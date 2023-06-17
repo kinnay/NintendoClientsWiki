@@ -98,7 +98,7 @@ This method does not take any parameters
 | --- | --- |
 | Uint32 | contentId |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | name |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | description |
 | [DateTime](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#datetime) | dateAvailable |
 | [DateTime](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#datetime) | dateExpired |
 | Uint32 | flags |
