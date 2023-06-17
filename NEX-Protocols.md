@@ -69,7 +69,7 @@ Ubisoft games always use the original Quazal Rendez-Vous library instead of NEX.
 | 47 | Ubi friends |
 | 48 | Skill rating |
 | 49 | [Uplay win](Uplay-Win-Protocol) |
-| 51 | Title storage |
+| 51 | [Title storage](Title-Storage-Protocol) |
 | 53 | [User storage](User-Storage-Protocol) |
 | 55 | [Player stats](Player-Stats-Protocol) |
 | 60 | Spark |
