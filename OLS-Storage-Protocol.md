@@ -135,7 +135,7 @@ This method does not take any parameters
 | Type | Name |
 | --- | --- |
 | [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;[OLSLdbRow](#olsldbrow-structure)&#x3E; | result |
-| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;float&#x3E; | graduations |
+| [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;Float&#x3E; | graduations |
 | [List](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#list)&#x3C;Uint32&#x3E; | envelope |
 | Uint32 | unit |
 | Uint32 | my_country |
@@ -162,10 +162,10 @@ This method does not take any parameters
 | --- | --- |
 | Uint32 | id_leaderboard |
 | Bool | is_objective_reached |
-| float | score |
-| float | tomb_x |
-| float | tomb_y |
-| float | tomb_z |
+| Float | score |
+| Float | tomb_x |
+| Float | tomb_y |
+| Float | tomb_z |
 | Uint32 | id_costume |
 
 ## Response
@@ -185,7 +185,7 @@ This method does not take any parameters
 | Uint64 | id_ghost |
 | Uint32 | id_competition |
 | Uint32 | id_costume |
-| float | score |
+| Float | score |
 
 ## Response
 This method does not return anything
@@ -273,28 +273,28 @@ This method does not take any parameters
 | Uint16 | BronzeMedals |
 | Uint32 | GlobalMedalsRank |
 | Uint32 | GlobalMedalsMaxRank |
-| float | distanceRun |
+| Float | distanceRun |
 | Uint32 | rank_distanceRun |
-| float | lums |
+| Float | lums |
 | Uint32 | rank_lums |
-| float | pets |
+| Float | pets |
 | Uint32 | rank_pets |
-| float | teensies |
+| Float | teensies |
 | Uint32 | rank_teensies |
-| float | jumps |
+| Float | jumps |
 | Uint32 | rank_jumps |
-| float | costumes |
+| Float | costumes |
 | Uint32 | rank_costumes |
-| float | stat_daily |
+| Float | stat_daily |
 | Uint32 | rank_daily |
 | Sint8 | unit_daily |
-| float | stat_weekly |
+| Float | stat_weekly |
 | Uint32 | rank_weekly |
 | Sint8 | unit_weekly |
-| float | stat_daily_expert |
+| Float | stat_daily_expert |
 | Uint32 | rank_daily_expert |
 | Sint8 | unit_daily_expert |
-| float | stat_weekly_expert |
+| Float | stat_weekly_expert |
 | Uint32 | rank_weekly_expert |
 | Sint8 | unit_weekly_expert |
 
@@ -336,10 +336,10 @@ This method does not take any parameters
 | [OLSCompetitionResult](#olscompetitionresult-structure) | result |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | message |
 | Uint32 | seed |
-| float | objective |
-| float | score_validation |
+| Float | objective |
+| Float | score_validation |
 | Uint32 | id_bricks |
-| float | score |
+| Float | score |
 
 ## OLSSelectionRow ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 | Type | Name |
@@ -350,7 +350,7 @@ This method does not take any parameters
 | Uint32 | id_costume |
 | Uint32 | country |
 | Uint32 | level |
-| float | score |
+| Float | score |
 
 ## OLSCompetitionInfos ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 | Type | Name |
@@ -370,7 +370,7 @@ This method does not take any parameters
 | --- | --- |
 | Uint32 | ID |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | name |
-| float | value |
+| Float | value |
 | Uint32 | costume |
 | Uint32 | statusIcon |
 | Uint32 | country |
@@ -381,9 +381,9 @@ This method does not take any parameters
 | Sint32 | pid |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | name |
 | Uint32 | id_costume |
-| float | x |
-| float | y |
-| float | z |
+| Float | x |
+| Float | y |
+| Float | z |
 
 ## OLSFriend ([Structure](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#structure))
 | Type | Name |
