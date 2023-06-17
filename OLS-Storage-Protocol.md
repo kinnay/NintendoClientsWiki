@@ -1,4 +1,4 @@
-## [NEX-Protocols](https://github.com/kinnay/NintendoClients/wiki/NEX-Protocols) > OLSStorageProtocol
+## [NEX-Protocols](https://github.com/kinnay/NintendoClients/wiki/NEX-Protocols) > OLS Storage
 
 | Method ID | Method Name |
 | --- | --- |
