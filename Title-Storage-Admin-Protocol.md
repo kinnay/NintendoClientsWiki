@@ -77,7 +77,7 @@ This method does not take any parameters
 | Uint32 | contentId |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | uploadURL |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | uploadMimeType |
-| std_map&#x3C;string,string&#x3E; | uploadBody |
+| [Map](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#map)&#x3C;string,string&#x3E; | uploadBody |
 
 # (6) RemoveContent
 
