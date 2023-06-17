@@ -1,4 +1,4 @@
-## [NEX-Protocols](https://github.com/kinnay/NintendoClients/wiki/NEX-Protocols) > TitleStorageProtocol
+## [NEX-Protocols](https://github.com/kinnay/NintendoClients/wiki/NEX-Protocols) > Title Storage (51)
 
 | Method ID | Method Name |
 | --- | --- |
@@ -74,7 +74,7 @@
 | --- | --- |
 | Uint32 | id |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | name |
-| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) |
+| [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | description |
 | Sint64 | size |
 | [String](https://github.com/kinnay/NintendoClients/wiki/NEX-Common-Types#string) | contentType |
 | Uint32 | flags |
