@@ -36,7 +36,15 @@ Response on success:
 
 | Field | Description |
 | --- | --- |
-| contents_authorization_token | The token |
+| timestamp | Current server time |
+| system_update_metas | Array (see below) |
+
+The system_update_metas array has exactly one entry, with the following fields:
+
+| Field | Description |
+| --- | --- |
+| title_id | Latest system update title id |
+| title_version | Latest system update title version |
 
 Example:
 
