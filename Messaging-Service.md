@@ -94,7 +94,9 @@ This method can be used to send a message to one or more players.
 ```json
 {
     "user": "tenants/current/users/current",
-    "receiver_users": ["tenants/t-156eef4e-lp1/users/u-azbb3i4ze5j46mfu7zum"],
+    "receiver_users": [
+        "tenants/t-156eef4e-lp1/users/u-azbb3i4ze5j46mfu7zum"
+    ],
     "message_body": {
         "message_request_id": "5211fb2ef2818a0c",
         "fields": {
