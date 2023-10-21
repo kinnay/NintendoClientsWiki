@@ -68,6 +68,7 @@ Pokemon Scarlet and Violet implement custom services as well:
 | Pokemon Scarlet & Violet | `50e39f8f` |
 | Splatoon 3 | `dce9377b` |
 | Splatoon 3: Splatfest World Premiere | `156eef4e` |
+| Super Mario Bros. Wonder | `ba973ec6` |
 
 ## Useful Tools
 * [grpcui](https://github.com/fullstorydev/grpcui) - a simple user interface for gRPC
