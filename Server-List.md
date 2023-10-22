@@ -92,7 +92,7 @@ For development servers, lp1 is replaced by one of the following:
 #### Title Installation ([docs](NIM-Servers))
 * https://aqua.hac.lp1.d4c.nintendo.net
 * https://atum.hac.lp1.d4c.nintendo.net
-* https://atumn.hac.lp1.d4c.nintendo.net
+* https://atumn.hac.lp1.d4c.nintendo.net ([system update content](Atumn-Server))
 * https://beach.hac.lp1.eshop.nintendo.net
 * https://pearljam.hac.lp1.eshop.nintendo.net
 * https://pushmo.hac.lp1.eshop.nintendo.net
