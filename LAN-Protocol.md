@@ -225,9 +225,9 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | Unknown |
-| 0x8 | 0x200 | Unknown |
-| 0x208 | 4 | Unknown |
+| 0x0 | 8 | Network id |
+| 0x8 | 0x200 | Application data |
+| 0x208 | 4 | Application data size |
 | 0x20C | 8 | Unknown |
 | 0x214 | 2 | Current number of participants |
 | 0x216 | 2 | Maximum number of participants |
