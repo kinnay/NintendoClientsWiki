@@ -95,8 +95,8 @@ Each attribute list may contain up to 20 attributes. Every attribute is stored a
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | Matchmake key |
-| 0x8 | 2 | Maximum number of participants |
-| 0xA | 2 | Minimum number of participants |
+| 0x8 | 2 | Maximum number of participants (maximum) |
+| 0xA | 2 | Maximum number of participants (minimum) |
 | 0xC | 2 | [Validity flags](#validity-flags-1) |
 | 0xE | 8 | Title id |
 
@@ -107,7 +107,7 @@ These flags indicate which fields are compared against the active session to det
 | --- | --- |
 | 0x1 | Ignored |
 | 0x2 | Matchmake key |
-| 0x4 | Maximum / minimum number of participants |
+| 0x4 | Maximum number of participants |
 | 0x8 | Opened only |
 | 0x10 | Vacant only |
 
