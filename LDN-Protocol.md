@@ -28,7 +28,7 @@ Also see: [[Local Wireless Communication on PC]].
 | System version | LDN version | Changes |
 | --- | --- | --- |
 | 2.0.0 - 5.1.0 | 2 | Initial version |
-| 6.0.0 - 14.1.1 | 3 | Challenge was added to authentication frame |
+| 6.0.0 - 17.0.1 | 3 | Challenge was added to authentication frame |
 
 ## WLAN Channels
 The channel on which LDN operates can be specified by games. Allowed channels are:
