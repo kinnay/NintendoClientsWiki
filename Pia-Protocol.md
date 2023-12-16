@@ -286,6 +286,8 @@ The CRC32 hash is calculated over the following data:
 ### Session Key
 The session key is used for packet encryption and signature calculation.
 
+*Up to 5.43:*
+
 | Mode | Session key |
 | --- | --- |
 | NEX | The session key is obtained from the game server during [matchmaking](Match-Making-Types#matchmakesession-structure). |
