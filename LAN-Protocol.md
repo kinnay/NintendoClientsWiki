@@ -120,7 +120,7 @@ These flags indicate which fields are compared against the active session to det
 ## (1) Browse reply
 This packet is sent to the source of the [browse request](#browse-request) in plain text, and is not encapsulated in a [Pia packet](Pia-Protocol).
 
-*Up to 5.31:*
+*Up to 5.44:*
 
 | Type | Description |
 | --- | --- |
