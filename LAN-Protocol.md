@@ -229,7 +229,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 #### LanStationInfo
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Role |
+| 0x0 | 1 | Role (1=host, 2=player) |
 | 0x1 | 1 | Username encoding type (1=utf8, 2=utf16) |
 | 0x2 | 40 | Username |
 | 0x2A | 8 | Station id |
