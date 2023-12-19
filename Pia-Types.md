@@ -102,7 +102,7 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
-*5.11 - 5.43:*
+*5.11 - 5.44:*
 
 | Type | Description |
 | --- | --- |
