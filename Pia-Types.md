@@ -97,7 +97,7 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: natf<br>`0xC`: natm |
+| Uint8 | `0x3`: natf<br>`0xC`: natm<br>`0xF0`: nat type |
 | Uint8 | type |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
@@ -114,7 +114,7 @@ Up to Pia version 5.9, a station location contained either a public or a private
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: natf<br>`0xC`: natm |
+| Uint8 | `0x3`: natf<br>`0xC`: natm<br>`0xF0`: nat type |
 | Uint8 | type |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
