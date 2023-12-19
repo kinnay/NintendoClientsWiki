@@ -124,7 +124,7 @@ The station location holds information that allows Pia to connect to a given sta
 | [StationAddress](#stationaddress) | Address |
 | Uint64 | [Constant id] |
 | Uint16 | [Variable id] |
-| Uint8 | `0x3`: [NAT filtering](#nat-filtering)<br>`0xC`: [NAT mapping](#nat-mapping)<br>`0x10`: Is IPv6 NAT |
+| Uint8 | `0x3`: [NAT filtering](#nat-filtering)<br>`0xC`: [NAT mapping](#nat-mapping)<br>`0x10`: Is IPv6 |
 
 ### NEX URL Type
 The URL type depends on the scheme of the given station url. It is always 0 or 1 in practice.
