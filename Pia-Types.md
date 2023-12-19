@@ -95,7 +95,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: NAT type |
+| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
 | Uint8 | [NAT flags](#nat-flags) (type) |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
@@ -112,7 +112,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint64 | [Constant id] (PID) |
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
-| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: NAT type |
+| Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
@@ -155,6 +155,19 @@ The URL type depends on the scheme of the given station url. It is always 0 or 1
 | --- | --- |
 | 1 | Is behind NAT |
 | 2 | Is public |
+
+### NAT Type
+The NAT type determines how well the Switch is able to set up peer-to-peer connections. A is the best and F is the worst. The NAT type is also shown in the system settings if you perform a connection test.
+
+The NAT type is used during host migration, giving players with a better NAT type a higher priority.
+
+| Value | Type |
+| --- | --- |
+| 0 | F |
+| 1 | A |
+| 2 | B |
+| 3 | C |
+| 4 | D |
 
 ## StationConnectionInfo
 *Up to 5.9:*
