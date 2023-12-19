@@ -220,9 +220,9 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint32 | Application data size |
 | Bool | Is opened |
 | [StationAddress](Pia-Types#stationaddress) | Host address |
-| Uint64 | Host pid |
-| Uint32 | Host cid |
-| Uint32 | Host rvcid |
+| Uint64 | Host constant id |
+| Uint32 | Host variable id |
+| Uint32 | Host service variable id |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 | Bytes (0x20) | Session param. This is used to derive the session key. |
 
