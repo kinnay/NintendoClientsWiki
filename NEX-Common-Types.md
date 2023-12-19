@@ -92,7 +92,7 @@ A station url contains the address and port of a server or client, along with a 
 | type | [NAT type flags](#nat-type-flags) |
 | RVCID | Rendez-vous connection id |
 | natm | [NAT mapping](#nat-mapping) |
-| natf | NAT filtering |
+| natf | [NAT filtering](#nat-filtering) |
 | upnp | UPnP support (0 or 1) |
 | pmp | PMP support (0 or 1) |
 | probeinit | Probe request initiation |
@@ -127,6 +127,13 @@ The following fields were added on Nintendo Switch:
 | 0 | Unknown |
 | 1 | Endpoint independent mapping |
 | 2 | Endpoint dependent mapping |
+
+### NAT Filtering
+| Value | Description |
+| --- | --- |
+| 0 | Unknown |
+| 1 | Port independent filtering |
+| 2 | Port dependent filtering |
 
 # Variant
 A variant consists of an uint8 indicating the type followed by its value.
