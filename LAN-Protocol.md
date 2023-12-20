@@ -285,6 +285,8 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 ## (3) Get Host Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
+*Up to 5.44:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Message type (3) |
@@ -294,15 +296,28 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 ## (4) Get Host Reply
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key.
 
+*Up to 5.9:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Message type (4) |
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | Session id |
-| 0x10 | | [StationConnectionInfo](Pia-Types#stationconnectioninfo) (up to Pia 5.9) or [StationLocation](Pia-Types#stationlocation) (Pia 5.10 and later) for host |
+| 0x10 | | [StationConnectionInfo](Pia-Types#stationconnectioninfo) for host |
+
+*5.10 - 5.44:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (4) |
+| 0x1 | 11 | Padding (always 0) |
+| 0xC | 4 | Session id |
+| 0x10 | | [StationLocation](Pia-Types#stationlocation) for host |
 
 ## (5) Get Session Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
+
+*Up to 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -312,6 +327,8 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 
 ## (6) Get Session Reply
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key. The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
+
+*Up to 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -326,6 +343,8 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 
 ## (7) Keep Alive Message
 This packet is sent through UDP broadcast port 49152 and is encapsulated in a [Pia message](Pia-Protocol). This message is sent once every two seconds, even if the console is not participating in a session. If the console is participating in a session, the message payload is encrypted with the session key. Otherwise, the payload is not encrypted. The message payload contains the following data:
+
+*Up to 5.44:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
