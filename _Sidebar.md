@@ -39,7 +39,6 @@
 * [NPLN](NPLN-Servers)
   * [Auth](Auth-Service)
 * [Pia](Pia-Overview)
-  * [Terminology](Pia-Terminology)
   * [[Pia Protocol]]
   * [Pia Services](Pia-Protocols)
     * [Mesh](Mesh-Protocol)
