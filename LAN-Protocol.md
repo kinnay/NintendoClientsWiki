@@ -221,7 +221,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Bool | Is opened |
 | [StationLocation](Pia-Types#stationlocation) | Host address |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
-| Bytes (0x20) | Session param. This is used to derive the session key. |
+| Bytes (0x20) | Session key param. This is used to derive the session key. |
 
 *5.10 - 5.44:*
 
@@ -244,7 +244,7 @@ This packet is sent to the source of the [browse request](#browse-request) in pl
 | Uint32 | Host variable id |
 | Uint32 | Host service variable id |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
-| Bytes (0x20) | Session param. This is used to derive the session key. |
+| Bytes (0x20) | Session key param. This is used to derive the session key. |
 
 #### LanStationInfo
 | Offset | Size | Description |
