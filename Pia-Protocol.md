@@ -231,7 +231,7 @@ If encryption is enabled, the messages are encrypted with AES-GCM. The authentic
 
 The AES-GCM nonce depends on the network type and is generated as follows:
 
-*NEX (up to 5.44):*
+**NEX** *(up to 5.44):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -239,7 +239,7 @@ The AES-GCM nonce depends on the network type and is generated as follows:
 | 0x1 | 3 | `gathering_id & 0xFFFFFF` |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-*LDN (up to 5.44):*
+**LDN** *(up to 5.44):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -254,14 +254,14 @@ The CRC32 hash is calculated over the following data:
 | 0x0 | 4 | Session id (see [application data](LDN-Application-Data-(Pia))) |
 | 0x4 | 6 | MAC address of source |
 
-*LDN (6.26):*
+**LDN** *(6.26):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | XOR of [network id](LAN-Protocol#lannetworkproperty) and IP address of source |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-*LAN (up to 5.44):*
+**LAN** *(up to 5.44):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -269,14 +269,14 @@ The CRC32 hash is calculated over the following data:
 | 0x4 | 1 | [Connection id](#header) |
 | 0x5 | 7 | Last 7 bytes of nonce from [header](#header) |
 
-*LAN (6.26):*
+**LAN** *(6.26):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | IP address of source (CRC-32 hash if IPv6 is used) |
 | 0x4 | 8 | Nonce from [header](#header) |
 
-*NPLN (6.26):*
+**NPLN** *(6.26):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
