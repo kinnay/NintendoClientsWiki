@@ -254,7 +254,7 @@ The CRC32 hash is calculated over the following data:
 | 0x0 | 4 | Session id (see [application data](LDN-Application-Data-(Pia))) |
 | 0x4 | 6 | MAC address of source |
 
-**LDN** *(6.26):*
+**LDN** *(6.16 - 6.30):*
 
 | Offset | Size | Description |
 | --- | --- | --- |
