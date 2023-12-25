@@ -157,8 +157,8 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint32 | Session id |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos (P) |
-| [PlayerInfo](#player-info) (up to P) | Player info, may be [fragmented](#fragment-id). |
+| Uint8 | Number of player infos |
+| [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
 | Uint32 | Ack id |
 
 *5.7 - 5.11:*
@@ -197,7 +197,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint32 | Session id |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos (P) |
+| Uint8 | Number of player infos |
 | [PlayerInfo](#player-info) (2 or 4) | Player info |
 | Uint32 | Ack id |
 
