@@ -161,7 +161,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
 | Uint32 | Ack id |
 
-*5.7 - 5.11:*
+*5.7 - 5.18:*
 
 | Type | Description |
 | --- | --- |
