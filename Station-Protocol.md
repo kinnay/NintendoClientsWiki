@@ -342,7 +342,7 @@ The protocol list contains the following for every available protocol.
 | Uint8 | Account name encoding (1=utf8, 2=utf16) |
 | Uint8 | Language |
 | Bytes (64) | Play history registration key |
-| Uint64 | Unknown |
+| Uint64 | Principal id |
 
 *5.27 - 5.43:*
 
@@ -354,7 +354,7 @@ The protocol list contains the following for every available protocol.
 | Bytes (40) | Account name |
 | Uint8 | Language |
 | Bytes (64) | Play history registration key |
-| Uint64 | Unknown |
+| Uint64 | Principal id |
 
 [Constant id]: Pia-Types#constant-id
 [Variable id]: Pia-Types#variable-id
