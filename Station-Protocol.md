@@ -148,7 +148,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 
 | Type | Description |
 | --- | --- |
-| Uint8 | Message type (1) |
+| Uint8 | Message type (2) |
 | Uint8 | [Connection result](#connection-result) (accepted) |
 | Uint8 | [Version number](#version-numbers) |
 | Uint8 | [Platform id](#platform-id) |
@@ -161,11 +161,11 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | [PlayerInfo](#player-info) (up to P) | Player info, may be [fragmented](#fragment-id). |
 | Uint32 | Ack id |
 
-*5.7 - 5.9:*
+*5.7 - 5.11:*
 
 | Type | Description |
 | --- | --- |
-| Uint8 | Message type (1) |
+| Uint8 | Message type (2) |
 | Uint8 | [Connection result](#connection-result) (accepted) |
 | Uint8 | [Version number](#version-numbers) |
 | Uint8 | [Platform id](#platform-id) |
@@ -184,7 +184,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 
 | Type | Description |
 | --- | --- |
-| Uint8 | Message type (1) |
+| Uint8 | Message type (2) |
 | Uint8 | [Connection result](#connection-result) (accepted) |
 | Uint8 | [Platform id](#platform-id) |
 | Uint64 | [Constant id] |
