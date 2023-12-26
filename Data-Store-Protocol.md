@@ -1,6 +1,7 @@
 ## [[NEX Protocols]] > Data Store (115)
 
 The following games have additional methods in the datastore protocol:
+* [Miitopia 3DS](Data-Store-Protocol-(Miitopia-3DS))
 * [Pokemon Bank](Data-Store-Protocol-(Pokemon-Bank))
 * [Pokemon X / Y](Data-Store-Protocol-(Pokemon-XY))
 * [Splatoon 2](Data-Store-Protocol-(Splatoon-2))
