@@ -1,7 +1,7 @@
 [Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Station Protocol
 ---
 
-The difference between the reliable and unreliable protocol is that the reliable protocol wraps messages in a [Pia-Types#reliable sliding window](#reliable-sliding-window). The reliable protocol is not used by Pia however, and support for it was removed in version *5.6*.
+The difference between the reliable and unreliable protocol is that the reliable protocol wraps messages in a [reliable sliding window](Pia-Types#reliable-sliding-window). The reliable protocol is not used by Pia however, and support for it was removed in version *5.6*.
 
 | Port | Description |
 | --- | --- |
