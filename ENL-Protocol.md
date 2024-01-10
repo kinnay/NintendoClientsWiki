@@ -59,7 +59,7 @@ In the tables below, the values of P (maximum number of players) and Q (number o
 | Uint8 | Is player id table initialized |
 | [UniqueId](#uniqueid) (P*2-1) | Player unique ids |
 | [UniqueId](#uniqueid) (Q) | Special unique ids |
-| Uint8 | Unknown |
+| Uint8 | Player id sync unique |
 | Uint8 (P) | Player id table |
 
 *Switch:*
@@ -75,7 +75,7 @@ In the tables below, the values of P (maximum number of players) and Q (number o
 | Uint8 | Is player id table initialized |
 | [UniqueId](#uniqueid) (P*2-1) | Player unique ids |
 | [UniqueId](#uniqueid) (Q) | Special unique ids |
-| Uint8 | Unknown |
+| Uint8 | Player id sync unique |
 | Uint8 (P) | Player id table |
 
 ### UniqueId
