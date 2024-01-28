@@ -1,4 +1,5 @@
-This page lists all protocols that are part of the [[Pia protocol]].
+[Pia](Pia-Overview) > Protocols
+---
 
 All games that use Pia version 5.6 or newer use the new protocol ids. Older games use the old protocol ids.
 
