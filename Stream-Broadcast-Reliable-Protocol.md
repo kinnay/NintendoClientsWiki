@@ -9,7 +9,7 @@ The payload contains the following data:
 | --- | --- | --- |
 | 0x0 | 1 | [Packet type](#packet-types) |
 | 0x1 | 1 | Requested stream id |
-| 0x2 | 1 | Unknown |
+| 0x2 | 1 | Progress (in %) |
 | 0x3 | 4 | Requested stream size |
 | 0x7 | 4 | Payload size |
 | 0xB | | Payload |
