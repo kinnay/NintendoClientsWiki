@@ -15,8 +15,8 @@ SMM 2 uses [ENL](ENL-Protocol).
 | 0x92 | 2 | Bottom number |
 | 0x94 | 2 | Headwear number |
 | 0x96 | 2 | Anim number |
-| 0x98 | 4 | Unknown |
-| 0x9C | 1 | Unknown |
+| 0x98 | 4 | Related to battle mode rating |
+| 0x9C | 1 | Related to battle mode rating |
 | 0x9D | 3 | Padding |
 | 0xA0 | 4 | Unknown |
 | 0xA4 | 4 | Unknown |
