@@ -62,6 +62,7 @@ Pokemon Scarlet and Violet implement custom services as well:
 | Game | Tenant ID |
 | --- | --- |
 | Bayonetta 3 | `2c06a4d3` |
+| Hamster Playground | `b9dd3510` |
 | Monster Hunter Rise | `e1c218b5` |
 | Monster Hunter Rise Demo | `f124d2cb` |
 | Monster Hunter Rise: Sunbreak Demo | `bc33b7d4` |
