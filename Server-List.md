@@ -8,8 +8,6 @@
 * http://ctest.cdn.nintendo.net
 * http://ctest-ul-lp1.cdn.nintendo.net
 * http://ctest-dl-lp1.cdn.nintendo.net
-
-New:
 * https://api.hac.lp1.ctest.srv.nintendo.net
 
 #### Device Authentication ([docs](DAuth-Server))
