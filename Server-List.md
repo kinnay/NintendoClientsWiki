@@ -99,11 +99,16 @@
 * https://veer.hac.lp1.d4c.nintendo.net
 
 #### Push Notifications ([docs](NPNS-Servers))
+Old:
 * https://consumer.lp1.npns.srv.nintendo.net
 * https://broker.lp1.npns.srv.nintendo.net
 * https://provider-lp1.npns.srv.nintendo.net
 * https://app-a03.lp1.npns.srv.nintendo.net
 * https://app-b01.lp1.npns.srv.nintendo.net
+
+New:
+* https://god.hac.lp1.penne.srv.nintendo.net
+* https://val.hac.lp1.penne.srv.nintendo.net
 
 #### Telemetry ([docs](Telemetry-Servers))
 * https://receive-lp1.dg.srv.nintendo.net (play reports)
