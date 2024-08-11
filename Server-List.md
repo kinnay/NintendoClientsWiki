@@ -9,6 +9,9 @@
 * http://ctest-ul-lp1.cdn.nintendo.net
 * http://ctest-dl-lp1.cdn.nintendo.net
 
+New:
+* https://api.hac.lp1.ctest.srv.nintendo.net
+
 #### Device Authentication ([docs](DAuth-Server))
 * https://dauth-lp1.ndas.srv.nintendo.net
 * https://dcert-lp1.ndas.srv.nintendo.net
@@ -112,6 +115,7 @@ New:
 
 #### Telemetry ([docs](Telemetry-Servers))
 * https://receive-lp1.dg.srv.nintendo.net (play reports)
+* https://realtime-receive-lp1.dg.srv.nintendo.net
 * https://receive-lp1.er.srv.nintendo.net (error reports)
 * https://sprofile-lp1.cdn.nintendo.net
 
