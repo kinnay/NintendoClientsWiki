@@ -1,4 +1,4 @@
-[Switch Servers](Server-List#switch) > eShop Applet
+[Switch](Server-List#switch) > eShop Applet
 ---
 
 The eShop is a website. When the eShop applet is opened, it visits https://bugyo.hac.lp1.eshop.nintendo.net/ashigaru/. The SwitchShop client certificate is required to access this website.
