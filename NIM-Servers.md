@@ -1,4 +1,4 @@
-[Switch Servers](Server-List#switch) > Title installation
+[Switch](Server-List#switch) > Title installation
 ---
 
 The following servers have a dedicated page:
