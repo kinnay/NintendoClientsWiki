@@ -19,7 +19,7 @@ The following files are provided by the server:
 * `/c2/<title id>/c/c/<content id>`: [NCA] containing game content
 * `/c2/<title id>/c/c/<content id>/d`: JSON object containing content hashes
 
-The difference between `c1` and `c2` is that `c1` requires an edge token from [dauth](DAuth-Server), while `c2` requires an edge token from [dragons](Dragons-Server).
+The difference between `c1` and `c2` is that `c1` requires an edge token from [dauth](DAuth-Server), while `c2` requires an edge token from [dragons](Dragons-Servers).
 
 ## Request Headers
 | Header | Description |
