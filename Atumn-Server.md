@@ -1,7 +1,7 @@
 [Switch](Server-List#switch) > System Update Content
 ---
 
-The atumn server provides title content. Unlike the atum server, it does not require an [edge token](DAuth-Server). The atumn server only provides content for system update titles.
+The atumn server provides title content. Unlike the [atum server](Atum-Server), it does not require an [edge token](DAuth-Server). The atumn server only provides content for system update titles.
 
 * [Overview](#overview)
 * [Request headers](#request-headers)
