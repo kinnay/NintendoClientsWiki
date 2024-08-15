@@ -3,21 +3,10 @@
 
 The following servers have a dedicated page:
 * [[Aqua Server]]
+* [[Atum Server]]
 * [[Atumn Server]]
 * [[Sun Server]]
 * [Tagaya Server](Tagaya-Server-(Switch))
-
-### atum
-| URL |
-| --- |
-| `/c1/a/d/<id>` |
-| `/c1/a/d/<id>/<id>` |
-| `/c1/r/t/<id>` |
-| `/c1/t/a/<id>/<id>` |
-| `/c1/<id>/c/a/<id>` |
-| `/c1/<id>/c/c/<id>` |
-| `/c2/<id>/c/a/<id>` |
-| `/c2/<id>/c/c/<id>` |
 
 ### beach
 | URL |
