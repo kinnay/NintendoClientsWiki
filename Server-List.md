@@ -89,7 +89,7 @@
 
 #### Title Installation ([docs](NIM-Servers))
 * https://aqua.hac.lp1.d4c.nintendo.net ([system update requirements](Aqua-Server))
-* https://atum.hac.lp1.d4c.nintendo.net
+* https://atum.hac.lp1.d4c.nintendo.net ([game content](Atum-Server))
 * https://atumn.hac.lp1.d4c.nintendo.net ([system update content](Atumn-Server))
 * https://beach.hac.lp1.eshop.nintendo.net
 * https://pearljam.hac.lp1.eshop.nintendo.net
