@@ -12,9 +12,10 @@ The following files are provided by the server:
 * `/c1/a/d/<id>`
 * `/c1/a/d/<id>/<id>`
 * `/c1/r/t/<id>`
-* `/c1/t/a/<id>/<id>`
-* `/c1/<id>/c/a/<id>`
-* `/c1/<id>/c/c/<id>`
+* `/c1/t/a/<title id>/<title version>`: [NCA] containing [CNMT]
+* `/c1/<title id>/c/a/<content id>`: [NCA] containing [CNMT]
+* `/c1/<title id>/c/c/<content id>`: [NCA] containing game content
+* `/c1/<title id>/c/c/<content id>/d`: JSON object containing content hashes
 * `/c2/<id>/c/a/<id>`
 * `/c2/<id>/c/c/<id>`
 
@@ -25,6 +26,8 @@ The following files are provided by the server:
 | Accept | `*/*` |
 | User-Agent | [User agent](#user-agents) |
 | X-Nintendo-DenebEdgeToken | [Edge token](DAuth-Server) |
+
+For requests ending in `/d`, the `Accept` header contains `application/json` instead and comes after the edge token header.
 
 ### User Agents
 The user agent looks as follows: `NintendoSDK Firmware/<firmware version>-<revision> (platform:NX; did:<device id>; eid:lp1)`. The firmware version and revision number are obtained from the [system version title](https://switchbrew.org/wiki/System_Version_Title).
