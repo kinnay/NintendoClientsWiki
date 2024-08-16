@@ -24,7 +24,7 @@ The difference between `c1` and `c2` is that `c1` requires an edge token from [d
 ## Request Headers
 | Header | Description |
 | --- | --- |
-| Host | `atumn.hac.lp1.d4c.nintendo.net` |
+| Host | `atum.hac.lp1.d4c.nintendo.net` |
 | Accept | `*/*` |
 | User-Agent | [User agent](#user-agents) |
 | X-Nintendo-DenebEdgeToken | [Edge token](DAuth-Server) |
