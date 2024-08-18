@@ -1,4 +1,4 @@
-[Switch Server](Server-List#switch) > eLicenses
+[Switch](Server-List#switch) > eLicenses
 ---
 
 The dragons servers are responsible for managing e-licenses on the Nintendo Switch. An e-license carries the right to play a game, and is obtained by purchasing the game on the Nintendo eShop.
