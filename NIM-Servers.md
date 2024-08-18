@@ -5,6 +5,7 @@ The following servers have a dedicated page:
 * [[Aqua Server]]
 * [[Atum Server]]
 * [[Atumn Server]]
+* [[Beach Server]]
 * [[Sun Server]]
 * [Tagaya Server](Tagaya-Server-(Switch))
 
