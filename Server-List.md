@@ -2,7 +2,7 @@
 | Environment | Description |
 | --- | --- |
 | lp1 | Production |
-| sd1, sp1 | Lotcheck |
+| sd1, sp1 | Staging |
 | dd1, dp1 | Game development |
 | td1 | System development |
 | jd1, xd1, yd1, zd1 | Other |
