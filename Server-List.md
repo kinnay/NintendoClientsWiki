@@ -108,15 +108,15 @@
 * https://atum-eda.hac.lp1.d4c.nintendo.net (LLNW)
 * https://atum-4ff.hac.lp1.d4c.nintendo.net (Lumen)
 
-#### Push Notifications ([docs](NPNS-Servers))
-Old:
+#### Push Notifications
+Old ([docs](NPNS-Servers)):
 * https://consumer.lp1.npns.srv.nintendo.net
 * https://broker.lp1.npns.srv.nintendo.net
 * https://provider-lp1.npns.srv.nintendo.net
 * https://app-a03.lp1.npns.srv.nintendo.net
 * https://app-b01.lp1.npns.srv.nintendo.net
 
-New:
+New ([docs](Penne-Servers)):
 * https://god.hac.lp1.penne.srv.nintendo.net
 * https://val.hac.lp1.penne.srv.nintendo.net
 
