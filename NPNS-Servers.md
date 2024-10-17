@@ -1,4 +1,4 @@
-[Switch](#switch) > Push Notifications
+[Switch](#switch) > Push Notifications (NPNS)
 ---
 
 NPNS has been replaced by [Penne](Penne-Servers).
