@@ -337,6 +337,7 @@ New ([docs](Penne-Servers)):
 * https://smas.mng.nintendo.net (service stats)
 * https://sst.mng.nintendo.net (shop sales tool)
 * https://dg.mng.nintendo.net (play report tool)
+* https://door-d4c.mng.nintendo.net (ROM management)
 
 # Internal
 | Server | Description |
