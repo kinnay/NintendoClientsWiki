@@ -332,7 +332,7 @@ Connection: close
 </html>
 ```
 
-Nowadays, the server terminates the connection during the TLS handshake instead.
+Nowadays, the server terminates the connection immediately after the TLS handshake instead.
 
 Before anything else, one must obtain a challenge:
 
