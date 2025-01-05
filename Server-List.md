@@ -81,8 +81,9 @@ Unknown:
 | lp1 | Production |
 | sd1, sp1 | Staging |
 | dd1, dp1 | Game development |
+| jd1 | Testing |
 | td1 | System development |
-| jd1, xd1, yd1, zd1 | Other |
+| xd1, yd1, zd1 | Other |
 
 #### Connection Test ([docs](Connection-Test))
 * `http://ctest.cdn.nintendo.net`
