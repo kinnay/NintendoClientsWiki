@@ -254,10 +254,10 @@ New ([docs](Penne-Servers)):
 * `https://tagaya.wup.shop.nintendo.net`
 
 #### eShop API ([docs](Ninja-Server))
-* `https://ninja.wup.shop.nintendo.net1
+* `https://ninja.wup.shop.nintendo.net`
 
 #### eShop Website
-* `https://geisha-wup.cdn.nintendo.net1
+* `https://geisha-wup.cdn.nintendo.net`
 
 #### eShop Services ([docs](SOAP-Services))
 * `https://cas.wup.shop.nintendo.net`
