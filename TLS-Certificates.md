@@ -49,6 +49,7 @@ Many client and server certificates that are used by Nintendo are issued by an i
 | `01:7C` | `*.xd1.npns.srv.nintendo.net` |
 | `01:80` | `*.frs.srv.nintendo.net` |
 | `01:A7` | `receive-lp1.er.srv.nintendo.net` |
+| `01:C2` | `WS Prod` |
 | `01:D7` | `capi.lp1.op2.nintendo.net` |
 | `02:0B` | `*.lp1.scsi.srv.nintendo.net` |
 | `02:0D` | `*.ndas.srv.nintendo.net` |
