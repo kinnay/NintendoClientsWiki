@@ -68,6 +68,7 @@ Many client and server certificates that are used by Nintendo are issued by an i
 | `04:96` | `system-dev.account.nintendo.net` |
 | `04:A6` | `*.dg.srv.nintendo.net` |
 | `04:B1` | `*.hac.shop.nintendo.net` |
+| `04:FA` | `*.lp1.t.npln.srv.nintendo.net` |
 | `05:77` | `account.nintendo.net` |
 
 ## Nintendo Class 2 CA
