@@ -88,7 +88,7 @@ The following methods require a user access token:
 | Friends | PATCH | `/1.0.0/users/<id>/device_accounts/<id>` |
 | Account | DELETE | [`/1.0.0/users/<id>/device_accounts/<id>`](#delete-100usersiddevice_accountsid) |
 | Friends | POST | [`/1.0.0/users/<id>/generate_code`](#post-100usersidgenerate_code) |
-| Account | POST | `/1.0.0/users/<id>/link` |
+| Account | POST | [`/1.0.0/users/<id>/link`](#post-100usersidlink) |
 | Account | POST | `/1.0.0/users/<id>/unlink` |
 | Friends | POST | `/2.0.0/friend_requests` |
 | Friends | PATCH | `/2.0.0/friend_requests/<id>` |
@@ -252,6 +252,14 @@ Generates a new friend code. Returns the new [user information](#user-informatio
 | Param | Description |
 | --- | --- |
 | type | `NX` |
+
+### POST /1.0.0/users/&lt;id&gt;/link
+Links a Nintendo account to the given device account.
+
+| Param | Description |
+| --- | --- |
+| `idp` | `nintendoAccount` |
+| `idToken` | ID token from Nintendo account \
 
 ### GET /1.0.0/certificates
 This method returns the JWK set for the id token that's issued by <code><a href="#post-100login">/1.0.0/login</a></code> and <code><a href="#post-100federation">/1.0.0/federation</a></code>.
