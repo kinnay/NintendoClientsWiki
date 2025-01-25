@@ -252,7 +252,7 @@ A `vendor_id` parameter was added:
 | `d5b6cac2c1514c56` | Dragons | No |
 | `dc656ea03b63cf68` | Parental controls | No |
 | `df51c436bc01c437` | Prepo | No |
-| `e58171fe439390ce` | Unknown | No |
+| `e58171fe439390ce` | Penne | No |
 
 ## Errors
 On error, the server sends the following response:
