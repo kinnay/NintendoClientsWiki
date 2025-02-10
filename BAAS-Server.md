@@ -106,7 +106,7 @@ This method provides an anonymous access token.
 | --- | --- |
 | grantType | `public_client` |
 | assertion | Device token obtained from [dauth server](DAuth-Server) |
-| penneId | Penne id (optional) |
+| penneId | Penne id (optional, introduced in 19.0.0) |
 
 Response on success:
 
