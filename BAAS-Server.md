@@ -190,6 +190,7 @@ This method is the same as [`/1.0.0/login`](#post-100login) except that it also 
 | idp | `nintendoAccount` |
 | idToken | ID token obtained from [accounts.nintendo.com](Account-Server-(Switch)) |
 | appAuthNToken | [AAuth token](AAuth-Server) (optional) |
+| naCountry | Country code such as `NL` (introduced in 18.0.0) |
 | skipOp2Verification | Skip NSO verification (optional) |
 
 ### POST /1.0.0/users
