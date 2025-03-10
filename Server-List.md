@@ -58,11 +58,11 @@ Table of contents:
 * `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
 * `https://download.p01.lp1.banco.srv.nintendo.net`
 * `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
+* `https://nemof.p01.lp1.nemor.srv.nintendo.net` (eShop videos)
 
 Unknown:
 
 * `*.p01.lp1.bcat.srv.nintendo.net`
-* `*.p01.lp1.nemo.srv.nintendo.net`
 * `*.p01.lp1.pegasus.srv.nintendo.net`
 * `*.p01.lp1.savanna.srv.nintendo.net`
 * `*.p01.lp1.smn.srv.nintendo.net`
