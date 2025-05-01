@@ -99,6 +99,7 @@ Unknown:
 
 #### Application Authentication ([docs](AAuth-Server))
 * `https://aauth-lp1.ndas.srv.nintendo.net`
+* `https://aauth.hac.lp1.ndas.srv.nintendo.net`
 * `https://acert-lp1.ndas.srv.nintendo.net`
 * `https://aapi-lp1.ndas.srv.nintendo.net` (internal)
 * `https://aadmin-lp1.ndas.mng.nintendo.net` (internal)
