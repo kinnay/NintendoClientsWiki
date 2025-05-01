@@ -217,6 +217,10 @@ New ([docs](Penne-Servers)):
 * `https://api-lp1.pctl.srv.nintendo.net`
 * `https://parentalcontrols-movie-lp1.cdn.nintendo.net`
 
+#### System Transfer
+* `https://transfer.hac.lp1.banco.srv.nintendo.net`
+* `https://download.hac.lp1.banco.srv.nintendo.net`
+
 #### Other Services
 * `https://mii-secure-lp1.cdn.nintendo.net` (mii images)
 * `https://idbe-hac.cdn.nintendo.net` ([icon data](IDBE-Server))
@@ -228,7 +232,6 @@ New ([docs](Penne-Servers)):
 * `https://web-lp1.share.srv.nintendo.net`
 * `https://bvc-hac-lp1.cdn.nintendo.net` (browser version check)
 * `https://api.sect.srv.nintendo.net`
-* `https://transfer.hac.lp1.banco.srv.nintendo.net` (system transfer to Switch 2)
 
 # Wii U
 #### Account Server ([docs](Account-Server))
