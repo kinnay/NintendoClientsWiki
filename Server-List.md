@@ -54,9 +54,12 @@ Table of contents:
 * `nncs1.p01.lp1.n.n.srv.nintendo.net`
 * `nncs2.p01.lp1.n.n.srv.nintendo.net`
 
+#### System Transfer
+* `https://transfer.p01.lp1.banco.srv.nintendo.net`
+* `https://download.p01.lp1.banco.srv.nintendo.net`
+
 #### Other Servers
 * `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
-* `https://download.p01.lp1.banco.srv.nintendo.net` (system transfer from Switch)
 * `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
 * `https://nemof.p01.lp1.nemor.srv.nintendo.net` (eShop videos)
 
