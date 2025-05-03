@@ -176,12 +176,20 @@ If the error code is `invalid_parameter`, the response may contain more details 
 | Status | Code | Title |
 | --- | --- | --- |
 | 400 | `duplicate_rights_id` | |
+| 400 | `exceed_upper_lending_limit` | |
+| 400 | `invalid_account_for_borrowing` | |
 | 400 | `invalid_device_certificate` | Device certificate is invalid |
+| 400 | `invalid_device_for_lending` | |
 | 400 | `invalid_eticket_template` | |
+| 400 | `invalid_lending_state` |
 | 400 | `invalid_parameter` | Parameter is invalid |
+| 400 | `license_active_on_lender_device` | |
+| 400 | `rights_has_already_lent` | |
 | 401 | `account_id_required` | Account ID is required |
 | 401 | `authentication_required` | |
 | 403 | `edge_token_not_grantable` | |
+| 403 | `invalid_rights_for_lending` | |
+| 403 | `invalid_migration_state` | |
 | 403 | `invalid_token` | Token is invalid |
 | 403 | `license_archive_not_allowed` | |
 | 403 | `license_inactive` | ELicense is inactive |
