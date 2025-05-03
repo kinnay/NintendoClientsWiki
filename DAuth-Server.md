@@ -30,13 +30,24 @@ Up to 17.0.1:
 
 The X-Nintendo-PowerState header is only present on system version 7.0.0 and later. In 7.0.0, there is a space between `X-Nintendo-PowerState` and the colon. This was fixed in 7.0.1.
 
-In 18.0.0 and later, the user agent is no longer present and the headers are reordered:
+Between 18.0.0 and 19.0.1, the user agent is no longer present and the headers are reordered:
 
 | Header | Description |
 | --- | --- |
 | Host | `dauth-lp1.ndas.srv.nintendo.net` |
 | Accept | `*/*` |
 | Content-Type | `application/x-www-form-urlencoded` |
+| X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
+| Content-Length | Content length |
+
+In 20.0.0 and later, the user agent is back again, between the `Accept` and `Content-Type` headers:
+
+| Header | Description |
+| --- | --- |
+| Host | `dauth-lp1.ndas.srv.nintendo.net` |
+| Accept | `*/*` |
+| User-Agent | [User agent](#user-agents) |
+| Content-Type | `application/x-www-form-urlencoded` or `application/json` |
 | X-Nintendo-PowerState | `FA` (fully awake) or `HA` (half awake) |
 | Content-Length | Content length |
 
@@ -63,8 +74,9 @@ In 18.0.0 and later, the user agent is no longer present and the headers are reo
 | 15.0.0 - 15.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 15.3.0.0)` |
 | 16.0.0 - 16.1.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 16.2.0.0)` |
 | 17.0.0 - 17.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 17.5.0.0)` |
+| 20.0.0 - 20.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 20.5.4.0)` |
 
-No user agent is present in system version 18.0.0 and later.
+No user agent is present between system version 18.0.0 and 19.0.1.
 
 ## Methods
 In API version 3 and later, one must perform a cryptographic challenge to obtain a device token or edge token:
@@ -112,7 +124,7 @@ The following methods return a different kind of device token:
 | 7.0.0 - 8.1.1 | v5 |
 | 9.0.0 - 12.1.0 | v6 |
 | 13.0.0 - 19.0.1 | v7 |
-| 20.0.0 | v8 |
+| 20.0.0 - 20.0.1 | v8 |
 
 #### API Changes
 | API | Changelog |
@@ -124,6 +136,7 @@ The following methods return a different kind of device token:
 | v5 | The `X-Nintendo-PowerState` header was added. The API path is no longer obfuscated. |
 | v6 | The `ist` parameter was added. |
 | v7 | The `vendor_id` parameter was added to the edge token request. |
+| v8 | The token endpoints were renamed and now allow the client to request multiple tokens at once |
 
 ## Challenge Request
 | Param | Description |
@@ -198,6 +211,26 @@ An `ist` parameter was added:
 | key_generation | [Master key revision](#master-key-revisions) |
 | system_version | [System version digest](https://switchbrew.org/wiki/System_Version_Title) |
 | mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
+### Version 8
+The endpoint now accepts a JSON body instead of form-encoding, and allows the client to request multiple tokens at once:
+
+| Field | Description |
+| --- | --- |
+| system_version | System version in hexadecimal (e.g. `00140001` for 20.0.1) |
+| fw_revision | [System version hash (hex string)](https://switchbrew.org/wiki/System_Version_Title#Known_Versions) |
+| ist | `true` or `false` (depends on [platform region](https://switchbrew.org/wiki/Settings_services#GetT)) |
+| token_requests | List of token requests |
+| key_generation | [Master key revision](#master-key-revisions) |
+| challenge | Base64-encoded [challenge](#challenge-request) |
+| mac | Base64-encoded AES-CMAC of all previous fields in form-encoding |
+
+Every token request is a dictionary with one or two fields:
+
+| Field | Description |
+| --- | --- |
+| client_id | [Client id](#known-client-ids) |
+| vendor_id | `akamai`, `llnw`, `lumen`, `fastly` or `cloudflare` (only present in edge token requests) |
 
 ## Edge Token Request
 This method returns a different kind of device token. Up to v6, it takes the same parameters as [`/device_auth_token`](#device-token-request).
