@@ -8,14 +8,17 @@ URL: https://gw.hac.lp1.vermillion.srv.nintendo.net
 ## Methods
 | Method | Path |
 | --- | --- |
-| GET | `/v1/nearness-checks` |
-| GET | `/v1/devices` |
-| GET | `/v1/accounts/vphyms` |
+| GET | `/v1/accounts/config` |
 | GET | `/v1/accounts/devices` |
+| ? | `/v1/accounts/devices/<id>` |
+| ? | `/v1/accounts/devices/<id>/replace` |
+| ? | `/v1/accounts/in-same-family` |
 | POST | `/v1/accounts/notify` |
 | POST | `/v1/accounts/notify-to-family` |
-| GET | `/v1/accounts/config` |
 | GET | `/v1/accounts/vphym-borrowers/candidates` |
+| GET | `/v1/accounts/vphyms` |
+| GET | `/v1/devices` |
+| GET | `/v1/nearness-checks` |
 
 ## Errors
 On error, the server sends the following response:
