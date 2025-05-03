@@ -77,6 +77,7 @@ The following methods require a user access token:
 | Module | Method | URL |
 | --- | --- | --- |
 | Account | POST | `/1.0.0/devices/me/delete` |
+| Account | POST | `/1.0.0/devices/snapshot` |
 | Account | POST | [`/1.0.0/image_upload`](#post-100image_upload) |
 | Account | PUT | `/1.0.0/push_channels/<id>/<id>` |
 | Friends | GET | `/1.0.0/users` |
@@ -87,9 +88,10 @@ The following methods require a user access token:
 | Friends | DELETE | `/1.0.0/users/<id>/blocks/<id>` |
 | Friends | PATCH | `/1.0.0/users/<id>/device_accounts/<id>` |
 | Account | DELETE | [`/1.0.0/users/<id>/device_accounts/<id>`](#delete-100usersiddevice_accountsid) |
+| Account | POST | `/1.0.0/users/<id>/device_histories` |
 | Friends | POST | [`/1.0.0/users/<id>/generate_code`](#post-100usersidgenerate_code) |
 | Account | POST | [`/1.0.0/users/<id>/link`](#post-100usersidlink) |
-| Account | POST | `/1.0.0/users/<id>/unlink` |
+| Account | POST | `/1.0.0/users/<id>/unlink
 | Friends | POST | `/2.0.0/friend_requests` |
 | Friends | PATCH | `/2.0.0/friend_requests/<id>` |
 | Friends | GET | `/2.0.0/users/<id>/friends` |
