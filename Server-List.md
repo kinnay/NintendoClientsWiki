@@ -83,6 +83,10 @@ Table of contents:
 * `https://enishi.p01.lp1.idobata.srv.nintendo.net`
 * `https://sebumi.p01.lp1.idobata.srv.nintendo.net`
 
+#### Album Upload
+* `api.p01.lp1.nega.srv.nintendo.net`
+* `nega-lp1-upload.s3.us-east-1.amazonaws.com`
+
 #### Other Servers
 * `https://bvc.p01.lp1.bvc.srv.nintendo.net` (browser version check)
 * `https://idbe-p01.cdn.nintendo.net` ([icon data](IDBE-Server))
@@ -103,7 +107,6 @@ Unknown:
 * `*.p01.lp1.p01-aaab.srv.nintendo.net`
 * `*.p01.lp1.civil.nintendo.net`
 * `*.p01.lp1.ss.nintendo.net`
-* `*.p01.lp1.nega.srv.nintendo.net`
 * `*.p01.lp1.kanawa.srv.nintendo.net`
 
 # Switch
