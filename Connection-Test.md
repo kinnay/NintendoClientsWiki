@@ -8,6 +8,7 @@ Nintendo provides the following connection test servers for the Nintendo Switch:
 * https://api.hac.lp1.ctest.srv.nintendo.net
 
 On the Switch 2, the following servers are used instead:
+* https://ctest.p01.ctest.srv.nintendo.net
 * https://ctest-dl.p01.lp1.ctest.srv.nintendo.net
 * https://ctest-ul.p01.lp1.ctest.srv.nintendo.net
 * https://api.p01.lp1.ctest.srv.nintendo.net
@@ -17,6 +18,7 @@ The first server is used to check if the internet connection is working when you
 The last server was introduced in system version 18.0.0 and is a replacement for `/v1/time` of the [[AAuth server]].
 
 ## Connection Test
+### Switch 1
 Request:
 
 ```
@@ -36,6 +38,31 @@ Expires: Mon, 05 Apr 2021 14:52:05 GMT
 Cache-Control: max-age=0, no-cache, no-store
 Pragma: no-cache
 Date: Mon, 05 Apr 2021 14:52:05 GMT
+Connection: keep-alive
+X-Organization: Nintendo
+Content-Type: text/plain
+
+ok
+```
+
+### Switch 2
+Request:
+```
+GET / HTTP/1.1
+Host: ctest.p01.ctest.srv.nintendo.net
+User-Agent: libcurl (nnNifm; bf4812d9-d89b-4804-b53a-d08e0bed634f; SDK 20.5.4.0; Add-on 20.5.4.0)
+Accept: */*
+```
+
+Response:
+
+```
+HTTP/1.1 200 OK
+Content-Length: 2
+Expires: Sat, 07 Jun 2025 09:18:57 GMT
+Cache-Control: max-age=0, no-cache, no-store
+Pragma: no-cache
+Date: Sat, 07 Jun 2025 09:18:57 GMT
 Connection: keep-alive
 X-Organization: Nintendo
 Content-Type: text/plain
