@@ -88,6 +88,7 @@ All packets consist of an unencrypted [header](#header), which is followed by on
 | 6.16 - 6.23 | 11 |
 | 6.25 - 6.26 | 12 |
 | 6.29 - 6.30 | 13 |
+| Unknown (Mario Kart World) | 16 |
 
 ### Connection ID
 During connection establishment, both consoles generate a random number between 2 and 255. This is the connection id. If packets are sent to a specific address, rather than station index, the connection id is set to 0.
