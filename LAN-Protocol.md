@@ -304,6 +304,7 @@ If the application data consumes less than 0x184 bytes, this is reflected in the
 | 7 | 5.11 - 5.18 |
 | 8 | 5.19 - 5.44 |
 | 10 | 6.16 - 6.30 |
+| 22 | ? (Mario Kart World) |
 
 ## (3) Host Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
