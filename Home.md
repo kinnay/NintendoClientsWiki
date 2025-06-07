@@ -22,4 +22,5 @@ Welcome to the NintendoClients wiki!
 * [[Wii U Error Codes]]
 * [[Switch Error Codes]]
 * [[Switch Tokens]]
-* [Title Database](https://kinnay.github.io)
+* [Switch Title Database](https://kinnay.github.io)
+* [[Switch 2 Titles]]
