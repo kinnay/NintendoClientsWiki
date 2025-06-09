@@ -112,6 +112,23 @@ Recipient type:
 | This structure inherits from [Data] |
 | --- |
 
+Wii U:
+
+| Type | Name |
+| --- | --- |
+| Uint32 | m_uiID |
+| Uint32 | m_idRecipient |
+| Uint32 | m_uiRecipientType |
+| Uint32 | m_uiParentICD |
+| [PID] | m_pidSender |
+| [DateTime] | m_receptiontime |
+| Uint32 | m_uiLifeTime |
+| Uint32 | m_uiFlags |
+| [String] | m_strSubject |
+| [String] | m_strSender |
+
+Switch:
+
 | Type | Name |
 | --- | --- |
 | Uint32 | m_uiID |
