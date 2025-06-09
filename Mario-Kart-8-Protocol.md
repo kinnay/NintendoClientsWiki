@@ -13,11 +13,10 @@ Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 | 10 | Chat |
 
 ## Record Type 0
-| Offset | Type | Description |
+| Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | [PlayerInfo](#playerinfo) (x12) | Players |
-| 0x90 | [PlayerId](#playerid) | Unknown |
-| 0x98 | Uint32 | Flags |
+| 0x0 | 12*12 | Player [votes](#vote) |
+| 0x90 | 12 | [Vote](#vote) chosen by roulette |
 | 0x9C | --- | End of record |
 
 ## Record Type 1
@@ -46,15 +45,39 @@ Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 | 0x0 | Uint8 | Unknown |
 | 0x1 | --- | End of record |
 
-## PlayerId
-| Offset | Type | Description |
+## Vote
+| Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | Uint32 | Station index |
-| 0x4 | Unk (4) | Unknown |
-
-## PlayerInfo
-| Offset | Type | Description |
-| --- | --- | --- |
-| 0x0 | [UniqueID](ENL-Protocol#uniqueid) | Unique id |
-| 0x8 | 1 | `0xFE`: voted course<br>`0x01`: unknown |
+| 0x0 | 8 | [Unique id](ENL-Protocol#uniqueid)
+| 0x8 | 1 | `0xFE`: course id<br>`0x01`: unknown |
 | 0x9 | 3 | Padding |
+
+## sys::PlayerInfo
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 212 | [Core](#sysplayerinfocore) |
+| 0xD4 | 2*21 | Null-terminated name (UTF-16) |
+| 0xFE | 2 | Padding |
+
+## sys::PlayerInfo::Core
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Unknown |
+| 0x4 | 4 | Unknown |
+| 0x8 | 4 | Unknown |
+| 0xC | 4 | [Rate 1](#sysrate) |
+| 0x10 | 4 | [Rate 2](#sysrate) |
+| 0x14 | 96 | [Mii data](Mii-Data-(Wii-U)) |
+| 0x74 | 16 | Unknown |
+| 0x84 | 64 | [Open flag pack](#sysopenflagpack) |
+| 0xC4 | 16 | Account UUID |
+
+## sys::Rate
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Value (float) |
+
+## sys::OpenFlagPack
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 0x40 | Unknown |
