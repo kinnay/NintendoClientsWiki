@@ -308,6 +308,7 @@ Device tokens:
 | `81333c548b2e876d` | [Account server](Account-Server-(Switch)) |
 | `83b72b05dc3278d7` | NPNS |
 | `8f849b5d34778d8e` | [AAuth](AAuth-Server) and [BaaS](BAAS-Server) |
+| `93af0acb26258de9` | Beach and Bugyo |
 | `bad8156f44ac935a` | SProfile |
 | `d5b6cac2c1514c56` | [Dragons](Dragons-Servers) and [Vermillion](Vermillion-Server) |
 | `dc656ea03b63cf68` | Parental controls |
