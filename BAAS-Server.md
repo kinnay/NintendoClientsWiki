@@ -331,6 +331,7 @@ This method returns the JWK set for the access token that's issued by <code><a h
 | deleted | Bool |
 | blocksUpdatedAt | Timestamp |
 | friendsUpdatedAt | Timestamp |
+| thumbnailUploadedAt | Timestamp |
 | createdAt | Timestamp |
 | updatedAt | Timestamp |
 
