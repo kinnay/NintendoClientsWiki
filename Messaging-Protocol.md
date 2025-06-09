@@ -119,7 +119,7 @@ Wii U:
 | Uint32 | m_uiID |
 | Uint32 | m_idRecipient |
 | Uint32 | m_uiRecipientType |
-| Uint32 | m_uiParentICD |
+| Uint32 | m_uiParentID |
 | [PID] | m_pidSender |
 | [DateTime] | m_receptiontime |
 | Uint32 | m_uiLifeTime |
