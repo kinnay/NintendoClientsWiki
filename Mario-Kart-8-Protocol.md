@@ -50,5 +50,5 @@ Mario Kart 8 uses the [ENL framework](ENL-Protocol).
 | Offset | Type | Description |
 | --- | --- | --- |
 | 0x0 | [UniqueID](ENL-Protocol#uniqueid) | Unique id |
-| 0x8 | 1 | Voted course:<br>`0xFE`: voted course<br>`0x01`: unknown |
+| 0x8 | 1 | `0xFE`: voted course<br>`0x01`: unknown |
 | 0x9 | 3 | Padding |
