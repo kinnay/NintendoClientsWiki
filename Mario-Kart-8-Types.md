@@ -1,3 +1,5 @@
+This page describes some data structures that are seen in Mario Kart 8.
+
 ## sys::PlayerInfo::Core
 
 | Offset | Size | Description |
