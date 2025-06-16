@@ -70,9 +70,9 @@ This method does not return anything.
 ## Request
 | Type | Description |
 | --- | --- |
-| Bool | Unknown |
-| Bool | Unknown |
-| Bool | Unknown |
+| Bool | Show online status |
+| Bool | Show current title |
+| Bool | Block friend requests |
 
 ## Response
 This method does not return anything
