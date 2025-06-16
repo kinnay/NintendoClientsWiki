@@ -305,9 +305,9 @@ This method does not return anything
 
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| [PID] | Pid |
 | [String] | Comment |
-| [DateTime] | Unknown |
+| [DateTime] | Modified at |
 
 ## FriendInfo ([Structure])
 | Type | Description |
@@ -321,9 +321,9 @@ This method does not return anything
 
 | Type | Description |
 | --- | --- |
-| Uint32 | Unknown |
+| [PID] | Pid |
 | [Mii](#mii-structure) | Mii |
-| [DateTime] | Unknown |
+| [DateTime] | Modified at |
 
 ## FriendMiiList ([Structure])
 | This structure inherits from [Data] |
@@ -351,7 +351,7 @@ This method does not return anything
 | [String] | Message |
 | [DateTime] | Message updated at |
 | [DateTime] | Friended at |
-| [DateTime] | Unknown |
+| [DateTime] | Last online |
 
 ## FriendPicture ([Structure])
 | This structure inherits from [Data] |
@@ -424,9 +424,9 @@ This method does not return anything
 | Uint8 | Area |
 | Uint8 | Language |
 | Uint8 | Platform |
-| Uint64 | Unknown |
-| [String] | Unknown |
-| [String] | Unknown |
+| Uint64 | Local friend code seed |
+| [String] | MAC address |
+| [String] | Serial number |
 
 ## NintendoPresence ([Structure])
 | This structure inherits from [Data] |
