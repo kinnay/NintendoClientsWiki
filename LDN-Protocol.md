@@ -121,7 +121,8 @@ If encryption is enabled, the hash and advertisement data are encrypted with AES
 | 0x0 | 16 | Network key |
 | 0x10 | 2 | Security level |
 | 0x12 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
-| 0x13 | 3 | Padding (always 0) |
+| 0x13 | 1 | Padding (always 0) |
+| 0x14 | 2 | Unknown (20.0.0+) |
 | 0x16 | 1 | Maximum number of participants |
 | 0x17 | 1 | Current number of participants |
 | 0x18 | 56 x 8 | [Participant](#participant-info) list |
