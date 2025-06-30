@@ -264,6 +264,8 @@ DISCONNECT packets may be reliable (graceful disconnect) or unreliable (forced d
 | 3 | DISCONNECT |
 | 4 | PING |
 | 5 | USER |
+| 6 | ROUTE |
+| 7 | RAW |
 
 | Mask | Description |
 | --- | --- |
