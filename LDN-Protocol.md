@@ -128,7 +128,7 @@ This is a vendor-specific action frame that is broadcasted by the access point e
 When AES-CTR is used, both the hash and advertisement data are encrypted. The input buffer for [key derivation](#encryption-keys) is the [session info](#session-info), and the input key is `191884743e24c77d87c69e4207d0c438`.
 
 ### Advertisement Data
-**Note:** the advertisement data has a different format when AES-GCM encryption is used, which has not yet been documented here.
+Note: the advertisement data has a different format when AES-GCM encryption is used, which has not yet been documented here.
 
 | Offset | Size | Description |
 | --- | --- | --- |
