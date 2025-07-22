@@ -127,7 +127,7 @@ The [Kerberos ticket](#kerberos-tickets) contains the following data, encrypted 
 
 The length of the session key is always 32 bytes, except in communication with the 3DS / Wii U friends server, in which case it's 16 bytes.
 
-The optional string is not always present. The client checks whether the ticket has more data to determine whether there is an optional string.
+The optional string is not always present. The client checks whether the ticket has more data to determine whether there is an optional string. The optional string is supported in NEX version 4.3.x and later.
 
 ### Internal Ticket Format
 The format of the internal ticket was updated at some point. In the old format, the internal ticket data was encrypted directly with the **target key**. In the new format, a random key is sent along with the internal ticket in plain text, which is combined with the **target key** to derive the final encryption key.
