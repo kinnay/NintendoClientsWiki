@@ -18,6 +18,8 @@ This page describes the methods that are only seen in Mario Kart 8 Deluxe.
 | 65 | [GetFavoriteCompetition](#65-getfavoritecompetition) |
 | 66 | GetTeamParticipants |
 | 67 | FindCommunityByOwner |
+| 68 | ? |
+| 69 | ? |
 
 # (54) CreateSimpleSearchObject
 ## Request
