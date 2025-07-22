@@ -123,9 +123,11 @@ The [Kerberos ticket](#kerberos-tickets) contains the following data, encrypted 
 | Bytes | A random session key |
 | [PID] | The principal id of the **target user** |
 | [Buffer] | [Internal ticket data](#internal-ticket-format) |
-| [Buffer] | [JSON attributes](#json-attributes) (only present on new game servers) |
+| [Buffer] | Optional null-terminated string (contains [JSON attributes](#json-attributes) on new game servers) |
 
 The length of the session key is always 32 bytes, except in communication with the 3DS / Wii U friends server, in which case it's 16 bytes.
+
+The optional string is not always present. The client checks whether the ticket has more data to determine whether there is an optional string.
 
 ### Internal Ticket Format
 The format of the internal ticket was updated at some point. In the old format, the internal ticket data was encrypted directly with the **target key**. In the new format, a random key is sent along with the internal ticket in plain text, which is combined with the **target key** to derive the final encryption key.
