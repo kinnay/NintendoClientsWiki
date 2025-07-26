@@ -1,3 +1,5 @@
+This list is incomplete. More title ids can be found here: https://switch2brew.org/wiki/Title_list/Games.
+
 | Title ID | Game |
 | --- | --- |
 | `0400C3F00006E000` | Mario Kart World |
