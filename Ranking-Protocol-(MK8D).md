@@ -60,7 +60,7 @@ This method does not return anything.
 | Type | Description |
 | --- | --- |
 | [List]&lt;[PID]&gt; | Pids |
-| Uint32 | Unknown |
+| Uint32 | Category |
 
 ## Response
 | Type | Description |
