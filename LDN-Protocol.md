@@ -132,7 +132,7 @@ Note: the advertisement data has a different format when AES-GCM encryption is u
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | Network key |
-| 0x10 | 2 | Security level |
+| 0x10 | 2 | [Security level](#encryption-keys) |
 | 0x12 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
 | 0x13 | 1 | Padding (always 0) |
 | 0x14 | 2 | Unknown (20.0.0+) |
