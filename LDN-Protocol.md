@@ -155,7 +155,7 @@ Every participant has the following structure:
 | 0x0 | 4 | IP address |
 | 0x4 | 6 | MAC address |
 | 0xA | 1 | Is connected |
-| 0xB | 1 | Platform (0=Switch, 1=Switch 2) |
+| 0xB | 1 | Platform (0 = Switch, 1 = Switch 2) |
 | 0xC | 32 | Username |
 | 0x2C | 2 | Application communication version |
 | 0x2E | 10 | Padding (always 0) |
@@ -184,7 +184,7 @@ Every participant has the following structure:
 | 0x0 | 4 | IP address |
 | 0x4 | 6 | MAC address |
 | 0xA | 1 | Player index |
-| 0xB | 1 | Platform (0=Switch, 1=Switch 2) |
+| 0xB | 1 | Platform (0 = Switch, 1 = Switch 2) |
 | 0xC | 32 | Username |
 | 0x2C | 4 | Padding (always 0) |
 
@@ -229,7 +229,8 @@ This is set to 0 in an authentication request. In an authentication response, it
 | --- | --- | --- |
 | 0x0 | 32 | Username |
 | 0x20 | 2 | Application communication version |
-| 0x22 | 30 | Padding (always 0) |
+| 0x22 | 1 | Platform (0 = Switch, 1 = Switch 2) |
+| 0x23 | 29 | Padding (always 0) |
 
 LDN version 3 and later:
 
