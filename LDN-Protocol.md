@@ -73,7 +73,7 @@ For data frames, the input key is `f1e7018419a84f711da714c2cf919c9c` and the inp
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 16 | Network key (generated when the network is created) |
-| 0x10 | N | Password specified by game (optional, up to 64 bytes) |
+| 0x10 | N | [Password specified by game](LDN-Passphrases) (optional, up to 64 bytes) |
 
 For advertisement frames, [see below](#advertisement-frame).
 
