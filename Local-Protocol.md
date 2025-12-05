@@ -37,7 +37,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 0x19 | 7 | Padding |
 | 0x20 | | [Payload](#update-session-payload) |
 
-*5.9 - 5.37:*
+*5.7 - 5.37:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
