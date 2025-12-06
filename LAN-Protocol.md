@@ -378,7 +378,9 @@ This packet is sent through UDP broadcast port 49152 and is encapsulated in a [P
 | 0x1 | 11 | Padding (always 0) |
 
 ## Crypto Challenge
-In Pia version 5.7 and later, the [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format:
+In Pia version 5.7 and later, the [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format.
+
+*Version 5.7 - 6.33:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -388,6 +390,18 @@ In Pia version 5.7 and later, the [browse request](#0-browse-request) contains a
 | 0xA | 16 | Challenge key (random bytes) |
 | 0x1A | 16 | Authentication tag for AES-GCM |
 | 0x2A | 256 or 16 | Challenge or response, encrypted with AES-GCM |
+
+*Version 6.40:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | [Version](#version) |
+| 0x1 | 1 | Crypto enabled (0 or 1) |
+| 0x2 | 1 | Sequence id |
+| 0x3 | 8 | Incrementing counter used for nonce |
+| 0xB | 16 | Challenge key (random bytes) |
+| 0x1B | 16 | Authentication tag for AES-GCM |
+| 0x2B | 256 or 16 | Challenge or response, encrypted with AES-GCM |
 
 The content of the challenge/response when crypto is enabled is described below. If crypto is disabled the authentication tag and challenge/response data are filled with random bytes.
 
