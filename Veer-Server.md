@@ -71,3 +71,32 @@ Response for `v3`:
   "ttl": 86400
 }
 ```
+
+
+Response for `v4`:
+
+```json
+{
+  "weights": [
+    {"vendor": "akamai", "weight":50},
+    {"vendor": "fastly", "weight":50},
+    {"vendor": "cloudflare", "weight":0}
+  ],
+  "uuid": "0a3a7f5b-399b-401b-a71c-02aa0b4ffe4c",
+  "ttl": 300
+}
+```
+
+Response for `v5`:
+
+```json
+{
+  "weights": [
+    {"vendor": "akamai", "weight":50},
+    {"vendor": "fastly", "weight":50},
+    {"vendor": "cloudflare", "weight":0}
+  ],
+  "uuid": "e324921d-d8de-4ed5-9f81-fb5ca8789cf7",
+  "ttl": 60
+}
+```
