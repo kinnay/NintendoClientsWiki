@@ -66,6 +66,7 @@ This method does not return anything.
 | Type | Name |
 | --- | --- |
 | [List]&lt;[ContentProperty]&gt; | properties |
+| [UserContentKey] | contentKey |
 
 ## Response
 | Type | Name |
@@ -78,6 +79,7 @@ This method does not return anything.
 | --- | --- |
 | [List]&lt;[ContentProperty]&gt; | properties |
 | [Buffer] | data |
+| [UserContentKey] | contentKey |
 
 ## Response
 | Type | Name |
@@ -105,6 +107,7 @@ This method does not return anything.
 | --- | --- |
 | Uint64 | pendingID |
 | Bool | result |
+| [UserContentKey] | contentKey |
 
 ## Response
 | Type | Name |
