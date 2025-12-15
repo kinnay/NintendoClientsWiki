@@ -31,15 +31,21 @@ Table of contents:
 * `https://api.accounts.nintendo.com`
 * `https://c-lp1.accounts.nintendo.com`
 
-#### Push Notifications
-* `https://god.p01.lp1.penne.srv.nintendo.net`
-* `https://val.p01.lp1.penne.srv.nintendo.net`
-* `https://fro-2.p01.lp1.penne.srv.nintendo.net`
+#### Game Servers (NPLN) ([docs](NPLN-Servers))
+* `<tenant id>.lp1.t.npln.srv.nintendo.net` (game server)
+  * **Example:** `t-e96531c6-lp1.lp1.t.npln.srv.nintendo.net`
+* `npln-lp1-latency-<region>-<id>-green-agones.lp1.t.npln.srv.nintendo.net` (latency measurement)
+  * **Example:** `npln-lp1-latency-eu-01-green-agones.lp1.t.npln.srv.nintendo.net`
 
 #### eLicenses
 * `https://dragons.p01.lp1.dragons.nintendo.net`
 * `https://dragonst.p01.lp1.dragons.nintendo.net`
 * `https://tigers.p01.lp1.dragons.nintendo.net`
+
+#### Push Notifications
+* `https://god.p01.lp1.penne.srv.nintendo.net`
+* `https://val.p01.lp1.penne.srv.nintendo.net`
+* `https://fro-2.p01.lp1.penne.srv.nintendo.net`
 
 #### System Updates
 * `https://sun.p01.lp1.d4c.srv.nintendo.net`
