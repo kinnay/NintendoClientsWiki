@@ -14,9 +14,9 @@ On the Switch 2, the following servers are used instead:
 * https://ctest-ul.p01.lp1.ctest.srv.nintendo.net
 * https://api.p01.lp1.ctest.srv.nintendo.net
 
-The first server is used to check if the internet connection is working when you connect to a wifi network. The next two are used to measure your download and upload speed.
+The `ctest` and `ctest-ipv6` servers are used to check if the internet connection is working when you connect to a wifi network. The `ctest-dl` and `ctest-ul` servers are used to measure your download speed.
 
-The last server was introduced in system version 18.0.0 and is a replacement for `/v1/time` of the [[AAuth server]].
+The `api` server was introduced in system version 18.0.0 and is a replacement for `/v1/time` of the [[AAuth server]].
 
 ## Connection Test
 ### Switch 1
