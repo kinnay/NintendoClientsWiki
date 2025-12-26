@@ -129,7 +129,7 @@ The nonce is constructed as follows:
 ## Session Begin Monitoring Content
 All fields are initialized to 0xFF.
 
-Version 18:
+*Version 18:*
 
 | Type | Description |
 | --- | --- |
@@ -297,6 +297,35 @@ Version 18:
 | Uint8 | Unknown |
 | Uint8 | Unknown |
 | Uint32 | Always `PiaM` |
+
+*Version 43:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | [Header](#monitoring-data-header) |
+| 0x10 | 4 | Pia version |
+| 0x14 | 4 | SDK version (1) |
+| 0x18 | 4 | SDK version (2) |
+| 0x1C | 4 | NPLN version |
+| 0x20 | 1 x 124 | Unknown |
+| 0x9C | 4 | Unknown |
+| 0xA0 | 4 | Unknown |
+| 0xA4 | 4 | Unknown |
+| 0xA8 | 1 | Unknown |
+| 0xA9 | 4 | Unknown |
+| 0xAD | 4 | Unknown |
+| 0xB1 | 4 | Unknown |
+| 0xB5 | 2 | Unknown |
+| 0xB7 | 1 x 188 | Unknown |
+| 0x173 | 8 | Unknown |
+| 0x17B | 1 x 7 | Unknown |
+| 0x182 | 2 | Unknown |
+| 0x184 | 1 | Unknown |
+| 0x185 | 4 | Unknown |
+| 0x189 | 4 | Unknown |
+| 0x18D | 2 | Unknown |
+| 0x18D | 2 | Unknown |
+| 0x18D | 2 | Unknown |
 
 ### NexSessionSearchCriteria
 | Type | Description |
