@@ -4,6 +4,7 @@ Table of contents:
 * [Switch](#switch)
 * [Wii U](#wii-u)
 * [3DS](#3ds)
+* [Mobile apps](#mobile-apps)
 * [Developers](#developers)
 * [Internal](#internal)
 
@@ -378,6 +379,58 @@ New ([docs](Penne-Servers)):
 
 #### Other Servers
 * `https://ctr-o2fgs.cdn.nintendo.net`
+
+# Mobile Apps
+#### General
+* `https://accounts.nintendo.com`
+* `https://api.accounts.nintendo.com`
+* `https://cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` (user profile image)
+* `https://cdn-mii.accounts.nintendo.com` (mii images)
+* `https://atum-img-lp1.cdn.nintendo.net` (game icons)
+
+#### Nintendo Switch App
+General:
+* `https://api-lp1.znc.srv.nintendo.net`
+* `https://cdn.znc.srv.nintendo.net`
+* `https://media-dl.wc.lp1.nega.srv.nintendo.net` (album downloads)
+
+Apps:
+* `https://web.sd.lp1.acbaa.srv.nintendo.net` (NookLink)
+* `https://app.smashbros.nintendo.net` (Smash World)
+* `https://www-aaaba-lp1-hac.cdn.nintendo.net` (Smash World)
+* `https://app.splatoon2.nintendo.net` (SplatNet 2)
+* `https://api.lp1.av5ja.srv.nintendo.net` (SplatNet 3)
+* `https://api.lp1.usagi.srv.nintendo.net` (SplatNet 3)
+* `https://api.lp1.87abc152.srv.nintendo.net` (Zelda Notes)
+
+#### Nintendo Music
+* `251737943c34c5e6ae451f19ff36c2bb.baas.nintendo.com`
+* `https://api.m.nintendo.com`
+* `https://image-assets.m.nintendo.com`
+* `https://media-assets.m.nintendo.com`
+
+#### Nintendo Store
+* `https://cms-front.znej.nintendo.com`
+* `https://app-api.znej.nintendo.com`
+
+#### Nintendo Today
+* `https://55f574e737db5d869cac906761c0c37e.baas.nintendo.com`
+* `https://prod-server.de4taiqu.srv.nintendo.net`
+* `https://prod-znsa.de4taiqu.srv.nintendo.net`
+* `https://prod-webview-znsa.de4taiqu.srv.nintendo.net`
+
+#### Parental Controls
+* `https://app.lp1.znma.srv.nintendo.net` (parental controls)
+
+#### Super Mario Run
+* `https://1d73367a8bc4b849f5286dc68416acfd.baas.nintendo.com`
+* `https://api.supermariorun.com`
+* `https://download-cdn-supermariorun.akamaized.net`
+
+#### Mario Kart Tour
+* `https://a6913b7b80402974409b47079c29d775.baas.nintendo.com`
+* `https://api.mariokarttour.com`
+* `https://download-cdn-mariokarttour.akamaized.net`
 
 # Developers
 * https://developer.nintendo.com (developer portal)
