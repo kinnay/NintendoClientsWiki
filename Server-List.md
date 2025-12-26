@@ -384,7 +384,7 @@ New ([docs](Penne-Servers)):
 #### General
 * `https://accounts.nintendo.com`
 * `https://api.accounts.nintendo.com`
-* `https://cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` (user profile image)
+* `https://cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` (user profile images)
 * `https://cdn-mii.accounts.nintendo.com` (mii images)
 * `https://atum-img-lp1.cdn.nintendo.net` (game icons)
 
