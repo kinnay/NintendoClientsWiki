@@ -33,7 +33,7 @@ This is the `nn::pia::common::MonitoringDataHeader` structure.
 | 0x0 | 1 | [Version number](#version-numbers) |
 | 0x1 | 1 | [Data type](#data-types) |
 | 0x2 | 1 | Flags |
-| 0x3 | 1 | Always 0xFF |
+| 0x3 | 1 | Unknown |
 | 0x4 | 2 | Payload size |
 | 0x6 | 8 | AES-GCM nonce (random number) |
 | 0xE | 1 | Encryption key id (random number) |
