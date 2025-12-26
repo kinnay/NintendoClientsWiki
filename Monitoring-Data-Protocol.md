@@ -1,29 +1,84 @@
-[[Pia Protocols]] > Monitoring Data Protocol
+[Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Monitoring Data Protocol
 ---
 
-This protocol is used for the P2P monitoring server on the Switch. The messages are wrapped in unencrypted [Pia packets](Pia-Protocol) and sent to `g<game server id>-%.p.srv.nintendo.net` through UDP port 34343.
+This protocol is used for the P2P monitoring server on the Switch. The messages are wrapped in unencrypted [Pia packets](Pia-Protocol) and are sent to `g<game server id>-%.p.srv.nintendo.net` through UDP port 34343.
 
 If no game server id is specified (e.g. when the game uses [NPLN](NPLN-Servers)), then `g2122d301` is used as a default.
 
 Wii U games send the monitoring data to the NEX server instead, through the [SendReport](Secure-Protocol#8-sendreport) method of the [secure connection protocol](Secure-Protocol).
 
-The message payload is encoded as follows:
+## Packet Format
+Every packet consists of:
+* An unencrypted [header](#packet-header)
+* A [compressed and encrypted](#packet-encoding) payload
+
+## Packet Header
+This is the `nn::pia::common::MonitoringDataHeader` structure.
 
 *Up to 5.6:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Payload, first zlib compressed, then encrypted with AES-ECB. The key is always: `901edf193dc5ef3c5290647bff20c385`. |
+| 0x0 | 1 | [Version number](#version-numbers) |
+| 0x1 | 1 | [Data type](#data-types) |
+| 0x2 | 1 | Flags |
+| 0x3 | 1 | Always 0xFF |
+| 0x4 | 2 | Payload size |
+| 0x6 | 10 | Padding (filled with 0xFF) |
 
 *5.7 and later:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | [Monitoring data header](#monitoring-data-header) |
-| 0x10 | | Payload, first zlib compressed, then encrypted with AES-GCM. See [AES-GCM encryption](#aes-gcm-encryption) below. |
-| | | AES-GCM authentication tag |
+| 0x0 | 1 | [Version number](#version-numbers) |
+| 0x1 | 1 | [Data type](#data-types) |
+| 0x2 | 1 | Flags |
+| 0x3 | 1 | Always 0xFF |
+| 0x4 | 2 | Payload size |
+| 0x6 | 8 | AES-GCM nonce (random number) |
+| 0xE | 1 | Encryption key id (random number) |
+| 0xF | 1 | Always 0xFF |
 
+### Version Numbers
+Monitoring was added to Pia in version 3.4.
+
+| Pia version | Monitoring version |
+| --- | --- |
+| 3.4 | 1 |
+| 3.5 | 2 |
+| 3.6 | 3 |
+| 3.7 | 4 |
+| 3.8 | 5 |
+| 3.9 | 6 |
+| 3.10 | 7 |
+| 4.5 | 9 |
+| 4.6 | 10 |
+| 4.9 | 11 |
+| 4.10 | 12 |
+| 5.2 - 5.4 | 15 |
+| 5.5 | 16 |
+| 5.6 | 17 |
+| 5.7 - 5.9 | 18 |
+| 5.10 - 5.12 | 19 |
+| 5.14 | 20 |
+| 5.17 - 5.19 | 22 |
+| 5.20 | 23 |
+| 5.21 - 5.31 | 24 |
+| 5.32 - 5.40 | 25 |
+| 5.41 | 26 |
+| 5.42 - 5.45 | 27 |
+| 6.16 | 30 |
+| 6.20 - 6.23 | 32 |
+| 6.25 | 33 |
+| 6.26 | 34 |
+| 6.29 | 35 |
+| 6.30 | 36 |
+| 6.31 | 37 |
+| 6.32 - 6.33 | 38 |
+| 6.34 | 39 |
+| 6.40 | 43 |
+
+### Data Types
 The content of the payload depends on the version number and data type in the monitoring data header.
 
 | Data Type | Payload content |
@@ -32,7 +87,17 @@ The content of the payload depends on the version number and data type in the mo
 | 1 | [Session end monitoring data](#session-end-monitoring-data) |
 | 2 | [Session end monitoring data](#session-end-monitoring-data) |
 
-## AES-GCM Encryption
+## Payload Encoding
+The payload is first zlib compressed and then encrypted.
+
+*Up to 5.6:*
+
+The payload is encrypted with AES-ECB with the key ``901edf193dc5ef3c5290647bff20c385`.
+
+*5.7 and later:*
+
+The payload is encrypted with AES-GCM. The AES-GCM tag is appended to the encrypted payload.
+
 The key is chosen by the lower nybble of the encryption key id in the monitoring data header:
 
 ```
@@ -60,61 +125,6 @@ The nonce is constructed as follows:
 | --- | --- | --- |
 | 0x0 | 8 | Nonce from monitoring data header |
 | 0x8 | 4 | Always `5bd085fa` |
-
-## Version Number
-Monitoring was added to Pia in version 3.4.
-
-| Pia version | Monitoring version |
-| --- | --- |
-| 3.4 | 1 |
-| 3.5 | 2 |
-| 3.6 | 3 |
-| 3.7 | 4 |
-| 3.8 | 5 |
-| 3.9 | 6 |
-| 3.10 | 7 |
-| 4.5 | 9 |
-| 4.6 | 10 |
-| 4.9 | 11 |
-| 4.10 | 12 |
-| 5.2 - 5.4 | 15 |
-| 5.5 | 16 |
-| 5.6 | 17 |
-| 5.7 - 5.9 | 18 |
-| 5.10 - 5.12 | 19 |
-| 5.14 | 20 |
-| 5.17 - 5.19 | 22 |
-| 5.20 | 23 |
-| 5.21 - 5.31 | 24 |
-| 5.32 | 25 |
-
-## Monitoring Data Header
-As described above, the message payload starts with a monitoring data header. Each monitoring data structure starts with a monitoring data header as well. The flags field is always 0xFC in the first monitoring data header, and 0xFF in all other monitoring data headers.
-
-In the first monitoring data header, the payload size indicates the size of the compressed payload. In all other monitoring data headers, the payload size indicates the size of the structure, including the monitoring data header itself.
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | [Version number](#version-number) |
-| 0x1 | 1 | Data type |
-| 0x2 | 1 | Flags |
-| 0x3 | 1 | Always 0xFF |
-| 0x4 | 2 | Payload size |
-
-*Up to 5.6:*
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x6 | 10 | Padding (filled with 0xFF) |
-
-*5.7 and later:*
-
-This part is only relevant in the first monitoring data header. In all other monitoring data headers, it is filled with 0xFF.
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x6 | 8 | AES-GCM nonce (random number) |
-| 0xE | 1 | Encryption key id (random number) |
-| 0xF | 1 | Always 0xFF |
 
 ## Session Begin Monitoring Content
 All fields are initialized to 0xFF.
