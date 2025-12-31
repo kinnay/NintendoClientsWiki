@@ -159,6 +159,9 @@ The following module ids are currently known:
 | 2219 | `ens` | Extended network service (game-specific HTTP services) |
 | 2220 | `nd` | Neighbour detection |
 | 2221 | `ndd` | Neighbour device protocol |
+| 2222 | `toycon` | Toycon |
+| 2223 | `websocket` | Websockets |
+| 2224 | `socketio` | Socket I/O |
 | 2306 | `nex` | [Game servers (old)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
 | 2321 | `npln` | Game servers (new) |
 | 2618 | `pia` | [Peer to peer](#pia-error-codes) |
