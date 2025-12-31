@@ -354,9 +354,10 @@ Most errors use HTTP status code 400. The only known exception is error 0009, wh
 | 0007 | System update is required. |
 | 0008 | Device has been banned. |
 | 0009 | Internal Server Error. |
-| 0010 | ? |
-| 0011 | ? |
-| 0013 | ? |
+| 0010 | Under maintenance. |
+| 0011 | Invalid client. |
+| 0012 | API not found. |
+| 0013 | Invalid certificate. |
 | 0014 | Invalid parameter in request. |
 | 0015 | Invalid parameter in request. |
 | 0016 | Invalid parameter in request. |
