@@ -442,9 +442,10 @@ The following errors are shown when the [DAuth server](DAuth-Server) returns an 
 | 2181-4007 | 0007 | System update is required. |
 | 2181-4008 | 0008 | Device has been banned. |
 | 2181-4009 | 0009 | Internal Server Error. |
-| 2181-4010 | 0010 | |
-| 2181-4011 | 0011 | |
-| 2181-4013 | 0013 | |
+| 2181-4010 | 0010 | Under maintenance. |
+| 2181-4011 | 0011 | Invalid client. |
+| 2181-4012 | 0012 | API not found. |
+| 2181-4013 | 0013 | Invalid certificate. |
 | 2181-4014 | 0014 | Invalid parameter in request. |
 | 2181-4015 | 0015 | Invalid parameter in request. |
 | 2181-4016 | 0016 | Invalid parameter in request. |
