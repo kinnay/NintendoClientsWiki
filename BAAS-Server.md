@@ -7,7 +7,7 @@ Depending on the method, this server takes form or json encoded requests. The se
 
 The main URL is https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com.
 
-On 21.0.0 and later, the account sysmodule uses https://m-lp1.baas.nintendo.com instead (the friends sysmodule still uses the previous URL). This server only accepts connections with a valid client certificate.
+On 21.0.0 and later, the account sysmodule uses https://m-lp1.baas.nintendo.com instead. This server only accepts connections with a valid client certificate. The friends sysmodule still uses the previous URL.
 
 * [Headers](#headers)
 * [Methods](#methods)
