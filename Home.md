@@ -24,3 +24,4 @@ Welcome to the NintendoClients wiki!
 * [[Switch Tokens]]
 * [Switch Title Database](https://kinnay.github.io)
 * [[Switch 2 Titles]]
+* [[Credits]]
