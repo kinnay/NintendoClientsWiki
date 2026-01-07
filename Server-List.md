@@ -25,6 +25,7 @@ Table of contents:
 #### Switch Users ([docs](BAAS-Server))
 * `https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com`
 * `https://cdn-image-e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com`
+* `https://m-lp1.baas.nintendo.com`
 
 #### Nintendo Accounts ([docs](Account-Server-(Switch)))
 * `https://accounts.nintendo.com`
@@ -113,7 +114,6 @@ Table of contents:
 * `https://lp1.nso.nintendo.net` (NSO applet)
 * `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
 * `https://service-status.p01.lp1.smn.srv.nintendo.net` (service status)
-* `https://m-lp1.baas.nintendo.com`
 
 Unknown:
 
@@ -154,6 +154,7 @@ Unknown:
 * `https://aadmin-lp1.ndas.mng.nintendo.net` (internal)
 
 #### Switch Users ([docs](BAAS-Server))
+* `https://m-lp1.baas.nintendo.com`
 * `https://e0d67c509fb203858ebcb2fe3f88c2aa.baas.nintendo.com` (lp1)
 * `https://e97b8a9d672e4ce4845ec6947cd66ef6-sb.baas.nintendo.com` (dd1)
 * `https://d9c8ea0e17f68bdeab8674c59f6fabda-sb.baas.nintendo.com` (dp1)
