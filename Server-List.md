@@ -85,6 +85,9 @@ Table of contents:
 * `https://transfer.p01.lp1.banco.srv.nintendo.net`
 * `https://download.p01.lp1.banco.srv.nintendo.net`
 
+#### Online Play Invitations ([docs](Online-Play-Invitation-Server))
+* `https://app.lp1.five.nintendo.net`
+
 #### News
 * `https://list.p01.lp1.bcat.srv.nintendo.net`
 * `https://topics.p01.lp1.bcat.srv.nintendo.net`
@@ -106,7 +109,6 @@ Table of contents:
 * `https://gw.p01.lp1.vermillion.srv.nintendo.net` (virtual game cards)
 * `https://p01.lp1.znma.srv.nintendo.net` (parental controls)
 * `https://capi.lp1.op2.nintendo.net` ([NSO membership verification](NSO-Verification-Server))
-* `https://app.lp1.five.nintendo.net` (friend invitations)
 * `https://p01.lp1.savanna.srv.nintendo.net` (eShop)
 * `https://lp1.nso.nintendo.net` (NSO applet)
 * `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
