@@ -274,6 +274,15 @@ The media_type parameter was renamed to auth_type. The challenge and challenge_s
 | challenge | Challenge |
 | challenge_src | Challenge src |
 
+## System Titles
+The following titles can be used with the `SYSTEM` media type:
+
+* `010000000000002f` (NPNS)
+* `010000000000003a` (Migration)
+* `010000000000003e` (OLSC)
+* `0100000000000040` (ND)
+* `0100000000000044` (?)
+
 ## Errors
 On error, the server sends the following response:
 
@@ -287,15 +296,6 @@ Every error is encoded like this:
 | --- | --- |
 | code | Error code (string with 4 digits) |
 | message | Error message |
-
-### System Titles
-The following titles can be used with the `SYSTEM` media type:
-
-* `010000000000002f` (NPNS)
-* `010000000000003a` (Migration)
-* `010000000000003e` (OLSC)
-* `0100000000000040` (ND)
-* `0100000000000044` (?)
 
 ### Known Errors
 | Code | Message |
