@@ -210,6 +210,8 @@ Unknown:
 * `https://pp.lp1.sata.srv.nintendo.net`
 * `https://scsi-policy-lp1.cdn.nintendo.net`
 * `https://lp1.sprofile.srv.nintendo.net`
+* `https://scsi-download.lp1.scsi.srv.nintendo.net`
+* `https://scsi-upload-lp1.s3.us-west-2.amazonaws.com`
 
 #### eShop Services ([docs](REST-Services))
 * `https://ecs-lp1.hac.shop.nintendo.net`
