@@ -57,6 +57,8 @@ https://permission.lp1.sata.srv.nintendo.net
 ### SATA privacy policy
 https://pp.lp1.sata.srv.nintendo.net
 
+This server redirects to Nintendo's privacy policy page in various languages.
+
 | URL |
 | --- |
 | `/noa/en_US.html` |
