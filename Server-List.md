@@ -285,6 +285,7 @@ New ([docs](Penne-Servers)):
 * `https://bvc-hac-lp1.cdn.nintendo.net` (browser version check)
 * `https://api.sect.srv.nintendo.net`
 * `https://gw.hac.lp1.vermillion.srv.nintendo.net` ([virtual game cards](Vermillion-Server))
+* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net`
 
 # Wii U
 #### Account Server ([docs](Account-Server))
