@@ -113,10 +113,10 @@ Table of contents:
 * `https://lp1.nso.nintendo.net` (NSO applet)
 * `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
 * `https://service-status.p01.lp1.smn.srv.nintendo.net` (service status)
+* `https://pegasus.p01.lp1.pegasus.srv.nintendo.net` (playable platform list)
 
 Unknown:
 
-* `*.p01.lp1.pegasus.srv.nintendo.net`
 * `*.p01.lp1.sprofile.srv.nintendo.net`
 * `*.p01.lp1.p01-aaab.srv.nintendo.net`
 * `*.p01.lp1.civil.nintendo.net`
@@ -285,7 +285,7 @@ New ([docs](Penne-Servers)):
 * `https://bvc-hac-lp1.cdn.nintendo.net` (browser version check)
 * `https://api.sect.srv.nintendo.net`
 * `https://gw.hac.lp1.vermillion.srv.nintendo.net` ([virtual game cards](Vermillion-Server))
-* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net`
+* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` (playable platform list)
 
 # Wii U
 #### Account Server ([docs](Account-Server))
