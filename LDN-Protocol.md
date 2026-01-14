@@ -173,7 +173,7 @@ Every participant has the following structure:
 | 0x24 | 2 | `0x03FF`: Channel<br>`0xFC00`: Band (2 = 2.4 GHz, 5 = 5 GHz, 6 = 6 GHz) |
 | 0x26 | 1 | Maximum number of participants |
 | 0x27 | 1 | Current number of participants (N) |
-| 0x28 | 48 x N | Participant list |
+| 0x28 | 48 x N | Participant list (see below) |
 | | 2 | Application data size |
 | | | [Application data](LDN-Application-Data-(Pia)) |
 
