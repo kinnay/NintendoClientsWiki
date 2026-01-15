@@ -43,7 +43,7 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | 0x9 | 8*N | Multicast [constant ids](#constant-id) |
 | | | Payload |
 
-*5.31:*
+*5.29 - 5.31:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
