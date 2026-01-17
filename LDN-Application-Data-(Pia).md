@@ -2,6 +2,8 @@ The application data field allows the host of an [LDN network](LDN-Protocol) to 
 
 The application data starts with a short header, which is followed by game-specific application data.
 
+**Note:** the values in this header seem to be stored in little-endian byte order.
+
 5.2 - 5.7:
 
 | Offset | Size | Description |
