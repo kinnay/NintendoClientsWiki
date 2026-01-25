@@ -5,8 +5,6 @@ These packets are usually sent directly from one console to another through UDP,
 
 All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes an unencrypted [footer](#footer).
 
-The maximum packet size is 1472 bytes.
-
 ## Header
 *Up to 5.6:*
 
@@ -106,6 +104,12 @@ The maximum packet size is 1472 bytes.
 | 6.29 - 6.30 | 13 |
 | 6.32 - 6.34 | 15 |
 | 6.40 - 6.41 | 16 |
+
+### Maximum Packet Size
+| Pia Version | Maximum Size |
+| --- | --- |
+| Up to 6.33 | 1472 |
+| 6.34 - 6.40 | 1452 |
 
 ### Connection ID
 During connection establishment, both consoles generate a random number between 2 and 255. This is the connection id. If packets are sent to a specific address, rather than station index, the connection id is set to 0.
