@@ -72,7 +72,7 @@ For data frames, the input key is `f1e7018419a84f711da714c2cf919c9c` and the inp
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | Network key (generated when the network is created) |
+| 0x0 | 16 | Server random (generated when the network is created) |
 | 0x10 | N | [Password specified by game](LDN-Passphrases) (optional, up to 64 bytes) |
 
 For advertisement frames, [see below](#advertisement-frame).
@@ -134,7 +134,7 @@ The band and channel fields were added in version 20.0.0.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | Network key |
+| 0x0 | 16 | Server random |
 | 0x10 | 2 | [Security level](#encryption-keys) |
 | 0x12 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
 | 0x13 | 1 | Padding (always 0) |
@@ -164,7 +164,7 @@ Every participant has the following structure:
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 16 | Network key |
+| 0x0 | 16 | Server random |
 | 0x10 | 8 | Authentication token (random) |
 | 0x18 | 1 | [Security level](#encryption-keys) |
 | 0x19 | 1 | Station accept policy:<br>0 = Open participation<br>1 = Closed participation<br>2 = Blacklist (provided by game)<br>3 = Whitelist (provided by game) |
@@ -208,8 +208,8 @@ This is a data frame with ethertype 0x88B7 (OUI extended). It is usually [encryp
 | 0x4 | 1 | Payload size (`size >> 8`) |
 | 0x5 | 3 | Padding (always 0) |
 | 0x8 | 32 | [Session info](#session-info) in little-endian byte order |
-| 0x28 | 16 | Network key |
-| 0x38 | 16 | Authentication key (random bytes) |
+| 0x28 | 16 | Server random |
+| 0x38 | 16 | Client random (random bytes) |
 | 0x48 | | Authentication payload ([request](#authentication-request) or [response](#authentication-response)) |
 
 #### Authentication Status Code
