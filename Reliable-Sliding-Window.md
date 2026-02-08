@@ -63,7 +63,7 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | 2 | Message start (first fragment) |
 | 4 | Message end (last fragment) |
 | 8 | Is initialized |
-| 16 | Is compressed |
+| 16 | The payload is zlib compressed |
 | 32 | Reset |
 | 64 | Reset ack |
 
