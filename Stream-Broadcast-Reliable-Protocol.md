@@ -18,4 +18,9 @@ The payload contains the following data:
 | Type | Description |
 | --- | --- |
 | 0 | Request stream |
-| 3 | Request mismatch |
+| 1 | Start data |
+| 2 | Data |
+| 3 | Request failure |
+| 4 | Cancel send |
+| 5 | Cancel request |
+| 6 | Cancel request ack |
