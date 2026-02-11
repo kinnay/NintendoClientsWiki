@@ -195,7 +195,7 @@ The constant id is the same as your principal id (pid).
 
 The constant id is generated from your local IP address and port: `ip << 32 | port`
 
-**LDN** *(Up to 5.9):*
+**LDN** *(Up to 5.44):*
 
 The constant id is generated from your MAC address: `mac[2] << 56 | mac[4] << 48 | mac[5] << 40 | mac[3] << 32 | mac[1] << 24 | mac[0] << 16`.
 
@@ -213,7 +213,7 @@ The variable id is the same as your connection id (CID).
 The exact method with which the variable id is generated varies per Pia version, but it is indiscernible from a random value.
 
 ## Service Variable ID
-Like the [variable id](#variable-id), the service variable id uniquely identifies a station in the current session and may change across sessions. The service variable id depends on the network type:
+Like the [variable id](#variable-id), the service variable id uniquely identifies a station in the current session and may change across sessions. The service variable id depends on the network type. In old Pia versions, the service variable id was called "service connection id (scid)" instead.
 
 **NEX** *(Up to 5.44):*
 
@@ -223,7 +223,7 @@ The services variable id is your Rendez-Vous connection id (RVCID). This is rece
 
 The service variable id is generated from your local IP address and port: `(ip & 0xFFFF) << 16 | port`.
 
-**LDN** *(Up to 5.9):*
+**LDN** *(Up to 5.44):*
 
 The service variable id is the CRC32 hash of your MAC address.
 
