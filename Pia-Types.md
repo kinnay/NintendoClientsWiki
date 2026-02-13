@@ -70,7 +70,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint8 | NEX stream type (stream) |
 | Uint8 | [NAT mapping](#nat-mapping) (natm) |
 | Uint8 | [NAT filtering](#nat-filtering) (natf) |
-| Uint8 | [NAT flags](#nat-flags) (type) |
+| Uint8 | [NAT location](#nat-location) (type) |
 | Uint8 | probeinit |
 
 *5.2 - 5.9:*
@@ -86,7 +86,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint8 | NEX stream type (stream) |
 | Uint8 | [NAT mapping](#nat-mapping) (natm) |
 | Uint8 | [NAT filtering](#nat-filtering) (natf) |
-| Uint8 | [NAT flags](#nat-flags) (type) |
+| Uint8 | [NAT location](#nat-location) (type) |
 | Uint8 | probeinit |
 | [InetAddress](#inetaddress) | Relay address |
 
@@ -101,7 +101,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
 | Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
-| Uint8 | [NAT flags](#nat-flags) (type) |
+| Uint8 | [NAT location](#nat-location) (type) |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
@@ -118,7 +118,7 @@ The station location holds information that allows Pia to connect to a given sta
 | Uint32 | [Variable id] (CID) |
 | Uint32 | [Service variable id] (RVCID) |
 | Uint8 | `0x3`: [NAT filtering](#nat-filtering) (natf)<br>`0xC`: [NAT mapping](#nat-mapping) (natm)<br>`0xF0`: [NAT type](#nat-type) |
-| Uint8 | [NAT flags](#nat-flags) (type) |
+| Uint8 | [NAT location](#nat-location) (type) |
 | Uint8 | probeinit |
 | Uint8 | Is private address available |
 
@@ -156,11 +156,12 @@ The URL type depends on the scheme of the given station url. It is always 0 or 1
 | 1 | Port independent filtering |
 | 2 | Port dependent filtering |
 
-### NAT Flags
-| Flag | Description |
+### NAT Location
+| Value | Description |
 | --- | --- |
+| 0 | Unknown |
 | 1 | Is behind NAT |
-| 2 | Is public |
+| 2 | Is public (not behind NAT) |
 
 ### NAT Type
 The NAT type determines how well the Switch is able to set up peer-to-peer connections. A is the best and F is the worst. The NAT type is also shown in the system settings if you perform a connection test.
