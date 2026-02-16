@@ -7,6 +7,8 @@ If no game server id is specified (e.g. when the game uses [NPLN](NPLN-Servers))
 
 Wii U games send the monitoring data to the NEX server instead, through the [SendReport](Secure-Protocol#8-sendreport) method of the [secure connection protocol](Secure-Protocol).
 
+Up to Pia version 5.23, the monitoring data protocol was called the "feedback protocol".
+
 ## Packet Format
 Every packet consists of:
 * An unencrypted [header](#monitoring-data-header)
