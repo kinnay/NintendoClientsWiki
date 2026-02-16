@@ -311,16 +311,16 @@ The protocol list contains the following for every available protocol.
 *3.3 - 3.10:*
 | Type | Description |
 | --- | --- |
-| Uint16 (16) | Player name (utf16) |
-| Uint8 | Player name length |
+| Uint16 (16) | Player name (UTF-16) |
+| Uint8 | Player name length (number of characters) |
 | Uint8 | Language |
 | Uint16 | Padding |
 
 *4.5 - 4.10:*
 | Type | Description |
 | --- | --- |
-| Uint16 (16) | Player name (utf16) |
-| Uint8 | Player name length |
+| Uint16 (16) | Player name (UTF-16) |
+| Uint8 | Player name length (number of characters) |
 | Uint8 | Language |
 | Uint32 | Unknown |
 | Uint16 | Padding |
@@ -329,9 +329,9 @@ The protocol list contains the following for every available protocol.
 | Type | Description |
 | --- | --- |
 | Bytes (80) | Player name |
-| Uint8 | Player name encoding (1=utf8, 2=utf16) |
+| Uint8 | Player name encoding (1=UTF-8, 2=UTF-16) |
 | Bytes (40) | Account name |
-| Uint8 | Account name encoding (1=utf8, 2=utf16) |
+| Uint8 | Account name encoding (1=UTF-8, 2=UTF-16) |
 | Uint8 | Language |
 | Bytes (64) | Play history registration key |
 
@@ -339,9 +339,9 @@ The protocol list contains the following for every available protocol.
 | Type | Description |
 | --- | --- |
 | Bytes (80) | Player name |
-| Uint8 | Player name encoding (1=utf8, 2=utf16) |
+| Uint8 | Player name encoding (1=UTF-8, 2=UTF-16) |
 | Bytes (40) | Account name |
-| Uint8 | Account name encoding (1=utf8, 2=utf16) |
+| Uint8 | Account name encoding (1=UTF-8, 2=UTF-16) |
 | Uint8 | Language |
 | Bytes (64) | Play history registration key |
 | Uint64 | Principal id |
@@ -350,9 +350,9 @@ The protocol list contains the following for every available protocol.
 
 | Type | Description |
 | --- | --- |
-| Uint8 | Player name encoding (1=utf8, 2=utf16) |
+| Uint8 | Player name encoding (1=UTF-8, 2=UTF-16) |
 | Bytes (80) | Player name |
-| Uint8 | Account name encoding (1=utf8, 2=utf16) |
+| Uint8 | Account name encoding (1=UTF-8, 2=UTF-16) |
 | Bytes (40) | Account name |
 | Uint8 | Language |
 | Bytes (64) | Play history registration key |
