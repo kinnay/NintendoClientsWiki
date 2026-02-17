@@ -10,7 +10,7 @@ This protocol is used in LDN mode. All messages seem to be encoded with little e
 | 0x13 | [Start host migration](#start-host-migration-message) |
 | 0x21 | [Update session ack](#ack-message) |
 
-The following version numbers are advertised during the [connection request](Station-Protocol):
+The following version number is advertised during the [connection request](Station-Protocol):
 
 | Pia version | Version |
 | --- | --- |
