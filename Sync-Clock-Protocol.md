@@ -18,3 +18,9 @@ The host sends the following reply:
 | 0x8 | 8 | Synchronized clock in milliseconds |
 
 The system tick is used to measure the round trip time. To reduce noise, Pia calculates the median of the last 10 measurements. The estimated round trip time is divided by two, and added to the received clock value.
+
+The following version number is advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.19 - 5.44 | 0 |
