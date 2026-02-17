@@ -1,4 +1,4 @@
-[[Pia Protocols]] > Unreliable Protocol
+[Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Unreliable Protocol
 ---
 
 This protocol may be used by games to send data packets to other consoles. The payload contains game-specific data.
