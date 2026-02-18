@@ -288,8 +288,8 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | --- | --- |
 | 0 | Accepted |
 | 1 | Connection denied |
-| 2 | Incompatible header version |
-| 3 | Incompatible protocol version |
+| 2 | Version is too low |
+| 3 | Version is too high |
 
 ## Fragment ID
 In some Pia versions, the connection response may be fragmented, depending on the maximum payload size.
