@@ -20,6 +20,8 @@ The first byte of each packet indicates the message type.
 | 6 | Relay connection request |
 | 7 | Relay connection response |
 
+Messages that need to be acknowledged are retransmitted every 500 milliseconds until they are acknowledged.
+
 ### Version numbers
 
 | Pia Version | Version |
