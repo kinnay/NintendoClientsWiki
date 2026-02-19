@@ -21,7 +21,7 @@ This page lists the protocols that may be implemented in the given Pia versions.
 * [5.26 - 5.28](#526---528)
 * [5.29 - 5.44](#529---544)
 * [6.16 - 6.30](#616---630)
-* [6.40](#640)
+* [6.32 - 6.40](#632---640)
 
 ## 3.3 - 3.10
 This is the earliest Pia version that we are aware of.
@@ -556,7 +556,7 @@ The Pia library was redesigned for NPLN.
 | 0xB0 | Reckoning 1D Protocol |
 | 0xB4 | Reckoning 3D Protocol |
 
-## 6.40
+## 6.32 - 6.40
 All protocol ids were changed.
 
 | ID | Protocol |
@@ -564,8 +564,11 @@ All protocol ids were changed.
 | 1 | Net Protocol |
 | 2 | Turn Protocol |
 | 3 | [[RTT Protocol]] |
+| 4 | Sync Protocol |
 | 5 | [[Unreliable Protocol]] |
 | 6 | Clone Protocol (atomic) |
+| 7 | Clone Protocol (event) |
+| 8 | Clone Protocol (broadcast event) |
 | 9 | Clone Protocol (clock) |
 | 10 | [[Reliable Protocol]] |
 | 11 | [[Broadcast Reliable Protocol]] |
