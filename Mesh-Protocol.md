@@ -49,7 +49,7 @@ The following version numbers are advertised during the [connection request](Sta
 | [StationAddress] | Station address |
 | Uint32 | Ack id |
 
-*5.11 - 5.18:*
+*5.11 - 5.44:*
 
 | Type | Description |
 | --- | --- |
