@@ -90,8 +90,8 @@ If the join response is too big to be sent in a single packet it is split into f
 | Uint8 | Fragment index |
 | Uint8 | Number of station info entries in current fragment (N) |
 | Uint8 | Base index of station info in current fragment |
-| Uint8 | Maximum number of stations in first mesh |
-| Uint8 | Maximum number of stations in second mesh |
+| Uint8 | Maximum number of stations in active session |
+| Uint8 | Maximum number of stations in buffer session |
 | Uint16 | Padding |
 | [StationInfo] (xN) | Station info list |
 | Uint32 | Ack id |
@@ -108,9 +108,9 @@ If the join response is too big to be sent in a single packet it is split into f
 | Uint8 | Fragment index |
 | Uint8 | Number of station info entries in current fragment (N) |
 | Uint8 | Base index of station info entries in current fragment |
-| Uint8 | Maximum number of stations in first mesh |
-| Uint8 | Maximum number of stations in second mesh |
-| Uint8 | Maximum number of stations (total) |
+| Uint8 | Maximum number of stations in active session |
+| Uint8 | Maximum number of stations in buffer session |
+| Uint8 | Maximum number of stations in total |
 | Uint8 | Padding |
 | Uint32 | Update counter (incremented on each mesh update) |
 | [StationInfo] (xN) | Station info list |
