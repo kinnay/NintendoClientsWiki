@@ -47,7 +47,7 @@ The join request is sent to the host of the mesh. It is retransmitted every 500 
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (1) |
-| Uint8 | Station index (always 0xFD) |
+| Uint8 | Local station index (always 253) |
 | Uint16 | Padding (always 0) |
 | [StationAddress] | Station address |
 | Uint32 | Ack id |
@@ -57,7 +57,7 @@ The join request is sent to the host of the mesh. It is retransmitted every 500 
 | Type | Description |
 | --- | --- |
 | Uint8 | Message type (1) |
-| Uint8 | Station index (Always 0xFD) |
+| Uint8 | Local station index (always 253) |
 | Uint32 | Ack id |
 
 # Join response (success)
