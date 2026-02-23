@@ -8,6 +8,8 @@ This page describes the protocol behind the Animal Crossing: New Horizons island
 | 5 | Unknown |
 | 6 | Unknown |
 
+Record type 0 and 1 seem to be unused. This suggests that they are either only present in a debug build, or they were present in an early version of the tool but later removed.
+
 ## Record Type 2
 This record contains information about the peers that are connected to the network. Interestingly, this record has room for up to 8 peers, even though the underlying LDN network only allows two nodes to be connected at once.
 
