@@ -78,7 +78,7 @@ The following module ids are currently known:
 | 2136 | `psm` | Power management |
 | 2137 | `nim` | [Network installation manager](#nim-error-codes) |
 | 2138 | `psc` | Power state control |
-| 2139 | `tc` | Temperature control |
+| 2139 | `tc` | Thermal coordinator |
 | 2140 | `usb` | USB |
 | 2141 | `nsd` | Network service discovery |
 | 2142 | `pctl` | Parental controls |
@@ -99,7 +99,7 @@ The following module ids are currently known:
 | 2157 | `arp` | Application registry |
 | 2158 | `updater` | Updater |
 | 2159 | `swkbd` | Software keyboard |
-| 2160 | `netdiag` | Network checks |
+| 2160 | `netdiag` | Network diagnostics |
 | 2161 | `nfc::mifare` | Mifare |
 | 2162 | `err` | Errors |
 | 2163 | `fatal` | Fatal errors |
@@ -112,7 +112,7 @@ The following module ids are currently known:
 | 2170 | `pl` | Platform services |
 | 2171 | `cdmsc` | USB mass storage |
 | 2172 | `audioctrl` | Audio control |
-| 2173 | `lbl` | Light sensor |
+| 2173 | `lbl` | Backlight control |
 | 2175 | `jit` | JIT compilation |
 | 2176 | `hdcp` | HDCP |
 | 2177 | `omm` | Operation mode manager |
@@ -156,19 +156,36 @@ The following module ids are currently known:
 | 2216 | `migration` | User migration |
 | 2217 | `migration::idc` | User migration (IDC) |
 | 2218 | `hidbus` | HID bus |
-| 2219 | `ens` | Extended network service (game-specific HTTP services) |
+| 2219 | `ens` | Extended network services (game-specific HTTP services) |
 | 2220 | `nd` | Neighbour detection |
 | 2221 | `ndd` | Neighbour device protocol |
 | 2222 | `toycon` | Toycon |
 | 2223 | `websocket` | Websockets |
 | 2224 | `socketio` | Socket I/O |
 | 2306 | `nex` | [Game servers (old)](#nex-error-codes)<br>[Error descriptions](#nex-error-descriptions) |
+| 2307 | | Voice chat |
+| 2308 | | Item catalog |
+| 2309 | | Consumable service management |
 | 2318 | `pia` | [Peer to peer (new)](#pia-error-codes-new) |
 | 2321 | `npln` | Game servers (new) |
+| 2522 | | Crash reporting tool |
 | 2618 | `pia` | [Peer to peer (old)](#pia-error-codes) |
+| 2621 | | Mandom (subscription management) |
+| 2622 | | Sugar (consumable service management) |
 | 2623 | `eagle` | [Relay servers](#eagle-error-codes) |
-| 2811 | | Nintendo eShop |
+| 2800 | | Web applet (application) |
+| 2801 | | Post album |
+| 2802 | | View album |
+| 2807 | | Web applet (news) |
+| 2808 | | Web applet (offline) |
+| 2811 | | EC applet |
+| 2813 | | Nintendo eShop |
+| 2814 | | Internet settings |
 | 2815 | `coral` | [Voice chat](#coral-error-codes) |
+| 2818 | | Voice chat |
+| 2819 | | Application rights |
+| 2820 | | Nintendo eShop (local) |
+| 2821 | | NSO applet |
 
 # SSL Error Codes
 | Error Codes | Description |
