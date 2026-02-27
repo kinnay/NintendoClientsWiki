@@ -223,6 +223,8 @@ The exact method with which the variable id is generated varies per Pia version,
 ## Service Variable ID
 Like the [variable id](#variable-id), the service variable id uniquely identifies a station in the current session and may change across sessions. The service variable id depends on the network type. In old Pia versions, the service variable id was called "service connection id (scid)" instead.
 
+In Pia 6.x, the concept of the service variable id was removed.
+
 **NEX** *(Up to 5.44):*
 
 The services variable id is your Rendez-Vous connection id (RVCID). This is received from the server when the client registers itself with the [secure connection protocol](Secure-Protocol).
