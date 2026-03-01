@@ -34,3 +34,18 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | 15 | ? |
 | 16 | ? |
 | 17 | ? |
+
+## Join Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (0) |
+| 0x1 | 1 | Number of protocols (N) |
+| 0x2 | 2 * N | Protocol list (see below) |
+| | ... | ... |
+
+The protocol list contains the following for every available protocol.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Protocol id |
+| 0x1 | 1 | Protocol version |
