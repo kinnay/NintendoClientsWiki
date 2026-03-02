@@ -1,7 +1,7 @@
 [Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Session Protocol (new)
 ---
 
-This page describes the session protocol that can be found in Pia version 6.x. It seems to combine the functions of the [[station protocol]] and [[mesh protocol]] into one.
+This page describes the session protocol that can be found in Pia version 6.x. It combines the functions of the [[station protocol]] and [[mesh protocol]] into one.
 
 *Added in 6.16 or earlier:*
 | Type | Description |
@@ -36,12 +36,23 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | 17 | ? |
 
 ## Join Request
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 1 | Message type (0) |
-| 0x1 | 1 | Number of protocols (N) |
-| 0x2 | 2 * N | Protocol list (see below) |
-| | ... | ... |
+| Type | Description |
+| --- | --- |
+| Uint8 | Message type (0) |
+| Uint8 | Number of protocols (N) |
+| Uint8 (N * 2) | Protocol list (see below) |
+| Uint32 | Random value |
+| Uint64 | Source constant id |
+| Uint16 | Source variable id |
+| Uint8 | NAT mapping |
+| Uint8 | Is private IPv6 |
+| Uint8 (32) | Identification token (ascii) |
+| [StationAddress](#stationaddress) | Station address (IPv4 or IPv6) |
+| Uint64 | Destination constant id |
+| Uint16 | Destination variable id |
+| Uint8 | Number of players (P) |
+| Uint8 | Number of participants |
+| [PlayerInfo](#playerinfo) (P) | Player info |
 
 The protocol list contains the following for every available protocol.
 
@@ -49,3 +60,21 @@ The protocol list contains the following for every available protocol.
 | --- | --- | --- |
 | 0x0 | 1 | Protocol id |
 | 0x1 | 1 | Protocol version |
+
+## StationAddress
+This structure is a wrapper around the [InetAddress](Pia-Types#inetaddress) type, but includes information about whether the address is IPv4 or IPv6.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | 0 = IPv4, 1 = IPv6 |
+| 0x1 | 6 or 18 | [InetAddress](Pia-Types#inetaddress), the size depends on whether it is IPv4 or IPv6 |
+
+## PlayerInfo
+The player name may consist of up to 20 characters.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | Player id |
+| 0x10 | 4 | Player name size (in bytes) |
+| 0x14 | 1 | Player name encoding (1 = UTF-8, 2 = UTF-16) |
+| 0x15 | | Player name |
