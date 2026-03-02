@@ -38,10 +38,13 @@ The network property request and response messages were later renamed to session
 | --- | --- | --- |
 | 0x0 | 4 | [Net message header](#net-message-header) |
 | 0x4 | 4 | Sequence id |
-| 0x8 | 2 | Host variable id |
-| 0xA | 8 | Host constant id |
+| 0x8 | 2 | Host [variable id] |
+| 0xA | 8 | Host [constant id] |
 | 0x12 | 8 | Network id |
 | 0x1A | 1 | Is network open |
 | 0x1B | 2 | Station list size |
 | 0x1D | 1 | Is migrating host |
 | 0x1E | | Payload |
+
+[constant id]: Pia-Types#constant-id
+[variable id]: Pia-Types#variable-id
