@@ -3,6 +3,8 @@
 
 The difference between the reliable and unreliable protocol is that the reliable protocol wraps messages in a [reliable sliding window](Pia-Types#reliableslidingwindow). The reliable protocol is not used by Pia however, and support for it was removed in version *5.6*.
 
+In Pia 6.x, the station protocol and [[mesh protocol]] were merged into the [session protocol](Session-Protocol-(new)).
+
 | Port | Description |
 | --- | --- |
 | 0 | Unreliable |
