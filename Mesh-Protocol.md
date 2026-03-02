@@ -1,6 +1,8 @@
 [Pia](Pia-Overview) > [Protocols](Pia-Protocols) > Mesh Protocol
 ---
 
+This page describes the mesh protocol for Pia 5.x. In Pia 6.x, the [[station protocol]] and mesh protocol were merged into the [session protocol](Session-Protocol-(new)).
+
 | Protocol Port | Description |
 | --- | --- |
 | 0 | Unreliable |
