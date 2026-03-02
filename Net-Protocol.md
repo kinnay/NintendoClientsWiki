@@ -38,6 +38,7 @@ The network property request and response messages were later renamed to session
 
 ## Update Network Connection Status
 *6.26 - 6.39:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | [Net message header](#net-message-header) |
@@ -53,6 +54,8 @@ The network property request and response messages were later renamed to session
 The payload contains N copies of the [NetStation](#netstation) structure.
 
 ## NetStation
+*6.26 - 6.39:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Host migration state |
