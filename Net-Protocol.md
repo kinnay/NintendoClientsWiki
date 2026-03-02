@@ -6,6 +6,7 @@ This page describes the net protocol that can be found in Pia 6.x.
 This protocol is the successor of the [[local protocol]] that was found in Pia 5.x. Unlike the local protocol, the net protocol is used for all network types and not just LDN. Its feature set has also expanded a bit.
 
 ## Message Types
+*6.26 - 6.39:*
 | Type | Description |
 | --- | --- |
 | 0x11 | [Update network connection status](#update-network-connection-status) |
@@ -27,6 +28,8 @@ This protocol is the successor of the [[local protocol]] that was found in Pia 5
 The network property request and response messages were later renamed to session property request and response.
 
 ## Net Message Header
+*6.26 - 6.39:*
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Header version |
@@ -34,6 +37,7 @@ The network property request and response messages were later renamed to session
 | 0x2 | 2 | Payload size |
 
 ## Update Network Connection Status
+*6.26 - 6.39:*
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | [Net message header](#net-message-header) |
