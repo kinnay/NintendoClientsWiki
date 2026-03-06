@@ -63,7 +63,7 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | Uint8 | Message type (0) |
 | Uint8 | Number of protocols (N) |
 | [ProtocolInfo](#protocolinfo) (N) | Protocol info |
-| Uint16 | Unknown |
+| Uint16 | Application communication version |
 | Uint32 | Unknown |
 | Uint64 | Source constant id |
 | Uint16 | Source variable id |
