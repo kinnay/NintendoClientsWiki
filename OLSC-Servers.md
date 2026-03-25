@@ -60,7 +60,8 @@ https://scsi-policy-lp1.cdn.nintendo.net
 
 | Method | URL |
 | --- | --- |
-| GET | [`/api/nx/v1/application_policy/<id>/<version>`](#get-apinxv1application_policyidversion |
+| GET | [`/api/nx/v1/application_policy/<id>/<version>`](#get-apinxv1application_policyidversion) |
+| GET | `/api/nx/v2/application_policy/<id>/<version>` |
 | ? | `/api/nx/v1/save_data_migration_policy/<id>/<id>` |
 
 ### SCSI migration server
