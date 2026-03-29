@@ -240,7 +240,9 @@ The service variable id is the CRC32 hash of your MAC address.
 ## Session ID
 The session id uniquely identifies a matchmake session.
 
-**NEX:** the session id is the [gathering id](https://github.com/kinnay/NintendoClients/wiki/Match-Making-Types#gathering-structure) received from NEX.
+**NEX:**
+
+The session id is the [gathering id](https://github.com/kinnay/NintendoClients/wiki/Match-Making-Types#gathering-structure) received from NEX.
 
 **LDN**:
 
