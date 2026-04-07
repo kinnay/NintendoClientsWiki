@@ -3,7 +3,7 @@
 
 This page describes the session protocol that can be found in Pia version 6.x. It combines the functions of the [[station protocol]] and [[mesh protocol]] into one.
 
-*Added in 6.16 or earlier:*
+*Up to 6.23:*
 | Type | Description |
 | --- | --- |
 | 0 | [Join request](#join-request) |
@@ -18,14 +18,18 @@ This page describes the session protocol that can be found in Pia version 6.x. I
 | 9 | Start host migration |
 | 10 | Start host migration ack |
 
-*Added in 6.26 or earlier:*
+*6.25 - 6.39:*
+
+In addition to the above:
 
 | Type | Description |
 | --- | --- |
 | 11 | Detect keep alive timeout |
 | 12 | Kick request |
 
-*Added in 6.40 or earlier:*
+*6.40 - 6.42:*
+
+In addition to the above:
 
 | Type | Description |
 | --- | --- |
