@@ -6,7 +6,7 @@ This page describes the net protocol that can be found in Pia 6.x.
 This protocol is the successor of the [[local protocol]] that was found in Pia 5.x. Unlike the local protocol, the net protocol is used for all network types and not just LDN. Its feature set has also expanded a bit.
 
 ## Message Types
-*6.26 - 6.39:*
+*6.16 - 6.39:*
 | Type | Description |
 | --- | --- |
 | 0x11 | [Update network connection status](#netupdatenetworkconnectionstatusmessage) |
@@ -28,7 +28,7 @@ This protocol is the successor of the [[local protocol]] that was found in Pia 5
 The network property request and response messages were later renamed to session property request and response.
 
 ## NetMessageHeader
-*6.26 - 6.39:*
+*6.16 - 6.39:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ The network property request and response messages were later renamed to session
 ## NetUpdateNetworkConnectionStatusMessage
 Whenever the network changes, this method is broadcast every 500 milliseconds until all intended receivers have acknowledged it.
 
-*6.26 - 6.39:*
+*6.16 - 6.39:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ Whenever the network changes, this method is broadcast every 500 milliseconds un
 The payload contains N copies of the [NetStation](#netstation) structure.
 
 ## NetUpdateNetworkConnectionStatusAckMessage
-*6.26 - 6.39:*
+*6.39:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -64,7 +64,7 @@ The payload contains N copies of the [NetStation](#netstation) structure.
 | 0x4 | 4 | Sequence id |
 
 ## NetConnectNetworkAckMessage
-*6.26:*
+*6.16 - 6.39:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -74,7 +74,7 @@ The payload contains N copies of the [NetStation](#netstation) structure.
 | 0x37 | 2 | Number of stations |
 
 ## NetStation
-*6.26 - 6.39:*
+*6.39:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
