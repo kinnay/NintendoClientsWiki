@@ -2,6 +2,7 @@ In LDN and LAN mode, [Pia](Pia-Overview) derives encryption keys using a game-sp
 
 | Game | Key |
 | --- | --- |
+| Game Boy - Nintendo Switch Online | `54ddaeaedb3ce1a39f793c962bf4a36c` |
 | Mario Kart 8 Deluxe | `ABCDEFGHIJKLMNOP` |
 | Pokemon Fire Red | `83ca7fab734c34633b10183526c1e85b` |
 | Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
