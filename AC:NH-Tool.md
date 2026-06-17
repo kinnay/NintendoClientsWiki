@@ -18,6 +18,27 @@ In addition, the following stream ids are used for the [[stream broadcast reliab
 
 Note: theoretically, the implementation seems to support stream id 0 up to 20. But only 17 seems to be used. This is likely because some of the code of the tool is shared with the real game.
 
+## Application Data
+The following application data is broadcasted by the Pia session:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | Version (1) |
+| 0x2 | 129 | Device name (UTF-8) |
+| 0x83 | 64 | `nn::oe::LaunchRequiredVersion` |
+| 0xC3 | 5 | Padding |
+| 0xC8 | 8 | Save data usable size |
+| 0xD0 | 8 | Save data journal size |
+| 0xD8 | 1 | Has land name |
+| 0xD9 | 1 | Padding |
+| 0xDA | 2 * 11 | Land name (UTF-16) |
+| 0xF0 | 1 | Unknown value related to land name |
+| 0xF1 | 7 | Padding |
+| 0xF8 | 8 | Total file size |
+| 0x100 | 4 | Number of files |
+| 0x104 | 1 | Save data restore flag |
+| 0x105 | 3 | Padding |
+
 ## Record Type 2
 This record contains information about the peers that are connected to the network. Interestingly, this record has room for up to 8 peers, even though the underlying LDN network only allows two nodes to be connected at once. This is likely because some of the code of the tool is shared with the real game.
 
