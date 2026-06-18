@@ -25,3 +25,6 @@ Welcome to the NintendoClients wiki!
 * [Switch Title Database](https://kinnay.github.io)
 * [[Switch 2 Titles]]
 * [[Credits]]
+
+## Contributing
+A mirror repository has been set up to allow pull requests to be made. If you would like to contribute to the wiki, feel free to submit a pull request [here](https://github.com/kinnay/NintendoClientsWiki).
