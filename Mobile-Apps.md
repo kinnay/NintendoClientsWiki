@@ -1,4 +1,4 @@
-Nintendo's mobile games may also use the [Pia](Pia-Overview) library.
+## Bundle IDs
 
 | Bundle ID | App |
 | --- | --- |
@@ -19,3 +19,13 @@ Nintendo's mobile games may also use the [Pia](Pia-Overview) library.
 | `com.nintendo.znej` | Nintendo Store |
 | `com.nintendo.znma` | Nintendo Switch Parental Controls |
 | `com.nintendo.znsa` | Nintendo Today! |
+
+## Pia Versions
+| Game | Version | Pia version |
+| --- | --- | --- |
+| Mario Kart Tour | 3.7.0 | 7.0.0 |
+| Mario Kart Tour | 3.6.4 | 6.40.0 |
+| Mario Kart Tour | 3.6.3 | 6.40.0 |
+| Mario Kart Tour | 3.6.2 | 6.35.0 |
+| Mario Kart Tour | 3.6.1 | 6.35.0 |
+| Mario Kart Tour | 3.6.0 | 6.35.0 |
