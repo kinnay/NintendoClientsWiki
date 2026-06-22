@@ -336,6 +336,10 @@ This method does not return anything.
 | [PID] | pid |
 
 # (27) NintendoCreateAccount
+This method is used by the 3DS and Wii U to create a user on a NEX server. It is only used by firmware, never by games. The method is invoked on the friends server only, which is shared between the 3DS and Wii U.
+
+Nintendo customized the account procedure a bit compared to the original Quazal Rendez-Vous library. When the system calls `NintendoCreateAccount`, the `strKey` field is generated from the password `dummy`. The real password is provided elsewhere (the exact procedure still needs to be reverse engineered).
+
 ## Request
 | Type | Name |
 | --- | --- |
