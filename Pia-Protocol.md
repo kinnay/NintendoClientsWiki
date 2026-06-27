@@ -6,6 +6,8 @@ These packets are usually sent directly from one console to another through UDP,
 All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes an unencrypted [footer](#footer).
 
 ## Header
+The header is not encrypted.
+
 *Up to 5.6:*
 
 | Offset | Size | Description |
@@ -144,9 +146,9 @@ In LAN mode and LDN mode, packets that are sent to multiple consoles at once are
 ## Messages
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one message  (the number of messages is determined from the size of packet).
 
-All messages are padded such that their size is a multiple of 4 bytes.
-
 *Up to 5.4:*
+
+All messages are padded so that their size is a multiple of 4 bytes.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -163,6 +165,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 
 *5.6 - 5.10:*
 
+All messages are padded so that their size is a multiple of 4 bytes.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Message flags](#message-flags) |
@@ -176,6 +180,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | | | Padding |
 
 *5.11 - 5.12:*
+
+All messages are padded so that their size is a multiple of 4 bytes.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -191,6 +197,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 
 *5.14 - 5.17:*
 
+All messages are padded so that their size is a multiple of 4 bytes.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Message flags](#message-flags) |
@@ -204,6 +212,8 @@ All messages are padded such that their size is a multiple of 4 bytes.
 | | | Padding |
 
 *5.18 - 5.26:*
+
+All messages are padded so that their size is a multiple of 4 bytes.
 
 Fields that are not present are copied from the previous message.
 
@@ -221,6 +231,8 @@ Fields that are not present are copied from the previous message.
 
 *5.27 - 6.30:*
 
+All messages are padded so that their size is a multiple of 4 bytes.
+
 Fields that are not present are copied from the previous message.
 
 | Type | Description |
@@ -236,7 +248,7 @@ Fields that are not present are copied from the previous message.
 
 *6.32 - 6.40:*
 
-Fields that are not present are copied from the previous message. It seems that the messages are no longer padded to a multiple of 4 bytes.
+Fields that are not present are copied from the previous message. The messages are no longer padded to a multiple of 4 bytes.
 
 | Type | Description |
 | --- | --- |
@@ -247,7 +259,6 @@ Fields that are not present are copied from the previous message. It seems that 
 | Uint8 | Protocol port (protocol-specific). *Only present if `flags & 8`.* |
 | Uint8 | Protocol-specific. *Only present if `flags & 16`.* |
 | Bytes | Payload (protocol-specific) |
-| | Padding |
 
 ### Message flags
 *Up to 5.4:*
