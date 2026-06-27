@@ -144,7 +144,8 @@ Up to Pia version 6.30, the footer is transmitted in plaintext. In Pia version 6
 | Flag | Description |
 | --- | --- |
 | 1 | Payload is compressed with ZSTD |
-| 2 | Unknown |
+| 2 | Skip destination variable id check |
+| 4 | Skip network connection check |
 
 ## Messages
 This part of the packet may be [encrypted](#encryption). A packet may contain more than one message  (the number of messages is determined from the size of packet).
