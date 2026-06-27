@@ -3,7 +3,7 @@
 
 These packets are usually sent directly from one console to another through UDP, with no server in between. Everything is encoded in big-endian byte order.
 
-All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes an unencrypted [footer](#footer).
+All packets consist of an unencrypted [header](#header), which is followed by one or more [messages](#messages), and sometimes a [footer](#footer).
 
 ## Header
 The header is not encrypted.
@@ -81,6 +81,7 @@ The header is not encrypted.
 | 0x14 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
 *6.32 - 7.2:*
+The footer is now also encrypted along with the payload.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -136,6 +137,8 @@ If no packet has been received from the target yet, the destination timer is set
 
 ### Footer
 In LAN mode and LDN mode, packets that are sent to multiple consoles at once are sent to the broadcast address of the network. In that case, the footer contains the [variable id](Pia-Types#variable-id) of all receiving consoles as 16-bit integers.
+
+Up to Pia version 6.30, the footer is transmitted in plaintext. In Pia version 6.32 and later, the payload and footer are encrypted together.
 
 ### Packet Flags
 | Flag | Description |
