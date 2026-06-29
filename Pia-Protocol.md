@@ -81,6 +81,7 @@ The header is not encrypted.
 | 0x14 | 8 | [AES-GCM authentication tag](#encryption) (first 8 bytes) |
 
 *6.32 - 7.2:*
+
 The footer is now also encrypted along with the payload.
 
 | Offset | Size | Description |
