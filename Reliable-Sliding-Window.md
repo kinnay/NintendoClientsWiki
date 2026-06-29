@@ -56,6 +56,18 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | 0x9 | 4*N | Multicast [constant ids](Pia-Types#constant-id) |
 | | | Payload |
 
+*7.0:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | [Flags](#flags) |
+| 0x1 | 2 | Payload size |
+| 0x3 | 2 | Sequence id |
+| 0x5 | 2 | Lowest sequence id pending ack |
+| 0x7 | 1 | Number of bitmap words (N) |
+| 0x8 | 4*N | Bitmap words |
+| | | Payload |
+
 ### Flags
 | Flag | Description |
 | --- | --- |
