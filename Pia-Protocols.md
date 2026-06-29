@@ -520,7 +520,7 @@ The broadcast event protocol was added to the clone protocol.
 | 0x73 | [[Clone Protocol]] |
 | 0x74 | Clone Protocol (atomic) |
 | 0x75 | Clone Protocol (event) |
-| 0x76 | Clone Protocol (broadcast event) |
+| 0x76 | [Clone Protocol (broadcast event)] |
 | 0x77 | [Clone Protocol (clock)] |
 | 0x7B | Voice Protocol |
 | 0x7C | [[Reliable Protocol]] |
@@ -544,7 +544,7 @@ The Pia library was redesigned for NPLN.
 | 0x68 | [[Unreliable Protocol]] |
 | 0x74 | Clone Protocol (atomic) |
 | 0x75 | Clone Protocol (event) |
-| 0x76 | Clone Protocol (broadcast event) |
+| 0x76 | [Clone Protocol (broadcast event)] |
 | 0x77 | [Clone Protocol (clock)] |
 | 0x7B | Voice Protocol |
 | 0x7C | [[Reliable Protocol]] |
@@ -569,8 +569,8 @@ All protocol ids were changed.
 | 5 | [[Unreliable Protocol]] |
 | 6 | Clone Protocol (atomic) |
 | 7 | Clone Protocol (event) |
-| 8 | Clone Protocol (broadcast event) |
-| 9 | Clone Protocol (clock) |
+| 8 | [Clone Protocol (broadcast event)] |
+| 9 | [Clone Protocol (clock)] |
 | 10 | [[Reliable Protocol]] |
 | 11 | [[Broadcast Reliable Protocol]] |
 | 12 | [[Stream Broadcast Reliable Protocol]] |
@@ -593,8 +593,8 @@ Some protocol ids were changed.
 | 5 | [[Unreliable Protocol]] |
 | 6 | Clone Protocol (atomic) |
 | 7 | Clone Protocol (event) |
-| 8 | Clone Protocol (broadcast event) |
-| 9 | Clone Protocol (clock) |
+| 8 | [Clone Protocol (broadcast event)] |
+| 9 | [Clone Protocol (clock)] |
 | 10 | [[Reliable Protocol]] |
 | 11 | [[Broadcast Reliable Protocol]] |
 | 12 | [[Stream Broadcast Reliable Protocol]] |
@@ -608,3 +608,4 @@ Some protocol ids were changed.
 [NAT Protocol]: NAT-Traversal-Protocol-(Pia)
 [WAN NAT Protocol]: NAT-Traversal-Protocol-(Pia)
 [Clone Protocol (clock)]: Clock-Protocol-(Clone)
+[Clone Protocol (broadcast event)]: Broadcast-Event-Clone-Protocol
