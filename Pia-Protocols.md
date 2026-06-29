@@ -22,6 +22,7 @@ This page lists the protocols that may be implemented in the given Pia versions.
 * [5.29 - 5.44](#529---544)
 * [6.16 - 6.30](#616---630)
 * [6.32 - 6.40](#632---640)
+* [7.0](#70)
 
 ## 3.3 - 3.10
 This is the earliest Pia version that we are aware of.
@@ -579,6 +580,29 @@ All protocol ids were changed.
 | 16 | WAN NAT Traversal Protocol |
 | 17 | Reckoning 1D Protocol |
 | 18 | Reckoning 3D Protocol |
+
+## 7.0
+Some protocol ids were changed.
+
+| ID | Protocol |
+| --- | --- |
+| 0 | [[Net Protocol]] |
+| 1 | [[Session Protocol (new)]] |
+| 3 | [[RTT Protocol]] |
+| 4 | Sync Protocol |
+| 5 | [[Unreliable Protocol]] |
+| 6 | Clone Protocol (atomic) |
+| 7 | Clone Protocol (event) |
+| 8 | Clone Protocol (broadcast event) |
+| 9 | Clone Protocol (clock) |
+| 10 | [[Reliable Protocol]] |
+| 11 | [[Broadcast Reliable Protocol]] |
+| 12 | [[Stream Broadcast Reliable Protocol]] |
+| 13 | NAT Traversal Result Protocol |
+| 14 | [[Monitoring Data Protocol]] |
+| 15 | WAN NAT Traversal Protocol |
+| 16 | Reckoning 1D Protocol |
+| 17 | Reckoning 3D Protocol |
 
 [Feedback Protocol]: Monitoring-Data-Protocol
 [NAT Protocol]: NAT-Traversal-Protocol-(Pia)
