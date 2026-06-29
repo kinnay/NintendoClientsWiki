@@ -250,7 +250,7 @@ Fields that are not present are copied from the previous message.
 | Bytes | Payload (protocol-specific) |
 | | Padding |
 
-*6.32 - 6.40:*
+*6.32 - 7.0:*
 
 Fields that are not present are copied from the previous message. The messages are no longer padded to a multiple of 4 bytes.
 
@@ -321,7 +321,7 @@ A number of protocols now support compression.
 | 0x40 | Unknown |
 | 0x80 | Unknown |
 
-*6.32 - 6.39:*
+*6.32 - 7.0:*
 
 | Mask | Description |
 | --- | --- |
@@ -347,7 +347,7 @@ Packets are encrypted and signed with the [session key](#session-key). The messa
 
 If encryption is enabled, the messages are encrypted with AES-ECB. The HMAC-MD5 of the whole packet (both header and encrypted payload) is appended to the packet.
 
-*5.7 - 6.30:*
+*5.7 - 7.0:*
 
 If encryption is enabled, the messages are encrypted with AES-GCM. The authentication tag is stored in the [header](#header). No other signature is appended to the packet.
 
