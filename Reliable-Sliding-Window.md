@@ -5,6 +5,7 @@ The reliable sliding window ensures that all packets arrive and in the correct o
 * [[Reliable protocol]]
 * [[Broadcast reliable protocol]]
 * [[Stream broadcast reliable protocol]]
+* [Broadcast event protocol (clone)](Broadcast-Event-Clone-Protocol)
 
 When a reliable sliding window is used, messages are wrapped as follows:
 
