@@ -16,6 +16,16 @@ Welcome to the NintendoClients wiki!
 * [[LAN Protocol]]
 * [[LDN Protocol]]
 
+## Wii U Games
+* [Mario Kart 8](Mario-Kart-8-Protocol)
+
+## Switch Games
+* [Animal Crossing: Island Transfer Tool](AC:NH-Tool)
+* [Super Mario Maker 2](SMM-2-Protocol)
+
+## Switch 2 Games
+* [[Mario Kart World]]
+
 ## Other pages
 * [[Server List]]
 * [[Game Server List]]
