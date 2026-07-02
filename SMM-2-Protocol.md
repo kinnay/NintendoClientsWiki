@@ -1,5 +1,13 @@
 SMM 2 uses [ENL](ENL-Protocol).
 
+### Application Data
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | Always 0 |
+| 0x8 | 24 | Player name (UTF-16-LE) |
+| 0x20 | 88 | [Mii](Mii-Data-(Switch)) |
+| 0x78 | 16 | Padding |
+
 ### Matching Packet
 
 | Offset | Size | Description |
