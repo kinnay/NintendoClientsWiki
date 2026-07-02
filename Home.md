@@ -20,7 +20,7 @@ Welcome to the NintendoClients wiki!
 * [Mario Kart 8](Mario-Kart-8-Protocol)
 
 ## Switch Games
-* [Animal Crossing: Island Transfer Tool](AC:NH-Tool)
+* [Animal Crossing: Island Transfer Tool](./AC:NH-Tool)
 * [Super Mario Maker 2](SMM-2-Protocol)
 
 ## Switch 2 Games
