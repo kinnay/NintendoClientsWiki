@@ -147,7 +147,7 @@ getSendData()
 getSendData()
 ```
 
-Most of these have a standard implementation, but the following methods are interested:
+Most of these have a standard implementation, but the following methods are interesting:
 * `getSendBufferSize` returns the size of the payload.
 * `getMySendData` is usually called to obtain a pointer to the payload. By looking for cross references to `getMySendData` it is possible to find functions that modify the payload.
 * `send` sets a flag that indicates whether the record should be transmitted or not.
