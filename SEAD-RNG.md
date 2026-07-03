@@ -38,4 +38,4 @@ class Random:
         return (self.u32() * max) >> 32
 ```
 
-The random number generator is used by [ENL](ENL-Key-Generation) to generate the game-specific key for the LAN protocol and by [Pia](Pia-Protocol#encryption) to generate the session key in LDN mode.
+The random number generator is used by [ENL](ENL-Key-Generation) to generate the game-specific [Pia](Pia-Protocol#encryption) key and also by [Pia](Pia-Protocol#encryption) to generate the session key in LDN mode.
