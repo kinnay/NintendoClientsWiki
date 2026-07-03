@@ -3,18 +3,22 @@ SEAD is Nintendo's private standard library. It is used by various first party g
 Its random number generator works as follows:
 ```python
 class Random:
-    def __init__(self, seed):
-        multiplier = 0x6C078965
+    def __init__(self, seed: int | list[int]):
+        if isinstance(seed, int):
+            multiplier = 0x6C078965
         
-        temp = seed
-        self.state = []
-        for i in range(1, 5):
-            temp ^= temp >> 30
-            temp = (temp * multiplier + i) & 0xFFFFFFFF
-            self.state.append(temp)
+            temp = seed
+            self.state = []
+            for i in range(1, 5):
+                temp ^= temp >> 30
+                temp = (temp * multiplier + i) & 0xFFFFFFFF
+                self.state.append(temp)
+
+        else:
+            self.state = seed
     
     # Returns a random 32-bit integer
-    def u32(self):
+    def u32(self) -> int:
         temp = self.state[0]
         temp = (temp ^ (temp << 11)) & 0xFFFFFFFF
         temp ^= temp >> 8
@@ -26,11 +30,11 @@ class Random:
         self.state[3] = temp
         return temp
 
-    def u64(self):
+    def u64(self) -> int:
         return (self.u32() << 32) | self.u32()
     
     # Returns a random integer smaller than 'max'
-    def uint(self, max):
+    def uint(self, max: int) -> int:
         return (self.u32() * max) >> 32
 ```
 
