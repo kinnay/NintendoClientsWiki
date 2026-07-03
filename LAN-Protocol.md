@@ -254,7 +254,7 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | 0x2A | 384 | Application data |
 | 0x1AA | 4 | Application data size |
 | 0x1AE | 1 | Is opened |
-| 0x1AF | 18 | Host address ([StationAddress])(Pia-Types#stationaddress) |
+| 0x1AF | 18 | Host address ([StationAddress](Pia-Types#stationaddress)) |
 | 0x1C1 | 8 | Host constant id |
 | 0x1C9 | 4 | Host variable id |
 | 0x1CD | 4 | Host service variable id |
