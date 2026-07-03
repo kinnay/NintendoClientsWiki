@@ -240,26 +240,26 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 
 *5.10 - 5.44:*
 
-| Type | Description |
-| --- | --- |
-| Uint32 | Game mode |
-| Uint32 | Session id |
-| Uint32 (x6) | Attributes |
-| Uint16 | Current number of participants |
-| Uint16 | Minimum number of participants |
-| Uint16 | Maximum number of participants |
-| Uint8 | [System communication version](#system-communication-version) |
-| Uint8 | Application communication version |
-| Uint16 | Session type |
-| Bytes (0x180) | Application data |
-| Uint32 | Application data size |
-| Bool | Is opened |
-| [StationAddress](Pia-Types#stationaddress) | Host address |
-| Uint64 | Host constant id |
-| Uint32 | Host variable id |
-| Uint32 | Host service variable id |
-| [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
-| Bytes (0x20) | [Session key param](#session-key-param) |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Game mode |
+| 0x4 | 4 | Session id |
+| 0x8 | 4 * 6 | Attributes |
+| 0x20 | 2 | Current number of participants |
+| 0x22 | 2 | Minimum number of participants |
+| 0x24 | 2 | Maximum number of participants |
+| 0x26 | 1 | [System communication version](#system-communication-version) |
+| 0x27 | 1 | Application communication version |
+| 0x28 | 2 | Session type |
+| 0x2A | 384 | Application data |
+| 0x1AA | 4 | Application data size |
+| 0x1AE | 1 | Is opened |
+| 0x1AF | 18 | Host address ([StationAddress])(Pia-Types#stationaddress) |
+| 0x1C1 | 8 | Host constant id |
+| 0x1C9 | 4 | Host variable id |
+| 0x1CD | 4 | Host service variable id |
+| 0x1D1 | 50 * 16 | [LanStationInfo](#lanstationinfo) for up to 16 players |
+| 0x4F1 | 32 | [Session key param](#session-key-param) |
 
 #### LanStationInfo
 | Offset | Size | Description |
