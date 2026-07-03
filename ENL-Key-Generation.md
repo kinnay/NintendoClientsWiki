@@ -35,7 +35,18 @@ def create_key(rand, table, size):
 rng = sead.Random([0x58F9A90D, 0xF329D9AD, 0x781BCDC, 0x9DF24013])
 table = [rng.u32() for i in range(64)]
 
+# The seed is the same as the game mode
 rand = sead.Random(31)
+print(create_key(rand, table, 16))
+```
+
+### Animal Crossing: New Horizons
+```python
+rng = sead.Random([0x58F9A90D, 0xF329D9AD, 0x781BCDC, 0x9DF24013])
+table = [rng.u32() for i in range(64)]
+
+# The seed is the same as the game mode
+rand = sead.Random(0)
 print(create_key(rand, table, 16))
 ```
 
