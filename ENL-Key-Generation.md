@@ -1,8 +1,8 @@
-The page describes how [ENL](ENL-Protocol) generates the [game-specific key](Pia-Game-Keys) for [Pia](Pia-Overview) in LDN and LAN mode.
+The page describes how [ENL](ENL-Protocol) generates the [game-specific key](Pia-Game-Keys) for [Pia](Pia-Overview) in LDN, LAN and NPLN mode.
 
 ### Algorithm
 
-To generate the key, ENL uses the random number generator provided by [SEAD](SEAD-RNG), with a game-specific seed. It also uses a table of 32-bit integers provided by the game.
+To generate the key, ENL uses the random number generator provided by [SEAD](SEAD-RNG), with a game-specific seed or state. It also uses a table of 32-bit integers provided by the game.
 
 For each byte in the key ENL generates two random numbers: an index into the provided table and a 'byte index' or shift amount. ENL always generates 4 bytes at once and stores them into the key in little endian byte order. In Python, this could look as follows:
 ```python
@@ -30,6 +30,15 @@ def create_key(rand, table, size):
     return key
 ```
 
+### AC:NH Island Transfer Tool
+```python
+rng = sead.Random([0x58F9A90D, 0xF329D9AD, 0x781BCDC, 0x9DF24013])
+table = [rng.u32() for i in range(64)]
+
+rand = sead.Random(31)
+print(create_key(rand, table, 16))
+```
+
 ### Splatoon 2
 ```python
 rand = Random(0xCEB9D8D9)
@@ -51,6 +60,8 @@ table = [
     0x78516ECD, 0x53445C15, 0xC86E9942, 0x5501D2C9,
     0xD0D4ECB3, 0x38F5C341, 0xC4A16155, 0x42F1F406
 ]
+
+print(create_key(rand, table, 16))
 ```
 
 ### Super Mario Maker 2
@@ -74,4 +85,6 @@ table = [
     0x82E15C68, 0x4D3BD8B4, 0x0447FB2F, 0x434717F0,
     0xCBCD01EC, 0x58A09E59, 0x630588E1, 0x1886EBE6
 ]
+
+print(create_key(rand, table, 16))
 ```
