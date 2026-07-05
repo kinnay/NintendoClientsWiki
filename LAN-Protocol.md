@@ -153,7 +153,7 @@ These flags indicate which fields are compared against the active session to det
 | 0x10 | Vacant only |
 
 ## (1) Browse reply
-This packet is sent to the source of the [browse request](#browse-request). It is not encapsulated in a [Pia packet](Pia-Protocol).
+This packet is sent to the source of the [browse request](#browse-request). It is not encapsulated in a [Pia packet](Pia-Protocol). The browse reply is transmitted three times, presumably to increase the chance that it arrives at the destination console.
 
 *Up to 5.6:*
 
@@ -430,6 +430,8 @@ The challenge key and challenge data are randomized for every packet that is tra
 | 0x2 | 1 | Sequence id |
 | 0x3 | 8 | Incrementing counter used for nonce |
 | 0xB | 304 | Unknown |
+
+The sequence id in a browse request is incremented on every transmitted request. The sequence id in a browse reply must be equal to the sequence id in the browse request.
 
 ### Encryption
 The content of the challenge/response when crypto is enabled is described below. If crypto is disabled the authentication tag and challenge/response data are filled with random bytes.
