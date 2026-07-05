@@ -8,4 +8,5 @@
 | Mario Kart 8 Deluxe | `MarioKart8Delux` followed by 17 null bytes |
 | Pokemon FireRed | `fcb6f6adb9dfea66aca9c326149d2b3b08a781895cbf78f720d78b85a57584a9`<br>`9665d237797b2a41ddef14063ec28d259143af7832fb3cbcf2759cbfbdc81d8c` |
 | Super Mario Maker 2 | `LunchPack2DefaultPhrase` |
+| Super Smash Bros. Ultimate | `session_simple key` followed by one null byte |
 | Tomodachi Life: Living the Dream | `ABCDEFGHIJKLMNOPQRSTUVWXYZ` |
