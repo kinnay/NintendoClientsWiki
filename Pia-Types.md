@@ -235,7 +235,7 @@ The service variable id is generated from your local IP address and port: `(ip &
 
 **LDN** *(Up to 5.44):*
 
-The service variable id is the CRC32 hash of your MAC address.
+The service variable id is the CRC-32 hash of your MAC address.
 
 ## Network ID
 The network id uniquely identifies a Pia network. Before Pia 6, the network id was called "session id" instead.
