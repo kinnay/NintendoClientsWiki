@@ -263,6 +263,8 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | 0x4F1 | 32 | [Session key param](#session-key-param) |
 
 #### LanStationInfo
+If there are less than 16 stations in the room, the remaining entries of this structure are filled with null bytes.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Role (1=host, 2=player) |
