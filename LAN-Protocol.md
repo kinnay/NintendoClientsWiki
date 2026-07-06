@@ -196,11 +196,12 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | Bytes (0x180) | Application data |
 | Uint32 | Application data size |
 | Bool | Is opened |
-| [StationLocation](Pia-Types#stationlocation) | Host address |
+| [StationLocation] | Host address |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 
 *5.3 - 5.6:*
 
+The [system communication version](#system-communication-version) and application communication version fields were added.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -216,11 +217,13 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | 0x2A | 384 | Application data |
 | 0x1AA | 4 | Application data size |
 | 0x1AE | 1 | Is opened |
-| 0x1AF | 35 | Host address ([StationLocation](Pia-Types#stationlocation)) |
+| 0x1AF | 35 | Host address ([StationLocation]) |
 | 0x1D2 | 50 * 16 | [LanStationInfo](#lanstationinfo) for up to 16 players |
 
 *5.7 - 5.9:*
 
+The [session key param](#session-key-param) field was added, due to encryption being introduced to PiaLan.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Game mode |
@@ -235,11 +238,13 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | 0x2A | 384 | Application data |
 | 0x1AA | 4 | Application data size |
 | 0x1AE | 1 | Is opened |
-| 0x1AF | 35 | Host address ([StationLocation](Pia-Types#stationlocation)) |
+| 0x1AF | 35 | Host address ([StationLocation]) |
 | 0x1D2 | 50 * 16 | [LanStationInfo](#lanstationinfo) for up to 16 players |
 | 0x4F2 | 32 | [Session key param](#session-key-param) |
 
 *5.10 - 5.44:*
+
+The [StationLocation] type was removed. The host address now consists of a [StationAddress] and separate fields for its [constant id], [variable id] and [service variable id].
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -256,9 +261,9 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | 0x1AA | 4 | Application data size |
 | 0x1AE | 1 | Is opened |
 | 0x1AF | 18 | Host address ([StationAddress](Pia-Types#stationaddress)) |
-| 0x1C1 | 8 | Host constant id |
-| 0x1C9 | 4 | Host variable id |
-| 0x1CD | 4 | Host service variable id |
+| 0x1C1 | 8 | Host [constant id] |
+| 0x1C9 | 4 | Host [variable id] |
+| 0x1CD | 4 | Host [service variable id] |
 | 0x1D1 | 50 * 16 | [LanStationInfo](#lanstationinfo) for up to 16 players |
 | 0x4F1 | 32 | [Session key param](#session-key-param) |
 
@@ -268,12 +273,14 @@ If there are less than 16 stations in the room, the remaining entries of this st
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | Role (1=host, 2=player) |
-| 0x1 | 1 | Username encoding type (1=utf8, 2=utf16) |
+| 0x1 | 1 | Username encoding type (1=UTF-8, 2=UTF-16) |
 | 0x2 | 40 | Username |
 | 0x2A | 8 | Station id |
 
 ### LanNetworkProperty
 *6.29 - 6.30:*
+
+The structure was redesigned from scratch.
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -286,7 +293,7 @@ If there are less than 16 stations in the room, the remaining entries of this st
 | 0x218 | 1 | Is opened |
 | 0x219 | 1 | Has player number limit |
 | 0x21A | 1 | Current number of players |
-| 0x21B | 0x12 | Host address ([StationAddress](Pia-Types#stationaddress)) |
+| 0x21B | 0x12 | Host address ([StationAddress]) |
 
 #### Property Data
 If the application data consumes less than 0x184 bytes, this is reflected in the property data size field in the [LanNetworkProperty](#lannetworkproperty) structure.
@@ -469,3 +476,10 @@ The session key param are used to derive the [challenge response key](#response)
 | 0x10 | 16 | [Challenge key received](#crypto-challenge) in browse request |
 
 When the host receives a valid browse request for the first time, it saves the session key param in the [LanSessionInfo](#lansessioninfo) or [LanNetworkProperty](#lannetworkproperty) structure. This is used to derive the [session key](Pia-Protocol#session-key).
+
+[StationLocation]: Pia-Types#stationlocation
+[StationAddress]: Pia-Types#stationaddress
+
+[constant id]: Pia-Types#constant-id
+[variable id]: Pia-Types#variable-id
+[service variable id]: Pia-Types#service-variable-id
