@@ -63,4 +63,3 @@
   * [Title Database](https://kinnay.github.io)
   * [[Wii U Error Codes]]
   * [[Switch Error Codes]]
-  * [Playground](https://nintendo-playground.com)
