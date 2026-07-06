@@ -201,7 +201,7 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 
 *5.3 - 5.6:*
 
-The [system communication version](#system-communication-version) and application communication version fields were added.
+The [system communication version](#system-communication-version) and application communication version fields were added. The session type field now occupies 2 bytes instead of 4.
 
 | Offset | Size | Description |
 | --- | --- | --- |
