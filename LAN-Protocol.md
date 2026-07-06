@@ -187,7 +187,7 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | Type | Description |
 | --- | --- |
 | Uint32 | Game mode |
-| Uint32 | Session id |
+| Uint32 | [Network id] |
 | Uint32 (x6) | Attributes |
 | Uint16 | Current number of participants |
 | Uint16 | Minimum number of participants |
@@ -206,7 +206,7 @@ The [system communication version](#system-communication-version) and applicatio
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Game mode |
-| 0x4 | 4 | Session id |
+| 0x4 | 4 | [Network id] |
 | 0x8 | 4 * 6 | Attributes |
 | 0x20 | 2 | Current number of participants |
 | 0x22 | 2 | Minimum number of participants |
@@ -227,7 +227,7 @@ The [session key param](#session-key-param) field was added, due to encryption b
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Game mode |
-| 0x4 | 4 | Session id |
+| 0x4 | 4 | [Network id] |
 | 0x8 | 4 * 6 | Attributes |
 | 0x20 | 2 | Current number of participants |
 | 0x22 | 2 | Minimum number of participants |
@@ -249,7 +249,7 @@ The [StationLocation] type was removed. The host address now consists of a [Stat
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 4 | Game mode |
-| 0x4 | 4 | Session id |
+| 0x4 | 4 | [Network id] |
 | 0x8 | 4 * 6 | Attributes |
 | 0x20 | 2 | Current number of participants |
 | 0x22 | 2 | Minimum number of participants |
@@ -284,7 +284,7 @@ The structure was redesigned from scratch.
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | Network id |
+| 0x0 | 8 | [Network id] |
 | 0x8 | 0x200 | [Property data](#property-data) and padding |
 | 0x208 | 4 | Property data size |
 | 0x20C | 8 | Matchmake key |
@@ -340,7 +340,7 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | --- | --- | --- |
 | 0x0 | 1 | Message type (3) |
 | 0x1 | 11 | Padding (always 0) |
-| 0xC | 4 | Session id |
+| 0xC | 4 | [Network id] |
 
 ## (4) Host Message
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key.
@@ -351,7 +351,7 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 | --- | --- | --- |
 | 0x0 | 1 | Message type (4) |
 | 0x1 | 11 | Padding (always 0) |
-| 0xC | 4 | Session id |
+| 0xC | 4 | [Network id] |
 | 0x10 | | [StationConnectionInfo](Pia-Types#stationconnectioninfo) for host |
 
 *5.10 - 5.44:*
@@ -360,7 +360,7 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 | --- | --- | --- |
 | 0x0 | 1 | Message type (4) |
 | 0x1 | 11 | Padding (always 0) |
-| 0xC | 4 | Session id |
+| 0xC | 4 | [Network id] |
 | 0x10 | | [StationLocation](Pia-Types#stationlocation) for host |
 
 ## (5) Session Request
@@ -372,7 +372,7 @@ This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulate
 | --- | --- | --- |
 | 0x0 | 1 | Message type (5) |
 | 0x1 | 11 | Padding (always 0) |
-| 0xC | 4 | Session id |
+| 0xC | 4 | [Network id] |
 
 ## (6) Session Message
 This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted with the session key. The goal of this message is to transmit a [LanSessionInfo](#lansessioninfo) structure. Depending on the size of the [LanSessionInfo](#lansessioninfo), this message may be split into multiple fragments. Each fragment contains up to 800 bytes of data.
@@ -483,3 +483,4 @@ When the host receives a valid browse request for the first time, it saves the s
 [constant id]: Pia-Types#constant-id
 [variable id]: Pia-Types#variable-id
 [service variable id]: Pia-Types#service-variable-id
+[network id]: Pia-Types#network-id
