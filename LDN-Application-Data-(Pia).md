@@ -8,7 +8,7 @@ The application data starts with a short header, which is followed by game-speci
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Session id (random) |
+| 0x0 | 4 | [Network id] (random) |
 | 0x4 | 4 | CRC32 of user password |
 | 0x8 | 1 | [System communication version](#system-communication-version) |
 | 0x9 | 3 | Padding |
@@ -19,7 +19,7 @@ The application data starts with a short header, which is followed by game-speci
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Session id (random) |
+| 0x0 | 4 | [Network id] (random) |
 | 0x4 | 4 | CRC32 of user password |
 | 0x8 | 1 | [System communication version](#system-communication-version) |
 | 0x9 | 1 | Header size (24) |
@@ -32,7 +32,7 @@ The application data starts with a short header, which is followed by game-speci
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 4 | Session id (random) |
+| 0x0 | 4 | [Network id] (random) |
 | 0x4 | 4 | CRC32 of user password |
 | 0x8 | 1 | [System communication version](#system-communication-version) |
 | 0x9 | 1 | Header size (16) |
@@ -92,3 +92,4 @@ The application data depends on the game:
 | 0x78 | 16 | Unknown |
 
 [Mii info]: Mii-Data-(Switch)
+[Network id]: Pia-Types#network-id
