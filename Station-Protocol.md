@@ -126,7 +126,7 @@ In versions where applicable, the inverse connection id must be the connection i
 | Uint16 | Size of station location |
 | [StationLocation] | Station location |
 | Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Session id](Pia-Types#session-id) |
+| Uint32 | [Network id] |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
 | Uint8 | Number of player infos (P) |
@@ -160,7 +160,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint8 | [Platform id](#platform-id) |
 | Uint8 | [Fragment id](#fragment-id) |
 | Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Session id](Pia-Types#session-id) |
+| Uint32 | [Network id] |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
 | Uint8 | Number of player infos |
@@ -179,7 +179,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint64 | Target [constant id] |
 | Uint32 | Target [variable id] |
 | Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Session id](Pia-Types#session-id) |
+| Uint32 | [Network id] |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
 | Uint8 | Number of player infos |
@@ -201,7 +201,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint64 | Target [constant id] |
 | Uint32 | Target [variable id] |
 | Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Session id](Pia-Types#session-id) |
+| Uint32 | [Network id] |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
 | Uint8 | Number of player infos |
@@ -222,7 +222,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint16 | Size of station location |
 | [StationLocation] | Station location |
 | Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Session id](Pia-Types#session-id) |
+| Uint32 | [Network id] |
 | Uint8 | Number of players |
 | Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
 | Uint8 | Number of player infos |
@@ -387,6 +387,7 @@ The protocol list contains the following for every available protocol.
 
 [Constant id]: Pia-Types#constant-id
 [Variable id]: Pia-Types#variable-id
+[Network id]: Pia-Types#network-id
 
 [StationConnectionInfo]: Pia-Types#stationconnectioninfo
 [StationLocation]: Pia-Types#stationlocation
