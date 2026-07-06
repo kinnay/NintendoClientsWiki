@@ -51,14 +51,14 @@
   * [[LAN Protocol]]
   * [[LDN Protocol]]
 * [Switch Servers](Server-List#switch)
-  * [Application Authentication](AAuth-Server)
   * [Connection Test](Connection-Test)
   * [Device Authentication](DAuth-Server)
+  * [Application Authentication](AAuth-Server)
   * [E-Licenses](Dragons-Servers)
+  * [Switch Accounts](BAAS-Server)
+  * [Nintendo Accounts](Account-Server-(Switch))
   * [Game Servers (NEX)](NEX-Overview-(Game-Servers))
   * [Game Servers (NPLN)](NPLN-Servers)
-  * [Nintendo Accounts](Account-Server-(Switch))
-  * [Switch Accounts](BAAS-Server)
 * Other Pages
   * [Title Database](https://kinnay.github.io)
   * [[Wii U Error Codes]]
