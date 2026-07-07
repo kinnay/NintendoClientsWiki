@@ -14,7 +14,7 @@ The following version number is advertised during the [connection request](Stati
 
 | Pia version | Version |
 | --- | --- |
-| 5.19 - 5.44 | 0 |
+| 5.19 - 5.45 | 0 |
 
 ## Local message header
 *5.2 - 5.44:*
@@ -43,7 +43,7 @@ The sequence id starts at a random value and is incremented whenever the network
 | 0x19 | 7 | Padding |
 | 0x20 | | [Payload](#update-session-payload) |
 
-*5.7 - 5.44:*
+*5.7 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ The sequence id starts at a random value and is incremented whenever the network
 | 0x30 | | [Payload](#update-session-payload) |
 
 ### Update session payload
-*5.2 - 5.44:*
+*5.2 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -83,7 +83,7 @@ The sequence id starts at a random value and is incremented whenever the network
 | 0xC | 4 | Always 0 |
 
 ## Ack message
-*5.9 - 5.44:*
+*5.9 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -92,7 +92,7 @@ The sequence id starts at a random value and is incremented whenever the network
 | 0x10 | 4 | Always 0 |
 
 ## Local node
-*5.2 - 5.44:*
+*5.2 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -108,7 +108,7 @@ For unused entries in the list, the host migration ranking is set to 255, and th
 ## Local address
 Unlike the rest of the messages, a local address is encoded with big endian byte order.
 
-*5.2 - 5.44:*
+*5.2 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
