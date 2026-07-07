@@ -1,5 +1,7 @@
 In LDN and LAN mode, [Pia](Pia-Overview) derives encryption keys using a game-specific key. This page lists the game-specific key for some games.
 
+The game-specific key is used to encrypt and/or authenticate browse request and replies in [LAN mode](LAN-Protocol), and to derive the [Pia session key](Pia-Protocol#session-key).
+
 | Game | Key |
 | --- | --- |
 | Game Boy - Nintendo Switch Online | `54ddaeaedb3ce1a39f793c962bf4a36c` |
