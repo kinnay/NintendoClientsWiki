@@ -393,7 +393,9 @@ Whenever the session is updated, a session message is sent through UDP broadcast
 | 0x18 | | Fragment data |
 
 ## (7) Keep Alive Message
-This packet is sent through UDP broadcast port 49152 and is encapsulated in a [Pia message](Pia-Protocol). This message is sent once every two seconds, even if the console is not participating in a session. If the console is participating in a session, the message payload is encrypted with the session key. Otherwise, the payload is not encrypted. The message payload contains the following data:
+This packet is sent through UDP port 49152 and is encapsulated in a [Pia message](Pia-Protocol). This message is sent once every two seconds, even if the console is not participating in a session. If the console is participating in a session, the message payload is encrypted with the session key. Otherwise, the payload is not encrypted. It is unclear what purpose of the keep alive message is, as it is ignored by the receiver. In Pia version 5.28 and later, the keep alive message is sent to localhost (`127.0.0.1`). In earlier versions, it is sent to the broadcast IP address.
+
+The message payload contains the following data:
 
 *Up to 5.44:*
 
