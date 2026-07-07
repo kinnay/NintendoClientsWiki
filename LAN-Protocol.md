@@ -22,7 +22,7 @@ The maximum size of browse request and reply packets is 1364 bytes, although in 
 ### Transport Method
 The browse request is not encapsulated in a [Pia packet](Pia-Protocol).
 
-*Up to 5.44:*
+*Up to 5.45:*
 
 The packet is broadcasted through UDP port 30000.
 
@@ -39,7 +39,7 @@ The packet is broadcasted through UDP port 35000.
 | 0x1 | 4 | Size of search criteria (0x23A) |
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 
-*5.7 - 5.44:*
+*5.7 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ The packet is broadcasted through UDP port 35000.
 | 0x32 | 0x13B | [Crypto challenge](#crypto-challenge) |
 
 ### LanSessionSearchCriteria
-*Up to 5.44:*
+*Up to 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -242,7 +242,7 @@ The [session key param](#session-key-param) field was added, due to encryption b
 | 0x1D2 | 50 * 16 | [LanStationInfo](#lanstationinfo) for up to 16 players |
 | 0x4F2 | 32 | [Session key param](#session-key-param) |
 
-*5.10 - 5.44:*
+*5.10 - 5.45:*
 
 The [StationLocation] type was removed. The host address now consists of a [StationAddress] and separate fields for its [constant id], [variable id] and [service variable id].
 
@@ -327,14 +327,14 @@ If the application data consumes less than 0x184 bytes, this is reflected in the
 | 5 | 5.9 |
 | 6 | 5.10 |
 | 7 | 5.11 - 5.18 |
-| 8 | 5.19 - 5.44 |
+| 8 | 5.19 - 5.45 |
 | 10 | 6.16 - 6.30 |
 | 22 | 6.41 |
 
 ## (3) Host Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
-*Up to 5.44:*
+*Up to 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -354,7 +354,7 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 | 0xC | 4 | [Network id] |
 | 0x10 | | [StationConnectionInfo](Pia-Types#stationconnectioninfo) for host |
 
-*5.10 - 5.44:*
+*5.10 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -366,7 +366,7 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 ## (5) Session Request
 This packet is sent through UDP broadcast ports 49152 - 49155 and is encapsulated in a [Pia message](Pia-Protocol). The message payload contains the following data and is encrypted with the session key:
 
-*Up to 5.44:*
+*Up to 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -379,7 +379,7 @@ This message is encapsulated in a [Pia message](Pia-Protocol) and is encrypted w
 
 Whenever the session is updated, a session message is sent through UDP broadcast port 49152 - 49155. A session message is also sent to a specific station when the station requests an update with a [session request](#5-session-request).
 
-*Up to 5.44:*
+*Up to 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -397,7 +397,7 @@ This packet is sent through UDP port 49152 and is encapsulated in a [Pia message
 
 The message payload contains the following data:
 
-*Up to 5.44:*
+*Up to 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -458,7 +458,7 @@ The nonce for the AES-GCM algorithm is generated as follows:
 | Version | Pia version |
 | --- | --- |
 | 1 | 5.7 - 5.10 |
-| 2 | 5.11 - 5.44 |
+| 2 | 5.11 - 5.45 |
 | 3 | 6.16 - 6.33 |
 | 4 | 6.40 - 6.41 |
 | 5 | 7.2 |
