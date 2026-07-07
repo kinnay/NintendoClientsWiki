@@ -17,7 +17,7 @@ The following version number is advertised during the [connection request](Stati
 | 5.19 - 5.45 | 0 |
 
 ## Local message header
-*5.2 - 5.44:*
+*5.2 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
