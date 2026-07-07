@@ -19,7 +19,7 @@ This page lists the protocols that may be implemented in the given Pia versions.
 * [5.23](#523)
 * [5.24 - 5.25](#524---525)
 * [5.26 - 5.28](#526---528)
-* [5.29 - 5.44](#529---544)
+* [5.29 - 5.45](#529---545)
 * [6.16 - 6.30](#616---630)
 * [6.32 - 6.40](#632---640)
 * [7.0](#70)
@@ -502,7 +502,7 @@ Several protocols were removed.
 | 0xB0 | Reckoning 1D Protocol |
 | 0xB4 | Reckoning 3D Protocol |
 
-## 5.29 - 5.44
+## 5.29 - 5.45
 The broadcast event protocol was added to the clone protocol.
 
 | ID | Protocol |
