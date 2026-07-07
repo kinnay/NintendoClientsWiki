@@ -9,8 +9,8 @@ The following version numbers are advertised during the [connection request](Sta
 | --- | --- |
 | 5.19 | 0 |
 | 5.29 | 2 |
-| 5.31 | 3 |
-| 5.44 | 4 |
+| 5.31 - 5.43 | 3 |
+| 5.44 - 5.45 | 4 |
 
 ### Packet Types
 | Type | Description |
