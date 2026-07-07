@@ -41,7 +41,7 @@ The following version numbers are advertised during the [connection request](Sta
 | 5.19 - 5.20 | 0 |
 | 5.21 - 5.27 | 1 |
 | 5.28 - 5.29 | 2 |
-| 5.30 - 5.44 | 3 |
+| 5.30 - 5.45 | 3 |
 
 # Join request
 The join request is sent to the host of the mesh. It is retransmitted every 500 milliseconds until acknowledged. If no reply is received after 10 seconds, Pia considers the join request to have failed.
@@ -56,7 +56,7 @@ The join request is sent to the host of the mesh. It is retransmitted every 500 
 | [StationAddress] | Station address |
 | Uint32 | Ack id |
 
-*5.11 - 5.44:*
+*5.11 - 5.45:*
 
 | Type | Description |
 | --- | --- |
@@ -100,7 +100,7 @@ If the join response is too big to be sent in a single packet it is split into f
 | [StationInfo] (xN) | Station info list |
 | Uint32 | Ack id |
 
-*5.18 - 5.44:*
+*5.18 - 5.45:*
 
 | Type | Description |
 | --- | --- |
@@ -121,7 +121,7 @@ If the join response is too big to be sent in a single packet it is split into f
 | Uint32 | Ack id |
 
 # Join response (refused)
-*Up to 5.44:*
+*Up to 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -202,7 +202,7 @@ Because this message is sent through the reliable mesh protocol it does not need
 | 0x40 | 1 | Station index |
 | 0x41 | 3 | Padding |
 
-*5.31 - 5.44:*
+*5.31 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
