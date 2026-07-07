@@ -41,7 +41,7 @@ In version 5.19, the `StationProtocol` was renamed to `MeshStationProtocol` and 
 | --- | --- |
 | 5.19 - 5.23 | 0 |
 | 5.24 - 5.26 | 1 |
-| 5.27 - 5.44 | 2 |
+| 5.27 - 5.45 | 2 |
 
 ## Connection Request
 In versions where applicable, the inverse connection id must be the connection id that was previously received from the other station.
@@ -112,7 +112,7 @@ In versions where applicable, the inverse connection id must be the connection i
 | [StationLocation] | Station location |
 | Uint32 | Ack id |
 
-*5.27 - 5.43:*
+*5.27 - 5.45:*
 
 | Type | Description |
 | --- | --- |
@@ -208,7 +208,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
 | Uint32 | Ack id |
 
-*5.27 - 5.43:*
+*5.27 - 5.45:*
 
 | Type | Description |
 | --- | --- |
@@ -276,7 +276,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | Uint32 | [Variable id] |
 | Uint8 | Connection id |
 
-*5.27 - 5.44:*
+*5.27 - 5.45:*
 
 | Type | Description |
 | --- | --- |
@@ -373,7 +373,7 @@ The protocol list contains the following for every available protocol.
 | 0x7B | 64 | Play history registration key |
 | 0xBB | 8 | Principal id |
 
-*5.27 - 5.43:*
+*5.27 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
