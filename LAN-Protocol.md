@@ -163,7 +163,7 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | Uint32 | Size of session info |
 | [LanSessionInfo](#lansessioninfo) | Session info |
 
-*5.7 - 5.44:*
+*5.7 - 5.45:*
 
 | Type | Description |
 | --- | --- |
