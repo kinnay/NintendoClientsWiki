@@ -15,5 +15,6 @@ The following version number is advertised during the [connection request](Stati
 | Pia version | Version |
 | --- | --- |
 | 5.19 - 5.44 | 0 |
+| 5.45 | 1 |
 
 
