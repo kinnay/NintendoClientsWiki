@@ -275,7 +275,7 @@ If there are less than 16 stations in the room, the remaining entries of this st
 | 0x0 | 1 | Role (1=host, 2=player) |
 | 0x1 | 1 | Username encoding type (1=UTF-8, 2=UTF-16) |
 | 0x2 | 40 | Username |
-| 0x2A | 8 | Station id |
+| 0x2A | 8 | [Constant id] |
 
 ### LanNetworkProperty
 *6.29 - 6.30:*
