@@ -233,7 +233,6 @@ The services variable id is your Rendez-Vous connection id (RVCID). This is rece
 
 The service variable id is generated from your local IP address and port: `(ip & 0xFFFF) << 16 | port`.
 
-
 If IPv6 is used, the IP address is compressed into a 32-bit integer by calculating its HMAC-SHA256 with a key that consists of 16 null bytes, and taking the first 4 bytes of the resulting MAC.
 
 **LDN** *(Up to 5.45):*
