@@ -169,7 +169,7 @@ The following module ids are currently known:
 | 2318 | `pia` | [Peer to peer (new)](#pia-error-codes-new) |
 | 2321 | `npln` | Game servers (new) |
 | 2522 | | Crash reporting tool |
-| 2618 | `pia` | [Peer to peer (old)](#pia-error-codes) |
+| 2618 | `pia` | [Peer to peer (old)](#pia-error-codes-old) |
 | 2621 | | Mandom (subscription management) |
 | 2622 | | Sugar (consumable service management) |
 | 2623 | `eagle` | [Relay servers](#eagle-error-codes) |
