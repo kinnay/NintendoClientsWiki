@@ -49,11 +49,12 @@ When a reliable sliding window is used, messages are wrapped as follows:
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 1 | [Flags](#flags) |
-| 0x1 | 2 | Payload size |
-| 0x3 | 2 | Sequence id |
-| 0x5 | 2 | Lowest sequence id pending ack |
-| 0x7 | 1 | Number of destination bits (N) |
-| 0x8 | 4 * (N / 32) | Destination bits |
+| 0x1 | 1 | Stream id |
+| 0x2 | 2 | Payload size |
+| 0x4 | 2 | Sequence id |
+| 0x6 | 2 | Lowest sequence id pending ack |
+| 0x8 | 1 | Number of destination bits (N) |
+| 0x9 | 4 * (N / 32) | Destination bits |
 | | | Payload |
 
 The number of destination bits may not be higher than 32. This means that the size of this header is either 8 or 12 bytes.
