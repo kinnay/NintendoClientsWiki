@@ -3,6 +3,12 @@
 
 This page describes the broadcast event protocol of Pia clone. Messages are wrapped in a [[reliable sliding window]].
 
+The following version numbers are advertised during the [connection request](Station-Protocol):
+
+| Pia Version | Version |
+| --- | --- |
+| 5.43 | 9 |
+
 *7.0:*
 
 | Offset | Size | Description |
