@@ -2,3 +2,9 @@
 ---
 
 This protocol may be used by games to send data packets to other consoles. The broadcast reliable protocol is similar to the [[reliable protocol]] in that it uses a [[reliable sliding window]] to ensure that all packets arrive in the correct order. The difference is that the broadcast reliable protocol is able to send broadcast packets in LAN and LDN mode, which makes it more efficient for packets that are sent to all stations in the mesh.
+
+The following version numbers are advertised during the [connection request](Station-Protocol):
+
+| Pia version | Version |
+| --- | --- |
+| 5.43 | 3 |
