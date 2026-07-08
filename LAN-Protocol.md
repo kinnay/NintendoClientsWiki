@@ -386,7 +386,7 @@ Whenever the session is updated, a session message is sent through UDP broadcast
 | 0x0 | 1 | Message type (6) |
 | 0x1 | 11 | Padding (always 0) |
 | 0xC | 4 | This is a random value that must be the same in all fragments that belong to the same session message. This is used to distinguish different session replies. |
-| 0x10 | 2 | Session message id. This is an incrementing number that should be the same in all fragments that belong to the same session message. |
+| 0x10 | 2 | Sequence id. This is an incrementing number that should be the same in all fragments that belong to the same session message. The first session message has sequence id 0. |
 | 0x12 | 1 | Fragment index |
 | 0x13 | 1 | Number of fragments |
 | 0x14 | 4 | Fragment size |
