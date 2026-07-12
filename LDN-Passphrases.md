@@ -10,3 +10,4 @@
 | Super Mario Maker 2 | `LunchPack2DefaultPhrase` |
 | Super Smash Bros. Ultimate | `session_simple key` followed by one null byte |
 | Tomodachi Life: Living the Dream | `ABCDEFGHIJKLMNOPQRSTUVWXYZ` |
+| Virtual Game Cards applet | `d3640f54c36d7703567e18e49b0837979aad73839ef65c12967ea6d3a687e32c`<br>`9d24bdb42c9cefdd4981402f5c198066e14dd994f8304e9f4fda928f6fbc5aa8` |
