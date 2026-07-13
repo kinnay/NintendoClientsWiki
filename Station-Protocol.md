@@ -208,6 +208,27 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | 0x39 | | [Player info](#player-info), contains 2 or 4 entries, depending on [fragmentation](#fragment-id). The last byte is discarded. |
 | | 4 | Ack id |
 
+*5.26:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) (accepted) |
+| 0x2 | 1 | Station protocol id (always `0x14`) |
+| 0x3 | 1 | Station protocol [version number](#version-numbers) |
+| 0x4 | 1 | [Platform id](#platform-id) |
+| 0x5 | 1 | [Fragment id](#fragment-id) |
+| 0x6 | 8 | Target [constant id] |
+| 0xE | 4 | Target [variable id] |
+| 0x12 | 1 | Unknown |
+| 0x13 | 32 | Identification token (ascii) |
+| 0x33 | 4 | [Network id] |
+| 0x37 | 1 | Number of players |
+| 0x38 | 1 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
+| 0x39 | 1 | Number of player infos |
+| 0x3A | | [Player info](#player-info), contains 2 or 4 entries, depending on [fragmentation](#fragment-id). |
+| | 4 | Ack id |
+
 *5.27 - 5.45:*
 
 | Type | Description |
