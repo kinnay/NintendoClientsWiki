@@ -28,7 +28,7 @@ The application data starts with a short header, which is followed by game-speci
 | 0x10 | 8 | Always 0 |
 | 0x18 | | [Application data](#application-data) |
 
-5.29 - 5.39:
+5.26 - 5.39:
 
 | Offset | Size | Description |
 | --- | --- | --- |
