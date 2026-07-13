@@ -9,6 +9,7 @@
 | [Pokemon Brilliant Diamond](Pokemon-Brilliant-Diamond) | `WirelessStrongCryptoKey2021` |
 | Pokemon FireRed | `fcb6f6adb9dfea66aca9c326149d2b3b08a781895cbf78f720d78b85a57584a9`<br>`9665d237797b2a41ddef14063ec28d259143af7832fb3cbcf2759cbfbdc81d8c` |
 | [Super Mario Maker 2](SMM-2-Protocol) | `LunchPack2DefaultPhrase` |
+| Super Mario Party | `ndcube_buffet_ss` |
 | Super Smash Bros. Ultimate | `session_simple key` followed by one null byte |
 | Tomodachi Life: Living the Dream | `ABCDEFGHIJKLMNOPQRSTUVWXYZ` |
 | Virtual Game Cards applet | `d3640f54c36d7703567e18e49b0837979aad73839ef65c12967ea6d3a687e32c`<br>`9d24bdb42c9cefdd4981402f5c198066e14dd994f8304e9f4fda928f6fbc5aa8` |
