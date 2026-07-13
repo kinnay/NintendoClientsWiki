@@ -152,61 +152,61 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 
 *5.2 - 5.6:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) (accepted) |
-| Uint8 | [Version number](#version-numbers) |
-| Uint8 | [Platform id](#platform-id) |
-| Uint8 | [Fragment id](#fragment-id) |
-| Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Network id] |
-| Uint8 | Number of players |
-| Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos |
-| [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
-| Uint32 | Ack id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) (accepted) |
+| 0x2 | 1 | [Version number](#version-numbers) |
+| 0x3 | 1 | [Platform id](#platform-id) |
+| 0x4 | 1 | [Fragment id](#fragment-id) |
+| 0x5 | 32 | Identification token (ascii) |
+| 0x25 | 4 | [Network id] |
+| 0x29 | 1 | Number of players |
+| 0x2A | 1 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
+| 0x2B | 1 | Number of player infos |
+| 0x2C | | [Player info](#player-info), contains 2 or 4 entries, depending on [fragmentation](#fragment-id). |
+| | 4 | Ack id |
 
 *5.7 - 5.18:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) (accepted) |
-| Uint8 | [Version number](#version-numbers) |
-| Uint8 | [Platform id](#platform-id) |
-| Uint8 | [Fragment id](#fragment-id) |
-| Uint64 | Target [constant id] |
-| Uint32 | Target [variable id] |
-| Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Network id] |
-| Uint8 | Number of players |
-| Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos |
-| [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
-| Uint32 | Ack id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) (accepted) |
+| 0x2 | 1 | [Version number](#version-numbers) |
+| 0x3 | 1 | [Platform id](#platform-id) |
+| 0x4 | 1 | [Fragment id](#fragment-id) |
+| 0x5 | 8 | Target [constant id] |
+| 0xD | 4 | Target [variable id] |
+| 0x11 | 32 | Identification token (ascii) |
+| 0x31 | 4 | [Network id] |
+| 0x35 | 1 | Number of players |
+| 0x36 | 1 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
+| 0x37 | 1 | Number of player infos |
+| 0x38 | | [Player info](#player-info), contains 2 or 4 entries, depending on [fragmentation](#fragment-id). |
+| | 4 | Ack id |
 
 *5.19:*
 
 **Note:** due to a bug in Nintendo's code, the last byte of the last player info entry is dropped. The packet therefore contains one less byte than expected.
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) (accepted) |
-| Uint8 | Station protocol id (always `0x14`) |
-| Uint8 | Station protocol [version number](#version-numbers) |
-| Uint8 | [Platform id](#platform-id) |
-| Uint8 | [Fragment id](#fragment-id) |
-| Uint64 | Target [constant id] |
-| Uint32 | Target [variable id] |
-| Uint8 (32) | Identification token (ascii) |
-| Uint32 | [Network id] |
-| Uint8 | Number of players |
-| Uint8 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
-| Uint8 | Number of player infos |
-| [PlayerInfo](#player-info) (2 or 4) | Player info, may be [fragmented](#fragment-id). |
-| Uint32 | Ack id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) (accepted) |
+| 0x2 | 1 | Station protocol id (always `0x14`) |
+| 0x3 | 1 | Station protocol [version number](#version-numbers) |
+| 0x4 | 1 | [Platform id](#platform-id) |
+| 0x5 | 1 | [Fragment id](#fragment-id) |
+| 0x6 | 8 | Target [constant id] |
+| 0xE | 4 | Target [variable id] |
+| 0x12 | 32 | Identification token (ascii) |
+| 0x32 | 4 | [Network id] |
+| 0x36 | 1 | Number of players |
+| 0x37 | 1 | Number of participants. This is either 1 or equal to the number of players, depending on whether each player should count as a participant in the session. |
+| 0x38 | 1 | Number of player infos |
+| 0x39 | | [Player info](#player-info), contains 2 or 4 entries, depending on [fragmentation](#fragment-id). The last byte is discarded. |
+| | 4 | Ack id |
 
 *5.27 - 5.45:*
 
