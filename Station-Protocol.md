@@ -362,7 +362,7 @@ The protocol list contains the following for every available protocol.
 | 0x7A | 1 | Language |
 | 0x7B | 64 | Play history registration key |
 
-*5.7 - 5.19:*
+*5.7 - 5.26:*
 
 The principal id was added to the struct.
 
@@ -376,7 +376,7 @@ The principal id was added to the struct.
 | 0x7B | 64 | Play history registration key |
 | 0xBB | 8 | Principal id |
 
-*5.26 - 5.45:*
+*5.27 - 5.45:*
 
 The order of string and encoding was swapped.
 
