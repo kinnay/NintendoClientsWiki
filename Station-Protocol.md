@@ -363,6 +363,9 @@ The protocol list contains the following for every available protocol.
 | 0x7B | 64 | Play history registration key |
 
 *5.7 - 5.19:*
+
+The principal id was added to the struct.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 80 | Player name |
@@ -373,7 +376,9 @@ The protocol list contains the following for every available protocol.
 | 0x7B | 64 | Play history registration key |
 | 0xBB | 8 | Principal id |
 
-*5.27 - 5.45:*
+*5.26 - 5.45:*
+
+The order of string and encoding was swapped.
 
 | Offset | Size | Description |
 | --- | --- | --- |
