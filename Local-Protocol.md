@@ -32,12 +32,14 @@ This message is sent by the host of the network whenever a station joins, leaves
 
 The sequence id starts at a random value and is incremented whenever the network changes.
 
+The network id is a random value that is generated once when the network is created. It is **not** the same as the [network id](Pia-Types#network-id) that is broadcast in the [application data](LDN-Application-Data-(Pia)).
+
 *5.2:*
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 12 | [Local message header](#local-message-header) |
 | 0xC | 4 | Sequence id |
-| 0x10 | 4 | [Network id](Pia-Types#network-id) |
+| 0x10 | 4 | Network id (random) |
 | 0x14 | 4 | Host [variable id] |
 | 0x18 | 1 | Allow participation |
 | 0x19 | 7 | Padding |
@@ -49,7 +51,7 @@ The sequence id starts at a random value and is incremented whenever the network
 | --- | --- | --- |
 | 0x0 | 12 | [Local message header](#local-message-header) |
 | 0xC | 4 | Sequence id |
-| 0x10 | 4 | [Network id](Pia-Types#network-id) |
+| 0x10 | 4 | Network id (random) |
 | 0x14 | 4 | Host [variable id] |
 | 0x18 | 4 | Host [service variable id] |
 | 0x1C | 4 | Padding |
