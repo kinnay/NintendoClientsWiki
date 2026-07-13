@@ -253,49 +253,49 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 ### Denying
 *3.3 - 5.6:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) |
-| Uint8 | [Version number](#version-numbers) |
-| Uint8 | Always 0 |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) |
+| 0x2 | 1 | [Version number](#version-numbers) |
+| 0x3 | 1 | Always 0 |
 
 *5.7 - 5.18:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) |
-| Uint8 | [Version number](#version-numbers) |
-| Uint8 | Always 0 |
-| Uint8 | Always 0 |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) |
+| 0x2 | 1 | [Version number](#version-numbers) |
+| 0x3 | 1 | Always 0 |
+| 0x4 | 1 | Always 0 |
+| 0x5 | 8 | [Constant id] |
+| 0xD | 4 | [Variable id] |
 
 *5.19 - 5.23:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) |
-| Uint8 | Protocol id that has unexpected protocol version |
-| Uint8 | Expected protocol version |
-| Uint16 | Always 0 |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) |
+| 0x2 | 1 | Protocol id that has unexpected protocol version |
+| 0x3 | 1 | Expected protocol version |
+| 0x4 | 2 | Always 0 |
+| 0x6 | 8 | [Constant id] |
+| 0xE | 4 | [Variable id] |
 
 *5.24 - 5.26:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) |
-| Uint8 | Protocol id that has unexpected protocol version |
-| Uint8 | Expected protocol version |
-| Uint16 | Always 0 |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
-| Uint8 | Connection id |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) |
+| 0x2 | 1 | Protocol id that has unexpected protocol version |
+| 0x3 | 1 | Expected protocol version |
+| 0x4 | 2 | Always 0 |
+| 0x6 | 8 | [Constant id] |
+| 0xE | 4 | [Variable id] |
+| 0x12 | 1 | Connection id |
 
 *5.27 - 5.45:*
 
