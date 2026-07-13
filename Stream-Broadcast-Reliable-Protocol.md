@@ -8,6 +8,7 @@ The following version numbers are advertised during the [connection request](Sta
 | Pia version | Version |
 | --- | --- |
 | 5.19 | 0 |
+| 5.26 | 1 |
 | 5.29 | 2 |
 | 5.31 - 5.43 | 3 |
 | 5.44 - 5.45 | 4 |
