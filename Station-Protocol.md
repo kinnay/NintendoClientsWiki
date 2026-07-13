@@ -299,13 +299,13 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 
 *5.27 - 5.45:*
 
-| Type | Description |
-| --- | --- |
-| Uint8 | Message type (2) |
-| Uint8 | [Connection result](#connection-result) |
-| Uint8 | Always 0 |
-| Uint64 | [Constant id] |
-| Uint32 | [Variable id] |
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Message type (2) |
+| 0x1 | 1 | [Connection result](#connection-result) |
+| 0x2 | 1 | Always 0 |
+| 0x3 | 8 | [Constant id] |
+| 0xB | 4 | [Variable id] |
 
 ## Disconnection request
 | Offset | Size | Description |
