@@ -12,5 +12,6 @@ The game-specific key is used to encrypt and/or authenticate browse request and 
 | Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
 | Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
 | [Super Mario Maker 2](Super-Mario-Maker-2) | `667c18475889faab61f93ef1da180971` |
+| Super Mario Party | `ndcube_buffet_ss` |
 
 Most first-party games use [ENL](ENL-Key-Generation) to derive the game-specific key.
