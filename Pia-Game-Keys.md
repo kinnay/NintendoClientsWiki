@@ -11,6 +11,7 @@ The game-specific key is used to encrypt and/or authenticate browse request and 
 | Pokemon Fire Red | `83ca7fab734c34633b10183526c1e85b` |
 | Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
 | Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
+| Splatoon 3 | `78deee82d86875782c40b15278f37815` |
 | [Super Mario Maker 2](Super-Mario-Maker-2) | `667c18475889faab61f93ef1da180971` |
 | Super Mario Party | `ndcube_buffet_ss` |
 
