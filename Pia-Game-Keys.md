@@ -7,7 +7,7 @@ The game-specific key is used to encrypt and/or authenticate browse request and 
 | Game Boy - Nintendo Switch Online | `54ddaeaedb3ce1a39f793c962bf4a36c` |
 | Mario Kart 8 Deluxe | `ABCDEFGHIJKLMNOP` |
 | Nintendo Switch Sports | `48545a26643c254c39107cd1f8004453` |
-| [Pokemon Brilliant Diamond](Pokemon-Brilliant-Diamon) (1.3.0) | `9900bd0cdcfa65639918bd0fc7fa6577` |
+| [Pokemon Brilliant Diamond](Pokemon-Brilliant-Diamond) (1.3.0) | `9900bd0cdcfa65639918bd0fc7fa6577` |
 | Pokemon Fire Red | `83ca7fab734c34633b10183526c1e85b` |
 | Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
 | Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
