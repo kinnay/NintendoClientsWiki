@@ -16,3 +16,18 @@
 | 0x1 | 33 | Player name (null terminated) |
 | 0x22 | 2 | Padding |
 | 0x24 | 4 | Unknown |
+
+## Protocols
+*1.1.0:*
+
+* Station protocol
+* Mesh protocol
+* Sync clock protocol
+* Local protocol
+* RTT protocol
+* Sync protocol
+* Unreliable protocol
+* Reliable protocol
+* Broadcast reliable protocol
+* Session protocol
+* Monitoring data protocol
