@@ -22,6 +22,7 @@ Welcome to the NintendoClients wiki!
 ## Switch Games
 * [Animal Crossing: Island Transfer Tool](./AC:NH-Tool)
 * [Super Mario Maker 2](SMM-2-Protocol)
+* [Super Mario Party](Super-Mario-Party)
 
 ## Switch 2 Games
 * [[Mario Kart World]]
