@@ -5,7 +5,9 @@ A list of games with Pia and function names can be found [here](https://kinnay.g
 ## LDN Passphrase
 A list of passphrases can be found [here](LDN-Passphrases).
 
-The LDN passphrase is passed to the Pia library through `nn::pia::local::LdnCreateSessionSetting::SetWirelessCryptoKey` or `nn::pia::local::LdnJoinSessionSetting::SetWirelessCryptoKey`.
+In Pia 5, the LDN passphrase is passed to the Pia library through `nn::pia::local::LdnCreateSessionSetting::SetWirelessCryptoKey` or `nn::pia::local::LdnJoinSessionSetting::SetWirelessCryptoKey`.
+
+In Pia 6, look for the constructor of `nn::pia::local::LocalCreateNetworkSetting` or `nn::pia::local::LocalConnectNetworkSetting` instead.
 
 When [ENL](ENL-Protocol) is used, the passphrase is configured through `enl::PiaMatchmakeCondition::setPassPhrase`.
 
