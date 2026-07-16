@@ -8,6 +8,8 @@
 | Mario Kart 8 Deluxe | `MarioKart8Delux` followed by 17 null bytes |
 | [Pokemon Brilliant Diamond](Pokemon-Brilliant-Diamond) | `WirelessStrongCryptoKey2021` |
 | Pokemon FireRed | `fcb6f6adb9dfea66aca9c326149d2b3b08a781895cbf78f720d78b85a57584a9`<br>`9665d237797b2a41ddef14063ec28d259143af7832fb3cbcf2759cbfbdc81d8c` |
+| Pokemon Scarlet/Violet | `W3GoSMEn7RIIUQ89rzqBHGhGferRNb7K18ZBq2aNuj8Us9RO9Q9JYyGOZlLy8MYL` |
+| Pokemon Legends: Z-A | `BM7cXkadR9ugiXdHiurkiyhrQwcR3rMgCM5BF47dranKXWAGpGEA9z3ncXRnPjCX` |
 | [Super Mario Maker 2](SMM-2-Protocol) | `LunchPack2DefaultPhrase` |
 | Super Mario Party | `ndcube_buffet_st` |
 | Super Smash Bros. Ultimate | `session_simple key` followed by one null byte |
