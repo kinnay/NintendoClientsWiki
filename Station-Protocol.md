@@ -220,7 +220,7 @@ A connection response can either [accept](#accepted) or [deny](#denying) the con
 | 0x5 | 1 | [Fragment id](#fragment-id) |
 | 0x6 | 8 | Target [constant id] |
 | 0xE | 4 | Target [variable id] |
-| 0x12 | 1 | Unknown |
+| 0x12 | 1 | Target connection id |
 | 0x13 | 32 | Identification token (ascii) |
 | 0x33 | 4 | [Network id] |
 | 0x37 | 1 | Number of players |
