@@ -14,7 +14,7 @@ The game-specific key is used to encrypt and/or authenticate browse request and 
 | Pokemon Scarlet/Violet | `p1frXqxmeCZWFv0X` |
 | Splatoon 2 | `ee182a63e216cdb1f51ad4bed8cf6508` |
 | Splatoon 3 | `78deee82d86875782c40b15278f37815` |
-| [[Super Mario Maker 2]] | `667c18475889faab61f93ef1da180971` |
+| [Super Mario Maker 2](SMM-2-Protocol) | `667c18475889faab61f93ef1da180971` |
 | [[Super Mario Party]] | `ndcube_buffet_ss` |
 
 Most first-party games use [ENL](ENL-Key-Generation) to derive the game-specific key.
