@@ -17,7 +17,7 @@ Welcome to the NintendoClients wiki!
 * [[LDN Protocol]]
 
 ## Wii U Games
-* [Donkey Kong Country: Tropical Freeze](Donkey-Kong-Country:-Tropical-Freeze)
+* [Donkey Kong Country: Tropical Freeze](./Donkey-Kong-Country:-Tropical-Freeze)
 * [Mario Kart 8](Mario-Kart-8-Protocol)
 
 ## Switch Games
