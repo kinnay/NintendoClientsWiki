@@ -70,10 +70,7 @@ The score that is uploaded on the leaderboards is simply the number of milliseco
 | Crossing | GCN Baby Park | 61 |
 | Crossing | GBA Cheese Land | 62 |
 | Crossing | Wild Woods | 54 |
-| Crossing | Animal Crossing (1) | 52 |
-| Crossing | Animal Crossing (2) | 64 |
-| Crossing | Animal Crossing (3) | 65 |
-| Crossing | Animal Crossing (4) | 66 |
+| Crossing | Animal Crossing | 52 |
 ||
 | Bell | 3DS Neo Bowser City | 60 |
 | Bell | GBA Ribbon Road | 59 |
