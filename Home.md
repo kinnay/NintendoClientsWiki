@@ -18,7 +18,7 @@ Welcome to the NintendoClients wiki!
 
 ## Wii U Games
 * [Donkey Kong Country: Tropical Freeze](./Donkey-Kong-Country:-Tropical-Freeze)
-* [Mario Kart 8](Mario-Kart-8-Protocol)
+* [Mario Kart 8](Mario-Kart-8)
 
 ## Switch Games
 * [Animal Crossing: Island Transfer Tool](./AC:NH-Tool)
