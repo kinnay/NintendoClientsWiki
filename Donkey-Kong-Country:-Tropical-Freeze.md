@@ -1,3 +1,6 @@
+[Wii U](Home#wii-u-games) > Donkey Kong Country: Tropical Freeze
+---
+
 This page contains information about the Wii U version of Donkey Kong Country: Tropical Freeze.
 
 * [Ranking scores](#ranking-scores)
