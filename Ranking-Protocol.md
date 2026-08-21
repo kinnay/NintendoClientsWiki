@@ -1,6 +1,12 @@
 ## [[NEX Protocols]] > Ranking (112)
 
-The following games have additional methods in the ranking protocol:
+The ranking protocol provides leaderboards for games.
+
+Every leaderboard entry has a score, is assigned to a category, and may optionally be assigned to an arbitrary number of groups. The way that the score reflects the in-game score, such as the time in Mario Kart 8, depends on the game. The category and group ids are also arbitrarily defined by games. In addition, it is possible to upload game-specific 'common data' along with a score, which contains additional information about the leaderboard entry, such as a username.
+
+On the [home page](Home) you can links to documentation for a number of games, which may further describe the format of the score, the category ids and the common data format of those games.
+
+The following games also have additional methods in the ranking protocol:
 * [Mario Kart 8](Ranking-Protocol-(MK8))
 * [Mario Kart 8 Deluxe](Ranking-Protocol-(MK8D))
 * [Super Smash Bros. 4](Ranking-Protocol-(SSB4))
