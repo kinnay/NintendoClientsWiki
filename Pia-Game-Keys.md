@@ -9,6 +9,7 @@ The game-specific key is used to encrypt and/or authenticate browse request and 
 | Nintendo Switch Sports | `48545a26643c254c39107cd1f8004453` |
 | [Pokemon Brilliant Diamond](Pokemon-Brilliant-Diamond) (1.3.0) | `9900bd0cdcfa65639918bd0fc7fa6577` |
 | Pokemon Fire Red | `83ca7fab734c34633b10183526c1e85b` |
+| Pokemon Legends: Arceus | `p1frXqxmeCZWFv0X` |
 | Pokemon Legends: Z-A | `p3bwdaSsywFXUkDu` |
 | Pokemon Sword/Shield | `p1frXqxmeCZWFv0X` |
 | Pokemon Scarlet/Violet | `p1frXqxmeCZWFv0X` |
