@@ -807,7 +807,7 @@ Result option flags:
 | Uint8 | searchTarget |
 | [List]&lt;[PID]&gt; | ownerIds |
 | Uint8 | ownerType |
-| [List]&lt;Uint64&gt; | destinationIds |
+| [List]&lt;PID&gt; | destinationIds |
 | Uint16 | dataType |
 | [DateTime] | createdAfter |
 | [DateTime] | createdBefore |
