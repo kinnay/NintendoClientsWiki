@@ -31,7 +31,7 @@ The packet is broadcasted through UDP port 30000.
 The packet is broadcasted through UDP port 35000.
 
 ### Packet Format
-*Up to 5.6:*
+*Up to 5.7:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ The packet is broadcasted through UDP port 35000.
 | 0x1 | 4 | Size of search criteria (0x23A) |
 | 0x5 | 0x23A | [LanSessionSearchCriteria](#lansessionsearchcriteria) |
 
-*5.7 - 5.45:*
+*5.9 - 5.45:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -155,7 +155,7 @@ These flags indicate which fields are compared against the active session to det
 ## (1) Browse reply
 This packet is sent to the source of the [browse request](#browse-request). It is not encapsulated in a [Pia packet](Pia-Protocol). The browse reply is transmitted three times, presumably to increase the chance that it arrives at the destination console.
 
-*Up to 5.6:*
+*Up to 5.7:*
 
 | Type | Description |
 | --- | --- |
@@ -163,7 +163,7 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | Uint32 | Size of session info |
 | [LanSessionInfo](#lansessioninfo) | Session info |
 
-*5.7 - 5.45:*
+*5.9 - 5.45:*
 
 | Type | Description |
 | --- | --- |
@@ -199,7 +199,7 @@ This packet is sent to the source of the [browse request](#browse-request). It i
 | [StationLocation] | Host address |
 | [LanStationInfo](#lanstationinfo) (x16) | Station info of every player in the room |
 
-*5.3 - 5.6:*
+*5.3 - 5.7:*
 
 The [system communication version](#system-communication-version) and application communication version fields were added. The session type field now occupies 2 bytes instead of 4.
 
@@ -220,7 +220,7 @@ The [system communication version](#system-communication-version) and applicatio
 | 0x1AF | 35 | Host address ([StationLocation]) |
 | 0x1D2 | 50 * 16 | [LanStationInfo](#lanstationinfo) for up to 16 players |
 
-*5.7 - 5.9:*
+*5.9:*
 
 The [session key param](#session-key-param) field was added, due to encryption being introduced to PiaLan.
 
@@ -405,11 +405,11 @@ The message payload contains the following data:
 | 0x1 | 11 | Padding (always 0) |
 
 ## Crypto Challenge
-In Pia version 5.7 and later, the [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format.
+In Pia version 5.9 and later, the [browse request](#0-browse-request) contains a cryptographic challenge that must be correctly answered in the [browse reply](#1-browse-reply). Both the challenge and the response have the following format.
 
 The challenge key and challenge data are randomized for every packet that is transmitted.
 
-*5.7 - 6.33:*
+*5.9 - 6.33:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -457,7 +457,7 @@ The nonce for the AES-GCM algorithm is generated as follows:
 ### Version
 | Version | Pia version |
 | --- | --- |
-| 1 | 5.7 - 5.10 |
+| 1 | 5.9 - 5.10 |
 | 2 | 5.11 - 5.45 |
 | 3 | 6.16 - 6.33 |
 | 4 | 6.40 - 6.41 |
