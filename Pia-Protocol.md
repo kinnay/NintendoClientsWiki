@@ -441,7 +441,7 @@ The network id is stored in little-endian byte order.
 | 0x4 | 8 | Nonce from [header](#header) |
 
 #### LAN
-*Up to 5.26:*
+*5.9 - 5.26:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
