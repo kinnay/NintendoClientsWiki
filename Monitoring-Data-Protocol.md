@@ -34,7 +34,7 @@ This structure appears at the start of the packet, but also at the start of the 
 | 0x4 | 2 | Payload size |
 | 0x6 | 10 | Padding (filled with 0xFF) |
 
-*5.7 and later:*
+*5.7 - 6.41:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
