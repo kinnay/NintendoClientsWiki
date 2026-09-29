@@ -16,9 +16,21 @@ The following version number is advertised during the [connection request](Stati
 | 5.19 - 5.45 | 0 |
 
 ## Packet Format
-Every packet consists of:
-* An unencrypted [header](#monitoring-data-header)
-* A [compressed and encrypted](#payload-encoding) payload
+*Up to 7.2:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | Unencrypted [monitoring data header](#monitoring-data-header) |
+| 0x10 | | [Compressed and encrypted](#payload-encoding) payload |
+
+*7.3:*
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | Payload size |
+| 0x2 | 2 | Always 0x201 |
+| 0x4 | 44 | Obfuscated key material |
+| 0x30 | | [Compressed and encrypted](#payload-encoding) payload |
 
 ## Monitoring Data Header
 This structure appears at the start of the packet, but also at the start of the decrypted and decompressed payload.
@@ -34,7 +46,7 @@ This structure appears at the start of the packet, but also at the start of the 
 | 0x4 | 2 | Payload size |
 | 0x6 | 10 | Padding (filled with 0xFF) |
 
-*5.7 - 6.41:*
+*5.7 - 7.2:*
 
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -46,6 +58,8 @@ This structure appears at the start of the packet, but also at the start of the 
 | 0x6 | 8 | AES-GCM nonce (random number) |
 | 0xE | 1 | Encryption key id (random number) |
 | 0xF | 1 | Always 0xFF |
+
+In Pia version 7.3, the monitoring data header is no longer present.
 
 ### Version Numbers
 Monitoring was added to Pia in version 3.4.
@@ -90,6 +104,8 @@ Monitoring was added to Pia in version 3.4.
 ### Data Types
 The content of the payload depends on the version number and data type in the monitoring data header.
 
+*Up to 7.2:*
+
 | Data Type | Payload content |
 | --- | --- |
 | 0 | [Session begin monitoring content](#session-begin-monitoring-content) |
@@ -103,7 +119,7 @@ The payload is first zlib compressed and then encrypted.
 
 The payload is encrypted with AES-ECB with the key `901edf193dc5ef3c5290647bff20c385`.
 
-*5.7 and later:*
+*5.7 - 7.2:*
 
 The payload is encrypted with AES-GCM. The AES-GCM tag is appended to the encrypted payload.
 
@@ -134,6 +150,196 @@ The nonce is constructed as follows:
 | --- | --- | --- |
 | 0x0 | 8 | Nonce from monitoring data header |
 | 0x8 | 4 | Always `5bd085fa` |
+
+*7.3:*
+
+In Pia version 7.3, obfuscation was added to the encryption scheme. The [packet header](#packet-format) contains an obfuscated AES-GCM key, tag and nonce:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | AES-GCM key |
+| 0x10 | 12 | AES-GCM nonce |
+| 0x1C | 16 | AES-GCM authentication tag |
+
+The obfuscation algorithm uses a tiny VM that implements reversible operations. The opcodes are generated using Xorshift64*. The following Python code describes the obfuscation algorithm:
+
+```python
+import struct
+
+
+class Xorshift64:
+    """
+    This is the xorshift64* algorithm.
+
+    https://en.wikipedia.org/wiki/Xorshift#xorshift*
+    """
+
+    _state: int
+
+    def __init__(self, seed: int):
+        self._state = seed
+
+    def copy(self) -> Xorshift64:
+        return Xorshift64(self._state)
+
+    def skip(self, count: int) -> None:
+        for i in range(count):
+            self.u64()
+
+    def u64(self) -> int:
+        mask = (1 << 64) - 1
+        self._state ^= self._state >> 12
+        self._state ^= (self._state << 25) & mask
+        self._state ^= self._state >> 27
+        return (self._state * 0x2545F4914F6CDD1D) & mask
+
+    def genbytes(self, size: int) -> bytes:
+        data = b""
+        while len(data) < size:
+            data += struct.pack("<Q", self.u64())
+        return data[:size]
+
+
+class Splitmix64:
+    """
+    This is the splitmix64 algorithm.
+    
+    https://rosettacode.org/wiki/Pseudo-random_numbers/Splitmix64
+    """
+
+    _state: int
+
+    def __init__(self, seed: int):
+        self._state = seed
+
+    def u64(self) -> int:
+        mask = (1 << 64) - 1
+
+        self._state = (self._state + 0x9E3779B97F4A7C15) & mask
+
+        value = self._state
+        value = ((value ^ (value >> 30)) * 0xBF58476D1CE4E5B9) & mask
+        value = ((value ^ (value >> 27)) * 0x94D049BB133111EB) & mask
+        value ^= value >> 31
+        return value
+
+
+class Obfuscator:
+    def obfuscate(self, data: bytes, seed: int, count: int) -> bytes:
+        rng = Xorshift64(seed)
+        for opcode in self._generate_opcodes(rng, count):
+            data = self._apply_opcode(data, rng, opcode)
+        return data
+    
+    def deobfuscate(self, data: bytes, seed: int, count: int) -> bytes:
+        rng = Xorshift64(seed)
+
+        opcodes = self._generate_opcodes(rng, count)
+
+        rngs = []
+        for opcode in opcodes:
+            rngs.append(rng.copy())
+            if opcode == 0: rng.skip(1)
+            elif opcode == 1: rng.skip((len(data) - 1 + 7) // 8)
+            elif opcode == 2: rng.skip((len(data) + 7) // 8)
+            else:
+                rng.skip((len(data) + 7) // 8)
+
+        for opcode, rng in reversed(list(zip(opcodes, rngs))):
+            data = self._apply_opcode(data, rng, opcode, reverse=True)
+        return data
+
+    def _generate_opcodes(self, rng: Xorshift64, count: int) -> list[int]:
+        random = rng.u64()
+        opcodes = []
+        for i in range(count):
+            opcodes.append(random & 3)
+            random >>= 2
+        return opcodes
+    
+    def _apply_opcode(
+        self, data: bytes, rng: Xorshift64, opcode: int, reverse: bool = False
+    ) -> bytes:
+        if opcode == 0: return self._rotate(data, rng, reverse)
+        elif opcode == 1: return self._shuffle(data, rng, reverse)
+        elif opcode == 2: return self._splitmix(data, rng, reverse)
+        else:
+            return self._xor(data, rng)
+
+    def _rotate(self, data: bytes, rng: Xorshift64, reverse: bool) -> bytes:
+        value = int.from_bytes(data, "big")
+        bits = len(data) * 8
+
+        random = rng.u64()
+        shift = (random >> 1) % bits
+        if random & 1 != reverse:
+            shift = bits - shift
+
+        mask = (1 << bits) - 1
+        value = (value >> (bits - shift)) | ((value << shift) & mask)
+        return value.to_bytes(len(data), "big")
+
+    def _shuffle(self, data: bytes, rng: Xorshift64, reverse: bool) -> bytes:
+        array = bytearray(data)
+
+        randombytes = rng.genbytes(len(data) - 1)
+        for i in range(1, len(data)):
+            if reverse:
+                i = len(data) - i
+            j = randombytes[len(data) - i - 1] % (i + 1)
+            array[i], array[j] = array[j], array[i]
+    
+        return bytes(array)
+
+    def _splitmix(self, data: bytes, rng: Xorshift64, reverse: bool) -> bytes:
+        mask = (1 << 64) - 1
+
+        output = b""
+        for i in range(0, len(data) & ~7, 8):
+            splitmix = Splitmix64(rng.u64())
+            a = splitmix.u64()
+            b = splitmix.u64()
+            shift = (a ^ b) & 0xF
+
+            value = struct.unpack_from("<Q", data, i)[0]
+            if reverse:
+                a = pow(a | 1, -1, 1 << 64)
+                b = pow(b | 1, -1, 1 << 64)
+                value = (value >> shift) | ((value << (64 - shift)) & mask)
+                value = self._unmix((value * b) & mask, 27)
+                value = self._unmix((value * a) & mask, 31)
+            else:
+                value = ((value ^ (value >> 31)) * (a | 1)) & mask
+                value = ((value ^ (value >> 27)) * (b | 1)) & mask
+                value = ((value << shift) & mask) | (value >> (64 - shift))
+            output += struct.pack("<Q", value)
+
+        output += self._xor(data[len(data) & ~7:], rng)
+        return output
+
+    def _unmix(self, value: int, shift: int) -> int:
+        result = value
+        for i in range(0, 64, shift):
+            result = value ^ (result >> shift)
+        return result
+
+    def _xor(self, data: bytes, rng: Xorshift64) -> bytes:
+        mask = rng.genbytes(len(data))
+        return bytes(p ^ q for p, q in zip(data, mask))
+
+
+def obfuscate(data: bytes) -> bytes:
+    seed = 0x221A10F56909D263
+
+    obfuscator = Obfuscator()
+    return obfuscator.obfuscate(data, seed, 10)
+
+def deobfuscate(data: bytes) -> bytes:
+    seed = 0x221A10F56909D263
+    
+    obfuscator = Obfuscator()
+    return obfuscator.deobfuscate(data, seed, 10)
+```
 
 ## Session Begin Monitoring Content
 All fields are initialized to 0xFF.
