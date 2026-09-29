@@ -217,8 +217,9 @@ Unknown:
 * `https://ecs-lp1.hac.shop.nintendo.net`
 * `https://ias-lp1.hac.shop.nintendo.net`
 
-#### eShop Applet ([docs](eShop-Applet-(Switch)))
-* `https://bugyo.hac.lp1.eshop.nintendo.net`
+#### eShop Applet
+* `https://hac.lp1.savanna.srv.nintendo.net` (new)
+* `https://bugyo.hac.lp1.eshop.nintendo.net` (old) ([docs](eShop-Applet-(Switch)))
 
 #### System Updates
 * `https://sun.hac.lp1.d4c.nintendo.net` ([system update meta](Sun-Server))
@@ -286,7 +287,6 @@ New ([docs](Penne-Servers)):
 * `https://api.sect.srv.nintendo.net`
 * `https://gw.hac.lp1.vermillion.srv.nintendo.net` ([virtual game cards](Vermillion-Server))
 * `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` (playable platform list)
-* `https://hac.lp1.savanna.srv.nintendo.net` (new eShop applet)
 
 # Wii U
 #### Account Server ([docs](Account-Server))
