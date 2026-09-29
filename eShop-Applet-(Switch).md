@@ -1,6 +1,8 @@
 [Switch](Server-List#switch) > eShop Applet
 ---
 
+> :warning: The Bugyo server has been shut down around 23 September 2026. It was replaced by the savanna server.
+
 The eShop is a website. When the eShop applet is opened, it visits https://bugyo.hac.lp1.eshop.nintendo.net/ashigaru/. The SwitchShop client certificate is required to access this website.
 
 The eShop exposes system functions under the `window.nx` object.
