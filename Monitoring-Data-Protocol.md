@@ -59,8 +59,6 @@ This structure appears at the start of the packet, but also at the start of the 
 | 0xE | 1 | Encryption key id (random number) |
 | 0xF | 1 | Always 0xFF |
 
-In Pia version 7.3, the monitoring data header is no longer present.
-
 ### Version Numbers
 Monitoring was added to Pia in version 3.4.
 
@@ -100,6 +98,7 @@ Monitoring was added to Pia in version 3.4.
 | 6.34 | 39 |
 | 6.40 - 6.41 | 43 |
 | 7.2 | 45 |
+| 7.3 | 50 |
 
 ### Data Types
 The content of the payload depends on the version number and data type in the monitoring data header.
@@ -113,15 +112,13 @@ The content of the payload depends on the version number and data type in the mo
 | 2 | [Session end monitoring data](#session-end-monitoring-data) |
 
 ## Payload Encoding
-The payload is first zlib compressed and then encrypted.
-
 *Up to 5.6:*
 
-The payload is encrypted with AES-ECB with the key `901edf193dc5ef3c5290647bff20c385`.
+The payload is zlib compressed and encrypted with AES-ECB with the key `901edf193dc5ef3c5290647bff20c385`.
 
 *5.7 - 7.2:*
 
-The payload is encrypted with AES-GCM. The AES-GCM tag is appended to the encrypted payload.
+The payload is zlib compressed and encrypted with AES-GCM. The AES-GCM tag is appended to the encrypted payload.
 
 The key is chosen by the lower nybble of the encryption key id in the monitoring data header:
 
@@ -160,6 +157,16 @@ In Pia version 7.3, obfuscation was added to the encryption scheme. The [packet 
 | 0x0 | 16 | AES-GCM key |
 | 0x10 | 12 | AES-GCM nonce |
 | 0x1C | 16 | AES-GCM authentication tag |
+
+The plaintext has the following structure:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 2 | Compressed payload size |
+| 0x2 | | Zlib-compressed payload |
+| | | Padding |
+
+The padding contains repetitions of the bitwise complement of the last byte of the compressed data, until the size of the plaintext is a multiple of 16 bytes.
 
 The obfuscation algorithm uses a tiny VM that implements reversible operations. The opcodes are generated using Xorshift64*. The following Python code describes the obfuscation algorithm:
 
