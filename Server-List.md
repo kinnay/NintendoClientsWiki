@@ -57,7 +57,8 @@ Table of contents:
 * `https://aqua.p01.lp1.d4c.srv.nintendo.net`
 
 #### Content Servers
-* `https://tagaya.p01.lp1.eshop.nintendo.net`
+* `https://tagaya.p01.lp1.eshop.nintendo.net` (title version list, old)
+* `https://pegasus.p01.lp1.pegasus.srv.nintendo.net` (title version list, new)
 * `https://beach.p01.lp1.eshop.nintendo.net`
 * `https://pearljam.p01.lp1.eshop.nintendo.net`
 * `https://pushmo.p01.lp1.eshop.nintendo.net`
@@ -113,7 +114,6 @@ Table of contents:
 * `https://lp1.nso.nintendo.net` (NSO applet)
 * `https://fw-api.lp1.nso.nintendo.net` ([NSO rewards](NSO-Reward-Server))
 * `https://service-status.p01.lp1.smn.srv.nintendo.net` (service status)
-* `https://pegasus.p01.lp1.pegasus.srv.nintendo.net` (playable platform list)
 * `https://api.p01.lp1.tabiji.srv.nintendo.net` (play statistics)
 
 Unknown:
@@ -228,7 +228,8 @@ Unknown:
 * `https://aqua.hac.lp1.d4c.nintendo.net` ([system update requirements](Aqua-Server))
 
 #### Game Content (Metadata)
-* `https://tagaya.hac.lp1.eshop.nintendo.net` ([title version list](Tagaya-Server-(Switch)))
+* `https://tagaya.hac.lp1.eshop.nintendo.net` ([title version list](Tagaya-Server-(Switch)), old)
+* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` (title version list, new)
 * `https://beach.hac.lp1.eshop.nintendo.net`
 * `https://pearljam.hac.lp1.eshop.nintendo.net`
 * `https://pushmo.hac.lp1.eshop.nintendo.net`
@@ -287,7 +288,6 @@ New ([docs](Penne-Servers)):
 * `https://bvc-hac-lp1.cdn.nintendo.net` (browser version check)
 * `https://api.sect.srv.nintendo.net`
 * `https://gw.hac.lp1.vermillion.srv.nintendo.net` ([virtual game cards](Vermillion-Server))
-* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` (playable platform list)
 * `https://api.hac.lp1.tabiji.srv.nintendo.net` ([play statistics](Tabiji-Server))
 
 # Wii U
