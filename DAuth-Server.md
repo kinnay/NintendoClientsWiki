@@ -77,6 +77,7 @@ In 20.0.0 and later, the user agent is back again, between the `Accept` and `Con
 | 20.0.0 - 20.5.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 20.5.4.0)` |
 | 21.0.0 - 21.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 21.4.0.0)` |
 | 22.0.0 - 22.5.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 22.2.0.0)` |
+| 23.0.0 - 23.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 23.3.0.0)` |
 
 No user agent is present between system version 18.0.0 and 19.0.1.
 
@@ -126,7 +127,7 @@ The following methods return a different kind of device token:
 | 7.0.0 - 8.1.1 | v5 |
 | 9.0.0 - 12.1.0 | v6 |
 | 13.0.0 - 19.0.1 | v7 |
-| 20.0.0 - 22.5.0 | v8 |
+| 20.0.0 - 23.0.1 | v8 |
 
 #### API Changes
 | API | Changelog |
@@ -300,6 +301,7 @@ The request is the same as the [`/device_auth_tokens`](#device-token-request) re
 | 20.0.0 - 20.5.0 | 20 |
 | 21.0.0 - 21.2.0 | 21 |
 | 22.0.0 - 22.5.0 | 22 |
+| 23.0.0 - 23.0.1 | 23 |
 
 ## Known Client IDs
 Device tokens:
@@ -314,6 +316,7 @@ Device tokens:
 | `83b72b05dc3278d7` | NPNS |
 | `8f849b5d34778d8e` | [AAuth](AAuth-Server) and [BaaS](BAAS-Server) |
 | `93af0acb26258de9` | Beach and Bugyo |
+| `93c7e7dce26642aa` | Unknown |
 | `bad8156f44ac935a` | SProfile |
 | `d5b6cac2c1514c56` | [Dragons](Dragons-Servers) and [Vermillion](Vermillion-Server) |
 | `dc656ea03b63cf68` | Parental controls |
@@ -330,6 +333,7 @@ Edge tokens:
 | `67bf9945b45248c6` | BCAT |
 | `93af0acb26258de9` | Beach and Bugyo |
 | `d98185acb55994b4` | SCSI policy |
+| `e95fddf58447f117` | Pegasus server |
 
 ## Errors
 On error, the server sends the following response:
