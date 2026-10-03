@@ -6,6 +6,8 @@ The tagaya server provides the latest version number for each title. The tagaya 
 * [Header](#headers)
 * [Methods](#methods)
 
+In system version 23.0.0, the Tagaya server was removed and replaced by the Pegasus server.
+
 ## Headers
 | Header | Description |
 | --- | --- |
