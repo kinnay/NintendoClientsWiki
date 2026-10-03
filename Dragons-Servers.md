@@ -29,12 +29,7 @@ The following headers are optional and depend on the method and device type:
 | Nintendo-Nsa-Id-Token | `Bearer ` + id token |
 | Nintendo-ReferToVirtualDeviceLink | Only present on kiosk and development hardware. If present, always `true`. |
 
-If the request body is empty, the following headers are sent:
-
-| Header | Description |
-| --- | --- |
-| Content-Length | 0 |
-| Content-Type | `application/x-www-form-urlencoded` |
+If the request body is empty, a `Content-Length: 0` header is sent, and up to 16.1.0 also a `Content-Type: application/x-www-form-urlencoded` header.
 
 Otherwise, the following headers are sent:
 
