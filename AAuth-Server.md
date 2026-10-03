@@ -67,7 +67,8 @@ In 20.0.0 and later, the user agent is back:
 | 17.0.0 - 17.0.1 | `libcurl (nnHttp; 789f928b-138e-4b2f-afeb-1acae821d897; SDK 17.5.0.0; Add-on 17.5.0.0)` |
 | 20.0.0 - 20.5.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 20.5.4.0)` |
 | 21.0.0 - 21.2.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 21.4.0.0)` |
-| 22.0.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 22.2.0.0)` |
+| 22.0.0 - 22.5.0 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 22.2.0.0)` |
+| 23.0.0 - 23.0.1 | `libcurl (nnDauth; 16f4553f-9eee-4e39-9b61-59bc7c99b7c8; SDK 23.3.0.0)` |
 
 ## Methods
 The following method returns a timestamp and your ip address:
@@ -101,7 +102,7 @@ The following methods return an application token as JWT:
 | 5.0.0 - 8.1.1 | v2 |
 | 9.0.0 - 14.1.2 | v3 |
 | 15.0.0 - 18.1.0 | v4 |
-| 19.0.0 - 22.0.0 | v5 |
+| 19.0.0 - 23.0.1 | v5 |
 
 #### API Changes
 | API | Changelog |
