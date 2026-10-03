@@ -288,7 +288,7 @@ New ([docs](Penne-Servers)):
 * `https://api.sect.srv.nintendo.net`
 * `https://gw.hac.lp1.vermillion.srv.nintendo.net` ([virtual game cards](Vermillion-Server))
 * `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` (playable platform list)
-* `https://api.p01.lp1.tabiji.srv.nintendo.net` ([play statistics](Tabiji-Server))
+* `https://api.hac.lp1.tabiji.srv.nintendo.net` ([play statistics](Tabiji-Server))
 
 # Wii U
 #### Account Server ([docs](Account-Server))
