@@ -2,6 +2,10 @@ This page describes the local content share protocol of the Nintendo Switch. Thi
 
 Unless specified otherwise, all fields are encoded in big endian byte order.
 
+* [Network details](#network-details)
+* [Server protocol](#server-protocol)
+* [Protocol flow](#protocol-flow)
+
 ## Network Details
 The protocol is implemented on top of [LDN](LDN-Protocol). After creating the LDN network, the host starts a TCP server on port 55555. The server protocol is described [below](Server-Protocol).
 
@@ -123,3 +127,6 @@ The application details have the following structure, and are encoded in little 
 | 0x20 | 16 | Display version string |
 | 0x30 | 88 | Padding? |
 | 0x88 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
+
+## Protocol Flow
+After joining the LDN network, the client sends packet type 5. The host replies with packet type 7, followed by packet type 9.
