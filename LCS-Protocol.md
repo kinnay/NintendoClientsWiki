@@ -29,9 +29,7 @@ The application data that is broadcasted by the access point has the following f
 | 0xC | 4 | Unknown |
 | 0x10 | 7 | Padding |
 | 0x17 | 129 | Device nickname |
-| 0x98 | 4 | Unknown |
-| 0x9C | 4 | Unknown |
-| 0xA0 | 56 | Unknown |
+| 0x98 | 8 * 8 | Unknown |
 | 0xD8 | 40 * N | Application info |
 
 Currently, the implementation only supports one application to be shared per network. Therefore, the size of the application data is always 256 bytes in practice.
