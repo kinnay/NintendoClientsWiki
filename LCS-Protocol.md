@@ -108,7 +108,7 @@ Packet type 5 and 24 have the following structure:
 | 0xB | 129 | Device nickname |
 | 0x8C | 4 | Padding |
 | 0x90 | 256 | [System delivery info](https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo) |
-| 0x190 | | Application detail array |
+| 0x198 | | Application detail array |
 
 The application details have the following structure:
 
@@ -121,5 +121,5 @@ The application details have the following structure:
 | 0x14 | 4 | Unknown |
 | 0x18 | 8 | Estimated required size |
 | 0x20 | 16 | Display version string |
-| 0x30 | 80 | Padding? |
-| 0x80 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
+| 0x30 | 88 | Padding? |
+| 0x88 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
