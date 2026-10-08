@@ -1,6 +1,6 @@
 This page describes the local content share protocol of the Nintendo Switch. This protocol can be used to share update data with a nearby device without internet connection. The protocol is implemented by the `qlaunch` program and can be activated by using the "Match Version With Local Users" feature of the home menu. This page describes the protocol as seen in firmware version 22.5.0.
 
-All fields, except for native structures such as system delivery info, are encoded in big endian byte order.
+Unless specified otherwise, all fields are encoded in big endian byte order.
 
 ## Network Details
 The protocol is implemented on top of [LDN](LDN-Protocol). After creating the LDN network, the host starts a TCP server on port 55555. The server protocol is described [below](Server-Protocol).
@@ -107,10 +107,10 @@ Packet type 5 and 24 have the following structure:
 | 0xA | 1 | Unknown (only non-zero in packet type 24) |
 | 0xB | 129 | Device nickname |
 | 0x8C | 4 | Padding |
-| 0x90 | 256 | [System delivery info](https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo) |
+| 0x90 | 256 | [System delivery info](https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo) (little endian) |
 | 0x190 | | Application detail array |
 
-The application details have the following structure:
+The application details have the following structure, and are encoded in little endian byte order:
 
 | Offset | Size | Description |
 | --- | --- | --- |
