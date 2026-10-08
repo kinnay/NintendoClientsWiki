@@ -24,7 +24,10 @@ The application data that is broadcasted by the access point has the following f
 | 0x4 | 1 | Number of applications (N) |
 | 0x5 | 1 | Unknown |
 | 0x6 | 1 | Unknown |
-| 0x7 | 16 | Padding |
+| 0x7 | 1 | Padding |
+| 0x8 | 4 | Unknown |
+| 0xC | 4 | Unknown |
+| 0x10 | 7 | Padding |
 | 0x17 | 129 | Device nickname |
 | 0x98 | 4 | Unknown |
 | 0x9C | 4 | Unknown |
