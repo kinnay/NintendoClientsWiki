@@ -185,5 +185,8 @@ The following error codes are currently known:
 ### Packet Type 9
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 1 | Unknown |
-| 0x1 | 1 | Unknown |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 1 | Unknown |
+| 0x9 | 1 | Unknown |
+| 0xA | 6 | Padding |
+| 0x10 | | Payload |
