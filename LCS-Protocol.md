@@ -76,10 +76,10 @@ The following packet types are currently known:
 | 3 | [Application control data request](#application-control-data-request) |
 | 4 | [Application control data response](#application-control-data-response) |
 | 5 | [Join request](#join-request) |
-| 6 | ? |
+| 6 | Leave network |
 | 7 | [Join response](#join-response) |
 | 8 | [Error](#error-packet) |
-| 9 | ? |
+| 9 | [Network info](#network-info) |
 | 10 | ? |
 | 11 | ? |
 | 12 | ? |
@@ -138,27 +138,15 @@ The application control data contains the [NACP file](https://switchbrew.org/wik
 | 0xB | 129 | Device nickname |
 | 0x8C | 4 | Padding |
 | 0x90 | 256 | [System delivery info](https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo) (little endian) |
-| 0x190 | | Application detail array |
-
-The application details have the following structure, and are encoded in little endian byte order:
-
-| Offset | Size | Description |
-| --- | --- | --- |
-| 0x0 | 4 | Number of application delivery infos (N) |
-| 0x4 | 4 | Padding |
-| 0x8 | 8 | Title id |
-| 0x10 | 4 | Unknown |
-| 0x14 | 4 | Unknown |
-| 0x18 | 8 | Estimated required size |
-| 0x20 | 16 | Display version string |
-| 0x30 | 88 | Padding? |
-| 0x88 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
+| 0x190 | | [Application detail](#application-details) array |
 
 ### Join Response
+The node is is assigned by the host. It starts at a random value and is increment for every new participant.
+
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#server-protocol) |
-| 0x8 | 4 | Node id (random value) |
+| 0x8 | 4 | Node id |
 
 ### Error Packet
 | Offset | Size | Description |
@@ -182,11 +170,35 @@ The following error codes are currently known:
 | 9 | Join denied (version too low) |
 | 10 | Join denied (version too high) |
 
-### Packet Type 9
+### Network Info
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#server-protocol) |
-| 0x8 | 1 | Unknown |
-| 0x9 | 1 | Unknown |
+| 0x8 | 1 | Number of applications |
+| 0x9 | 1 | Number of nodes |
 | 0xA | 6 | Padding |
-| 0x10 | | Payload |
+| 0x10 | | [Application detail](#application-details) array |
+| | | Node info array |
+
+Every node info entry has the following structure:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Node id |
+| 0x4 | 7 | Padding |
+| 0xB | 129 | Device nickname |
+
+### Application Details
+This structure is encoded in little endian byte order.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Number of application delivery infos (N) |
+| 0x4 | 4 | Padding |
+| 0x8 | 8 | Title id |
+| 0x10 | 4 | Unknown |
+| 0x14 | 4 | Unknown |
+| 0x18 | 8 | Estimated required size |
+| 0x20 | 16 | Display version string |
+| 0x30 | 88 | Padding? |
+| 0x88 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
