@@ -4,7 +4,6 @@ Unless specified otherwise, all fields are encoded in big endian byte order.
 
 * [Network details](#network-details)
 * [Server protocol](#server-protocol)
-* [Protocol flow](#protocol-flow)
 
 ## Network Details
 The protocol is implemented on top of [LDN](LDN-Protocol). After creating the LDN network, the host starts a TCP server on port 55555. The server protocol is described [below](Server-Protocol).
@@ -72,13 +71,13 @@ The following packet types are currently known:
 
 | Type | Description |
 | --- | --- |
-| 1 | Application control data size request |
-| 2 | Application control data size response |
-| 3 | Application control data request |
-| 4 | Application control data response |
-| 5 | ? |
+| 1 | [Application control data size request](#application-control-data-size-request) |
+| 2 | [Application control data size response](#application-control-data-size-response) |
+| 3 | [Application control data request](#application-control-data-request) |
+| 4 | [Application control data response](#application-control-data-response) |
+| 5 | [Join request](#join-request) |
 | 6 | ? |
-| 7 | ? |
+| 7 | [Join response](#join-response) |
 | 8 | ? |
 | 9 | ? |
 | 10 | ? |
@@ -100,15 +99,42 @@ The following packet types are currently known:
 | 26 | ? |
 | 27 | ? |
 
-### Packet Type 5 / 24
-Packet type 5 and 24 have the following structure:
+### Application Control Data Size Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 8 | Title id |
 
+### Application Control Data Size Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 8 | Title id |
+| 0x10 | 4 | Application control data size |
+
+### Application Control Data Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 8 | Title id |
+
+### Application Control Data Response
+The application control data contains the [NACP file](https://switchbrew.org/wiki/NACP) of the game, followed by a JPEG thumbnail.
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 8 | Title id |
+| 0x10 | 4 | Application control data size |
+| 0x14 | | Application control data |
+
+### Join Request
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#server-protocol) |
 | 0x8 | 1 | [Protocol version](#protocol-version) |
 | 0x9 | 1 | Number of applications |
-| 0xA | 1 | Unknown (only non-zero in packet type 24) |
+| 0xA | 1 | Padding |
 | 0xB | 129 | Device nickname |
 | 0x8C | 4 | Padding |
 | 0x90 | 256 | [System delivery info](https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo) (little endian) |
@@ -128,5 +154,8 @@ The application details have the following structure, and are encoded in little 
 | 0x30 | 88 | Padding? |
 | 0x88 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
 
-## Protocol Flow
-After joining the LDN network, the client sends packet type 5. The host replies with packet type 7, followed by packet type 9.
+### Join Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 4 | Node id (random value) |
