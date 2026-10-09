@@ -181,3 +181,9 @@ The following error codes are currently known:
 | 8 | ? |
 | 9 | Join denied (version too low) |
 | 10 | Join denied (version too high) |
+
+### Packet Type 9
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 1 | Unknown |
+| 0x1 | 1 | Unknown |
