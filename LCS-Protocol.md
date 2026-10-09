@@ -78,7 +78,7 @@ The following packet types are currently known:
 | 5 | [Join request](#join-request) |
 | 6 | ? |
 | 7 | [Join response](#join-response) |
-| 8 | ? |
+| 8 | [Error](#error-packet) |
 | 9 | ? |
 | 10 | ? |
 | 11 | ? |
@@ -159,3 +159,25 @@ The application details have the following structure, and are encoded in little 
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#server-protocol) |
 | 0x8 | 4 | Node id (random value) |
+
+### Error Packet
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 1 | Error code (see below) |
+| 0x9 | 3 | Padding |
+
+The following error codes are currently known:
+
+| Code | Description |
+| --- | --- |
+| 1 | `2211-0232` |
+| 2 | Join denied (network is full) |
+| 3 | `2211-0256` - `2211-0287` except `2211-0260` |
+| 4 | ? |
+| 5 | ? |
+| 6 | ? |
+| 7 | ? |
+| 8 | ? |
+| 9 | Join denied (version too low) |
+| 10 | Join denied (version too high) |
