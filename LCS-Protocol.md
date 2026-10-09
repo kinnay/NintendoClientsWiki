@@ -80,7 +80,7 @@ The following packet types are currently known:
 | 7 | [Join response](#join-response) |
 | 8 | [Error](#error-packet) |
 | 9 | [Network info](#network-info) |
-| 10 | ? |
+| 10 | [Start communication](#start-communication) |
 | 11 | ? |
 | 12 | ? |
 | 13 | ? |
@@ -187,6 +187,9 @@ Every node info entry has the following structure:
 | 0x0 | 4 | Node id |
 | 0x4 | 7 | Padding |
 | 0xB | 129 | Device nickname |
+
+### Start Communication
+This packet is transmitted when the host of the group presses the "Start communication" button. It has no payload.
 
 ### Application Details
 This structure is encoded in little endian byte order.
