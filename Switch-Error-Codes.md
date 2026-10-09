@@ -148,7 +148,7 @@ The following module ids are currently known:
 | 2208 | `manu` | Manufacturing services |
 | 2209 | `atk` | Audio toolkit (NintendoWare) |
 | 2210 | `web` | Web browser |
-| 2211 | `lcs` | Local content share |
+| 2211 | `lcs` | [Local content share](#lcs-error-codes) |
 | 2212 | `grc` | Game recording |
 | 2213 | `repair` | Repair |
 | 2214 | `album` | Album |
@@ -724,6 +724,13 @@ The following errors are shown when the [dragons server](Dragons-Servers) return
 | 2181-4536 | `404/title_not_found` |
 | 2181-4537 | `500/update_record_failed` |
 | 2181-4538 | `500/unknown_issuer` |
+
+# LCS Error Codes
+| Error Code | Description |
+| --- | --- |
+| `2211-0233` | System delivery protocol version is too low |
+| `2211-0234` | System delivery protocol version is too high |
+| `2211-0260` | Network is full |
 
 # NEX Error Codes
 | Error code | Name |
