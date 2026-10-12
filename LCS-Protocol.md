@@ -81,15 +81,15 @@ The following packet types are currently known:
 | 8 | [Error](#error-packet) |
 | 9 | [Network info](#network-info) |
 | 10 | [Start communication](#start-communication) |
-| 11 | ? |
-| 12 | ? |
+| 11 | [Prepare system update request](#prepare-system-update-request) |
+| 12 | [Prepare system update response](#prepare-system-update-response) |
 | 13 | ? |
 | 14 | ? |
 | 15 | ? |
 | 16 | ? |
 | 17 | ? |
-| 18 | ? |
-| 19 | ? |
+| 18 | [Prepare game update request](#prepare-game-update-request) |
+| 19 | [Prepare game update response](#prepare-game-update-response) |
 | 20 | ? |
 | 21 | ? |
 | 22 | ? |
@@ -190,6 +190,34 @@ Every node info entry has the following structure:
 
 ### Start Communication
 This packet is transmitted when the host of the group presses the "Start communication" button. It has no payload.
+
+### Prepare System Update Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 4 | Unknown |
+
+### Prepare System Update Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 4 | Unknown |
+| 0xC | 256 | Always 0 |
+
+### Prepare Game Update Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 4 | Always 4 |
+| 0xC | 8 | Title id |
+
+### Prepare Game Update Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | 1 | Unknown |
+| 0x9 | 1 | Always 0 |
+| 0xA | 6 | Padding |
 
 ### Application Details
 This structure is encoded in little endian byte order.
