@@ -4,6 +4,7 @@ Unless specified otherwise, all fields are encoded in big endian byte order.
 
 * [Network details](#network-details)
 * [Server protocol](#server-protocol)
+* [Communication flow](#communication-flow)
 
 ## Network Details
 The protocol is implemented on top of [LDN](LDN-Protocol). After creating the LDN network, the host starts a TCP server on port 55555. The server protocol is described [below](Server-Protocol).
@@ -204,6 +205,18 @@ This packet is transmitted when the host of the group presses the "Start communi
 | 0x8 | 4 | Unknown |
 | 0xC | 256 | Always 0 |
 
+### Send System Update Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | | Unknown |
+
+### Receive System Update Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | | Unknown |
+
 ### Prepare Game Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
@@ -219,6 +232,18 @@ This packet is transmitted when the host of the group presses the "Start communi
 | 0x9 | 1 | Always 0 |
 | 0xA | 6 | Padding |
 
+### Send Game Update Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | | Unknown |
+
+### Receive Game Update Request
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x8 | | Unknown |
+
 ### Application Details
 This structure is encoded in little endian byte order.
 
@@ -233,3 +258,12 @@ This structure is encoded in little endian byte order.
 | 0x20 | 16 | Display version string |
 | 0x30 | 88 | Padding? |
 | 0x88 | 256 * N | [Application delivery info](https://switchbrew.org/wiki/NS_services#ApplicationDeliveryInfo) array |
+
+### Communication Flow
+When a local content share room is created on a device, it creates a [network](#network-details) that advertises the game that is currently selected on the home menu. Other devices can scan for nearby networks and join them. After joining the underlying LDN network, the client must send a [join request](#join-request) to the host. The host responds by sending a [join response](#join-response) or an [error packet](#error-packet) back to the client. Whenever the network information is changed, such as when a new device is accepted into the group, the host broadcasts a [network info](#network-info) packet to all clients to inform them of the change.
+
+When the user that created the group presses the "Start Communication" button, after at least one other device has joined the group, the host transmits a [start communication](#start-communication) packet. After that, it is no longer possible to join the group.
+
+The host then decides which nodes can share update data with each other. If a system update is required, the system update is always exchanged before the game update. The host selects one node as the sender, and one node as the receiver. The host sends a [send system update request](#send-system-update-request) or [send game update request](#send-game-update-request) to the sender. After the host receives a response, the host sends a [receive system update request](#receive-system-update-request) or [receive game update-request](#receive-game-update-request) to the receiver.
+
+The sender then opens a TCP server on port 55556. The receiver establishes a connection with this port. The update data is exchanged through the connection.
