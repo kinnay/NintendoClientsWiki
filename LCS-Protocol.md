@@ -81,19 +81,19 @@ The following packet types are currently known:
 | 8 | [Error](#error-packet) |
 | 9 | [Network info](#network-info) |
 | 10 | [Start communication](#start-communication) |
-| 11 | [Prepare system update request](#prepare-system-update-request) |
-| 12 | [Prepare system update response](#prepare-system-update-response) |
-| 13 | ? |
-| 14 | ? |
-| 15 | ? |
-| 16 | ? |
-| 17 | ? |
+| 11 | ? |
+| 12 | [Prepare system update request](#prepare-system-update-request) |
+| 13 | [Prepare system update response](#prepare-system-update-response) |
+| 14 | Send system update request |
+| 15 | Send system update response |
+| 16 | Receive system update request |
+| 17 | Receive system update response |
 | 18 | [Prepare game update request](#prepare-game-update-request) |
 | 19 | [Prepare game update response](#prepare-game-update-response) |
-| 20 | ? |
-| 21 | ? |
-| 22 | ? |
-| 23 | ? |
+| 20 | Send game update request |
+| 21 | Send game update response |
+| 22 | Receive game update request |
+| 23 | Receive game update response |
 | 24 | ? |
 | 25 | ? |
 | 26 | ? |
