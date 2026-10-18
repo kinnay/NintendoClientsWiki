@@ -215,7 +215,7 @@ This packet is transmitted when the host of the group presses the "Start communi
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#server-protocol) |
-| 0x8 | 1 | 0 = Not enough space, 2 = Accept |
+| 0x8 | 1 | 0 = Error (e.g. not enough space), 2 = Accept |
 | 0x9 | 1 | Always 0 |
 | 0xA | 6 | Padding |
 
