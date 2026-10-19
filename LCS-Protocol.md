@@ -284,9 +284,9 @@ This packet is transmitted when the host of the group presses the "Start communi
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 1 | [Status value](#status-value) |
-| 0x9 | 1 | Number of content meta keys (N) |
+| 0x9 | 1 | Number of [content meta keys] (N) |
 | 0xA | 6 | Padding |
-| 0x10 | 16 * N | Content meta keys |
+| 0x10 | 16 * N | [Content meta keys] |
 
 ### Receive Game Update Request
 | Offset | Size | Description |
@@ -296,12 +296,12 @@ This packet is transmitted when the host of the group presses the "Start communi
 | 0x9 | 1 | Always 4 |
 | 0xA | 1 | Always 20 |
 | 0xB | 1 | Unknown (0 or 1) |
-| 0xC | 1 | Number of content meta keys (N) |
+| 0xC | 1 | Number of [content meta keys] (N) |
 | 0xD | 3 | Padding |
 | 0x10 | 4 | IPv4 address of sender |
 | 0x14 | 4 | Node id of sender |
 | 0x18 | 8 | Title id |
-| 0x20 | 16 * N | Content meta keys |
+| 0x20 | 16 * N | [Content meta keys] |
 
 ### Receive Game Update Response
 | Offset | Size | Description |
@@ -362,3 +362,5 @@ The host then decides which nodes can share update data with each other. If a sy
 The sender then opens a TCP server on port 55556. The receiver establishes a connection with this port. The update data is exchanged through the connection.
 
 [system delivery info]: https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo
+[content meta key]: https://switchbrew.org/wiki/NCM_services#ContentMetaKey
+[content meta keys]: https://switchbrew.org/wiki/NCM_services#ContentMetaKey
