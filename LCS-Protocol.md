@@ -1,13 +1,14 @@
-This page describes the local content share protocol of the Nintendo Switch. This protocol can be used to share update data with a nearby device without internet connection. The protocol is implemented by the `qlaunch` program and can be activated by using the "Match Version With Local Users" feature of the home menu. This page describes the protocol as seen in firmware version 22.5.0.
+This page describes the local content share protocol of the Nintendo Switch. This protocol can be used to share update data with a nearby device without internet connection. The protocol can be activated by using the "Match Version With Local Users" feature of the home menu. This page describes the protocol as seen in firmware version 22.5.0.
 
 Unless specified otherwise, all fields are encoded in big endian byte order.
 
 * [Network details](#network-details)
-* [Server protocol](#server-protocol)
+* [Management protocol](#management-protocol)
+* [Transfer protocol](#transfer-protocol)
 * [Communication flow](#communication-flow)
 
 ## Network Details
-The protocol is implemented on top of [LDN](LDN-Protocol). After creating the LDN network, the host starts a TCP server on port 55555. The server protocol is described [below](Server-Protocol).
+The protocol is implemented on top of [LDN](LDN-Protocol). After creating the LDN network, the host starts a TCP server on port 55555. The server protocol is described [below](Management-Protocol).
 
 When a Nintendo Switch game is selected on the home menu, the LDN network is created with the following parameters:
 * Local communication id: `0100000000001000`
@@ -57,7 +58,9 @@ The protocol version is `(major << 4) | minor`. The application communication ve
 | --- | --- |
 | 22.5.0 | `0x13` |
 
-## Server Protocol
+## Management Protocol
+This protocol is provided by the owner of the local content share group on TCP port 55555. It is implemented by the `qlaunch` process.
+
 Every packet has the following format:
 
 | Offset | Size | Description |
@@ -103,20 +106,20 @@ The following packet types are currently known:
 ### Application Control Data Size Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 8 | Title id |
 
 ### Application Control Data Size Response
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 8 | Title id |
 | 0x10 | 4 | Application control data size |
 
 ### Application Control Data Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 8 | Title id |
 
 ### Application Control Data Response
@@ -124,7 +127,7 @@ The application control data contains the [NACP file](https://switchbrew.org/wik
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 8 | Title id |
 | 0x10 | 4 | Application control data size |
 | 0x14 | | Application control data |
@@ -132,7 +135,7 @@ The application control data contains the [NACP file](https://switchbrew.org/wik
 ### Join Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 1 | [Protocol version](#protocol-version) |
 | 0x9 | 1 | Number of applications |
 | 0xA | 1 | Padding |
@@ -146,13 +149,13 @@ The node is is assigned by the host. It starts at a random value and is incremen
 
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 4 | Node id |
 
 ### Error Packet
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 1 | Error code (see below) |
 | 0x9 | 3 | Padding |
 
@@ -174,7 +177,7 @@ The following error codes are currently known:
 ### Network Info
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 1 | Number of applications |
 | 0x9 | 1 | Number of nodes |
 | 0xA | 6 | Padding |
@@ -195,39 +198,39 @@ This packet is transmitted when the host of the group presses the "Start communi
 ### Prepare System Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 4 | Unknown |
 
 ### Prepare System Update Response
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 4 | Unknown |
 | 0xC | 256 | Always 0 |
 
 ### Send System Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | | Unknown |
 
 ### Receive System Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | | Unknown |
 
 ### Prepare Game Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 4 | Always 4 |
 | 0xC | 8 | Title id |
 
 ### Prepare Game Update Response
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | 1 | [Status value](#status-value) |
 | 0x9 | 1 | Always 0 |
 | 0xA | 6 | Padding |
@@ -235,13 +238,13 @@ This packet is transmitted when the host of the group presses the "Start communi
 ### Send Game Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | | Unknown |
 
 ### Receive Game Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
-| 0x0 | 8 | [Packet header](#server-protocol) |
+| 0x0 | 8 | [Packet header](#management-protocol) |
 | 0x8 | | Unknown |
 
 ### Application Details
@@ -268,6 +271,22 @@ Some packets include a status value that indicates whether an error has occurred
 | 2 | No error |
 
 It is unclear whether the value 1 is ever used.
+
+## Transfer Protocol
+This protocol allows a node to share update data with another. The host of the network decides which nodes should share update data with each other. This is coordinated through the [management protocol](#management-protocol). The transfer protocol is implemented by the `nim` process.
+
+When a node is requested to share update data with another, it starts a TCP server on port 55556. The node that shall receive the update data may then establish a connection with that server.
+
+All packets are structured as follows:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 4 | Magic number (`LDRq` for request, or `LDRs` for response) |
+| 0x4 | 1 | Message type |
+| 0x5 | 1 | Padding |
+| 0x6 | 2 | Unknown |
+| 0x8 | 8 | Payload size |
+| 0x10 | | Payload |
 
 ## Communication Flow
 When a local content share room is created on a device, it creates a [network](#network-details) that advertises the game that is currently selected on the home menu. Other devices can scan for nearby networks and join them. After joining the underlying LDN network, the client must send a [join request](#join-request) to the host. The host responds by sending a [join response](#join-response) or an [error packet](#error-packet) back to the client. Whenever the network information is changed, such as when a new device is accepted into the group, the host broadcasts a [network info](#network-info) packet to all clients to inform them of the change.
