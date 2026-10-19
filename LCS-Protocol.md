@@ -88,16 +88,16 @@ The following packet types are currently known:
 | 11 | ? |
 | 12 | [Prepare system update request](#prepare-system-update-request) |
 | 13 | [Prepare system update response](#prepare-system-update-response) |
-| 14 | Send system update request |
-| 15 | Send system update response |
-| 16 | Receive system update request |
-| 17 | Receive system update response |
+| 14 | [Send system update request](#send-system-update-request) |
+| 15 | [Send system update response](#send-system-update-response) |
+| 16 | [Receive system update request](#receive-system-update-request) |
+| 17 | [Receive system update response](#receive-system-update-response) |
 | 18 | [Prepare game update request](#prepare-game-update-request) |
 | 19 | [Prepare game update response](#prepare-game-update-response) |
-| 20 | Send game update request |
-| 21 | Send game update response |
-| 22 | Receive game update request |
-| 23 | Receive game update response |
+| 20 | [Send game update request](#send-game-update-request) |
+| 21 | [Send game update response](#send-game-update-response) |
+| 22 | [Receive game update request](#receive-game-update-request) |
+| 23 | [Receive game update response](#receive-game-update-response) |
 | 24 | ? |
 | 25 | ? |
 | 26 | ? |
@@ -141,7 +141,7 @@ The application control data contains the [NACP file](https://switchbrew.org/wik
 | 0xA | 1 | Padding |
 | 0xB | 129 | Device nickname |
 | 0x8C | 4 | Padding |
-| 0x90 | 256 | [System delivery info](https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo) (little endian) |
+| 0x90 | 256 | [System delivery info] (little endian) |
 | 0x190 | | [Application detail](#application-details) array |
 
 ### Join Response
@@ -212,13 +212,43 @@ This packet is transmitted when the host of the group presses the "Start communi
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#management-protocol) |
-| 0x8 | | Unknown |
+| 0x8 | 1 | Always 1 |
+| 0x9 | 1 | Always 20 |
+| 0xA | 1 | Always 1 |
+| 0xB | 1 | Always 0 |delivery
+| 0xC | 4 | IPv4 address of receiver |
+| 0x10 | 4 | Node id of receiver |
+| 0x14 | 4 | Always 0 |
+| 0x18 | 256 | Always 0 |
+
+### Send System Update Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#management-protocol) |
+| 0x8 | 1 | [Status value](#status-value) |
+| 0x9 | 3 | Padding |
+| 0xC | 256 | [System delivery info] (little endian) |
 
 ### Receive System Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#management-protocol) |
-| 0x8 | | Unknown |
+| 0x8 | 1 | Always 2 |
+| 0x9 | 1 | Always 20 |
+| 0xA | 1 | Unknown (0 or 1) |
+| 0xB | 1 | Always 0 |
+| 0xC | 4 | IPv4 address of sender |
+| 0x10 | 4 | Node id of sender |
+| 0x14 | 4 | Always 0 |
+| 0x18 | 256 | [System delivery info] (little endian) |
+
+### Receive System Update Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#management-protocol) |
+| 0x8 | 1 | [Status value](#status-value) |
+| 0x9 | 3 | Padding |
+| 0xC | 256 | Always 0 |
 
 ### Prepare Game Update Request
 | Offset | Size | Description |
@@ -239,13 +269,47 @@ This packet is transmitted when the host of the group presses the "Start communi
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#management-protocol) |
-| 0x8 | | Unknown |
+| 0x8 | 1 | Always 1 |
+| 0x9 | 1 | Always 4 |
+| 0xA | 1 | Always 20 |
+| 0xB | 1 | Unknown (0 or 1) |
+| 0xC | 1 | Always 0 |
+| 0xD | 3 | Padding |
+| 0x10 | 4 | IPv4 address of receiver |
+| 0x14 | 4 | Node id of receiver |
+| 0x18 | 8 | Title id |
+
+### Send Game Update Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#management-protocol) |
+| 0x8 | 1 | [Status value](#status-value) |
+| 0x9 | 1 | Number of content meta keys (N) |
+| 0xA | 6 | Padding |
+| 0x10 | 16 * N | Content meta keys |
 
 ### Receive Game Update Request
 | Offset | Size | Description |
 | --- | --- | --- |
 | 0x0 | 8 | [Packet header](#management-protocol) |
-| 0x8 | | Unknown |
+| 0x8 | 1 | Always 2 |
+| 0x9 | 1 | Always 4 |
+| 0xA | 1 | Always 20 |
+| 0xB | 1 | Unknown (0 or 1) |
+| 0xC | 1 | Number of content meta keys (N) |
+| 0xD | 3 | Padding |
+| 0x10 | 4 | IPv4 address of sender |
+| 0x14 | 4 | Node id of sender |
+| 0x18 | 8 | Title id |
+| 0x20 | 16 * N | Content meta keys |
+
+### Receive Game Update Response
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 8 | [Packet header](#management-protocol) |
+| 0x8 | 1 | [Status value](#status-value) |
+| 0x9 | 1 | Always 0 |
+| 0xA | 6 | Padding |
 
 ### Application Details
 This structure is encoded in little endian byte order.
@@ -296,3 +360,5 @@ When the user that created the group presses the "Start Communication" button, a
 The host then decides which nodes can share update data with each other. If a system update is required, the system update is always exchanged before the game update. The host selects one node as the sender, and one node as the receiver. The host sends a [send system update request](#send-system-update-request) or [send game update request](#send-game-update-request) to the sender. After the host receives a response, the host sends a [receive system update request](#receive-system-update-request) or [receive game update-request](#receive-game-update-request) to the receiver.
 
 The sender then opens a TCP server on port 55556. The receiver establishes a connection with this port. The update data is exchanged through the connection.
+
+[system delivery info]: https://switchbrew.org/wiki/NS_services#SystemDeliveryInfo
