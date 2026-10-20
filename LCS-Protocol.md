@@ -352,6 +352,47 @@ All packets are structured as follows:
 | 0x8 | 8 | Payload size |
 | 0x10 | | Payload |
 
+The following message types are currently known:
+
+| Type | Description |
+| --- | --- |
+| 1 | [Get content info](#get-content-info) |
+| 2 | [Download content](#download-content) |
+| 3 | Get ticket info |
+
+### Get Content Info
+Request:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | [Content meta key] |
+
+Response:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 32 | SHA-256 of content |
+| 0x20 | 16 | Content id |
+| 0x30 | 5 | Content size |
+| 0x35 | 1 | Content attributes |
+| 0x36 | 1 | Content type |
+| 0x37 | 1 | Content id offset |
+
+### Download Content
+Request:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | 16 | Content id |
+| 0x10 | 1 | Disable progress update |
+| 0x11 | 7 | Padding |
+
+Response:
+
+| Offset | Size | Description |
+| --- | --- | --- |
+| 0x0 | | Encrypted NCA |
+
 ## Communication Flow
 When a local content share room is created on a device, it creates a [network](#network-details) that advertises the game that is currently selected on the home menu. Other devices can scan for nearby networks and join them. After joining the underlying LDN network, the client must send a [join request](#join-request) to the host. The host responds by sending a [join response](#join-response) or an [error packet](#error-packet) back to the client. Whenever the network information is changed, such as when a new device is accepted into the group, the host broadcasts a [network info](#network-info) packet to all clients to inform them of the change.
 
