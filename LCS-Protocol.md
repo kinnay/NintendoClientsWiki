@@ -341,7 +341,7 @@ This protocol allows a node to share update data with another. The host of the n
 
 When a node is requested to share update data with another, it starts a TCP server on port 55556. The node that shall receive the update data may then establish a connection with that server.
 
-All packets are structured as follows:
+All packets are encoded in little-endian byte order and are structured as follows:
 
 | Offset | Size | Description |
 | --- | --- | --- |
