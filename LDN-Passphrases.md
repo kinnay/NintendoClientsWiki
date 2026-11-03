@@ -4,6 +4,7 @@
 | --- | --- |
 | [AC:NH Island Transfer Tool](./AC:NH-Tool) | `a2O_Xing:cMove_nntnd` |
 | Animal Crossing: New Horizons | `a2O_Xing:cVillage` |
+| Civilization VII | `cb964487b449f4208b1eabee6e927f8947fad3d88c37` |
 | Game Boy - Nintendo Switch Online | `4ab9f376ea4ae5ca366bdbf91bf08faf5590b7a3552669b7f077e726c43b3837`<br>`1e6b72909cfb216713a3f9e852b1ff95b912950f26ee880416563dbc47f0b84f` |
 | Local Content Share | `2d30885a658ab4e4d85092ed525a994c` |
 | Mario Kart 8 Deluxe | `MarioKart8Delux` followed by 17 null bytes |
