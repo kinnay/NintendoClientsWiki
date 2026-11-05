@@ -33,7 +33,7 @@ The following methods can be used without authorization:
 | GET | `/v1/api/miis` |
 | POST | <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
 | POST | `/v1/api/people` |
-| GET | <code><a href="#post-v1apipeoplennid">/v1/api/people/[nnid]</a></code>  |
+| GET | <code><a href="#get-v1apipeoplennid">/v1/api/people/[nnid]</a></code>  |
 | POST | `/v1/api/support/coppa/authorization` |
 | PUT | `/v1/api/support/email_confirmation/<%lu>/<%06u>` |
 | GET | `/v1/api/support/forgotten_password/<%lu>` |
