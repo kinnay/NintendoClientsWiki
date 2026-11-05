@@ -185,7 +185,7 @@ It will give this error if it is in use:
 Otherwise it will return nothing, still with the content type of `text/xml`.
 
 ### POST /v1/api/people
-Creates a new NNID
+Creates a new NNID.
 
 The console sends an xml request containing the user data:
 ```
