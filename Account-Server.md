@@ -33,7 +33,7 @@ The following methods can be used without authorization:
 | GET | `/v1/api/miis` |
 | POST | <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
 | POST | `/v1/api/people` |
-| GET | `/v1/api/people/<nnid>` |
+| GET | <code><a href="#post-v1apipeoplennid">/v1/api/people/[nnid]</a></code>  |
 | POST | `/v1/api/support/coppa/authorization` |
 | PUT | `/v1/api/support/email_confirmation/<%lu>/<%06u>` |
 | GET | `/v1/api/support/forgotten_password/<%lu>` |
@@ -170,6 +170,19 @@ Example response:
   <token>...</token>
 </nex_token>
 ```
+### GET /v1/api/people/<nnid>
+Checks if the given NNID is in use.
+
+It will give this error if it is in use:
+```
+<errors> 
+	<error> 
+		<code>0100</code> 
+		<message>Account ID already exists</message> 
+	</error> 
+</errors>
+```
+Otherwise it will return nothing, still with the content type of `text/xml`.
 
 ## Errors
 Here's an example error response:
