@@ -189,7 +189,6 @@ Creates a new NNID
 
 The console sends an xml request containing the user data:
 ```
-<?xml version="1.0" encoding="UTF-8"?>
 <person>
   <birth_date>BIRTHDAY IN YYYY-MM-DD FORMAT</birth_date>
   <user_id>USERNAME</user_id>
