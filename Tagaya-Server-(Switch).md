@@ -46,7 +46,7 @@ Every entry in the title list contains the following fields:
 | --- | --- |
 | id | Title id |
 | version | Latest title version |
-| required_version | Required title version to play online |
+| required_version | Minimum required version to launch |
 
 Example:
 
