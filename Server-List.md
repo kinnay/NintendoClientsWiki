@@ -229,7 +229,7 @@ Unknown:
 
 #### Game Content (Metadata)
 * `https://tagaya.hac.lp1.eshop.nintendo.net` ([title version list](Tagaya-Server-(Switch)), old)
-* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` (title version list, new)
+* `https://pegasus.hac.lp1.pegasus.srv.nintendo.net` ([title version list](Pegasus-Server), new)
 * `https://beach.hac.lp1.eshop.nintendo.net`
 * `https://pearljam.hac.lp1.eshop.nintendo.net`
 * `https://pushmo.hac.lp1.eshop.nintendo.net`
