@@ -32,8 +32,8 @@ The following methods can be used without authorization:
 | GET | `/v1/api/devices/@current/status` |
 | GET | `/v1/api/miis` |
 | POST | <code><a href="#post-v1apioauth20access_tokengenerate">/v1/api/oauth20/access_token/generate</a></code> |
-| POST | `/v1/api/people` |
-| GET | `/v1/api/people/<nnid>` |
+| POST | <code><a href="#post-v1apipeople">/v1/api/people</a></code> |
+| GET | [`/v1/api/people/<nnid>`](#get-v1apipeoplennid)  |
 | POST | `/v1/api/support/coppa/authorization` |
 | PUT | `/v1/api/support/email_confirmation/<%lu>/<%06u>` |
 | GET | `/v1/api/support/forgotten_password/<%lu>` |
@@ -170,6 +170,63 @@ Example response:
   <token>...</token>
 </nex_token>
 ```
+### GET /v1/api/people/&lt;nnid&gt;
+Checks if the given NNID is in use.
+
+It will give this error if it is in use:
+```
+<errors> 
+	<error> 
+		<code>0100</code> 
+		<message>Account ID already exists</message> 
+	</error> 
+</errors>
+```
+Otherwise it will return nothing, still with the content type of `text/xml`.
+
+### POST /v1/api/people
+Creates a new NNID.
+
+The console sends an xml request containing the user data:
+```
+<person>
+  <birth_date>BIRTHDAY IN YYYY-MM-DD FORMAT</birth_date>
+  <user_id>USERNAME</user_id>
+  <password>PASSWORD</password>
+  <country>COUNTRY</country>
+  <language>LANGUAGE</language>
+  <tz_name>TIMEZONE NAME</tz_name>
+  <agreement>
+    <agreement_date>TIME OF AGREEMENT</agreement_date>
+    <country>COUNTRY</country>
+    <type>NINTENDO-NETWORK-EULA</type>
+    <version>VERSION OF AGREEMENT</version>
+  </agreement>
+  <email>
+    <address>EMAIL</address>
+    <owned>N</owned>
+    <parent>N</parent>
+    <primary>Y</primary>
+    <validated>N</validated>
+    <type>DEFAULT</type>
+  </email>
+  <gender>M or F</gender>
+  <region>REGION CODE</region>
+  <marketing_flag>N</marketing_flag>
+  <off_device_flag>N</off_device_flag>
+  <mii>
+    <name>MII NAME</name>
+    <primary>Y</primary>
+    <data>MII DATA IN BASE64</data>
+  </mii>
+</person>
+```
+On success it sends back the user's PID:
+```
+<person> 
+	<pid>1234567890</pid> 
+</person>
+```
 
 ## Errors
 Here's an example error response:
@@ -185,11 +242,29 @@ Here's an example error response:
 
 Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is omitted entirely.
 
+In some cases it can give multiple errors in the same response like this:
+```
+<errors>
+	<error>
+		<cause>data</cause>
+		<code>0002</code>
+		<message>data format is invalid</message>
+	</error>
+	<error>
+		<cause>X-Nintendo-Region</cause>
+		<code>0002</code>
+		<message>X-Nintendo-Region format is invalid</message>
+	</error>
+</errors>
+
+```
+
 ### Known Errors
 | Code | Cause | Message |
 | --- | --- | --- |
 | 0002 | | deviceId format is invalid |
 | 0002 | | serialNumber format is invalid |
+| 0002 | data | data format is invalid |
 | 0002 | | platformId format is invalid |
 | 0002 | | version format is invalid |
 | 0002 | user_id | user_id format is invalid |
@@ -201,6 +276,7 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 0007 | Forbidden request |
 | 0008 | | Not Found |
 | 0100 | | Account ID already exists |
+| 0101 | userId | Account ID is not acceptable  |
 | 0103 | email | Email format is invalid |
 | 0106 | | Invalid account ID or password |
 | 0107 | | Account country and device country do not match |
@@ -214,8 +290,10 @@ Sometimes, the cause tag is closed immediately (`<cause/>`). Sometimes, it is om
 | 1022 | client_id | The requested client was not found. |
 | 1033 | | Excessive forgot password e-mail attempt |
 | 1126 | | The domain "..." is not accessible. |
+| 1500 | The request sent by the client was syntactically incorrect. | Bad Request Error | 
 | 1600 | Bad Request | Unable to process request |
 | 1600 | Unsupported Media Type | Unable to process request |
+| 2001 | | Internal server error |
 
 | Code | Description |
 | --- | --- |
