@@ -77,7 +77,29 @@ This method returns the following:
 | lm | Last modified (timestamp) |
 | apps | List of apps |
 
-The apps list seems to be empty as of August 2026.
+Every apps has the following fields:
+
+| Field | Description |
+| --- | --- |
+| id | Title id |
+| p | Integer |
+| vmin | Integer |
+| vmax | Integer |
+| r | List of ratings |
+
+Every rating is a list of two integers. The first integer describes the category, the second integer describes the value for that category.
+
+Example app:
+
+```json
+{
+    "id": "01000130120ee000",
+    "p": 0,
+    "vmin": 18,
+    "vmax": 18,
+    "r": [[0, 12], [1, 15], [2, 12], [3, 13], [4, 14], [5, 12], [6, 16], [7, 16], [8, 16], [9, 16], [10, 13], [11, 13]]
+}
+```
 
 ## GET /v1/apps/&lt;title id&gt;/recommend-versions
 This method returns at least the following fields:
