@@ -58,6 +58,6 @@ This method does not return anything.
 [List]: NEX-Common-Types#list
 [Structure]: NEX-Common-Types#structure
 
-[ScreeningDataStoreContentParam]: #screeningdatastorecontentparam
-[ScreeningUgcViolationParam]: #screeningugcviolationparam
-[ScreeningContextInfo]: #screeningcontextinfo
+[ScreeningDataStoreContentParam]: #screeningdatastorecontentparam-structure
+[ScreeningUgcViolationParam]: #screeningugcviolationparam-structure
+[ScreeningContextInfo]: #screeningcontextinfo-structure
