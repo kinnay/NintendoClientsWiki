@@ -1,6 +1,10 @@
 ## [[NEX Protocols]] > Secure Connection (11)
 
-[Nintendo Badge Arcade](Secure-Protocol-(NBA)) extends this protocol with an additional method.
+The following games have additional methods in the Secure Connection protocol:
+* [Nintendo Badge Arcade](Secure-Protocol-(NBA))
+* [Monster Hunter Generations Ultimate/XX](Secure-Protocol-(MHXX))
+
+The remainder of this page describes the methods that are not specific to any game.
 
 | Method ID | Method Name |
 | --- | --- |
